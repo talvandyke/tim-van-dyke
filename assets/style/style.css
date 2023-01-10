@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "unitext";
+  src: url("https://use.typekit.net/af/dc1183/00000000000000003b9b2146/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"), url("https://use.typekit.net/af/dc1183/00000000000000003b9b2146/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"), url("https://use.typekit.net/af/dc1183/00000000000000003b9b2146/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 200;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "unitext";
+  src: url("https://use.typekit.net/af/744712/00000000000000003b9b214b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/744712/00000000000000003b9b214b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/744712/00000000000000003b9b214b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "unitext";
+  src: url("https://use.typekit.net/af/9a7180/00000000000000003b9b214d/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/9a7180/00000000000000003b9b214d/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/9a7180/00000000000000003b9b214d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "unitext";
+  src: url("https://use.typekit.net/af/0db684/00000000000000003b9b214e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"), url("https://use.typekit.net/af/0db684/00000000000000003b9b214e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"), url("https://use.typekit.net/af/0db684/00000000000000003b9b214e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: auto;
+}
+
+.font-extra-light {
+  font-weight: 200;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.text-deep-forest {
+  color: #014003;
+}
+
+.bg-deep-forest {
+  background-color: #014003;
+}
+
+.border-deep-forest {
+  border-color: #014003 !important;
+}
+
+.text-deep-forest-dark {
+  color: #0b241a;
+}
+
+.bg-deep-forest-dark {
+  background-color: #0b241a;
+}
+
+.border-deep-forest-dark {
+  border-color: #0b241a !important;
+}
+
+.text-evergreen {
+  color: #13801c;
+}
+
+.bg-evergreen {
+  background-color: #13801c;
+}
+
+.border-evergreen {
+  border-color: #13801c !important;
+}
+
+.text-tea-green {
+  color: #79ea8e;
+}
+
+.bg-tea-green {
+  background-color: #79ea8e;
+}
+
+.border-tea-green {
+  border-color: #79ea8e !important;
+}
+
+.text-dew-green {
+  color: #b9fdcd;
+}
+
+.bg-dew-green {
+  background-color: #b9fdcd;
+}
+
+.border-dew-green {
+  border-color: #b9fdcd !important;
+}
+
+.text-clean-white {
+  color: #f9fafa;
+}
+
+.bg-clean-white {
+  background-color: #f9fafa;
+}
+
+.border-clean-white {
+  border-color: #f9fafa !important;
+}
+
+.text-black-forest {
+  color: #001000;
+}
+
+.bg-black-forest {
+  background-color: #001000;
+}
+
+.border-black-forest {
+  border-color: #001000 !important;
+}
+
+.text-dark-forest {
+  color: #002000;
+}
+
+.bg-dark-forest {
+  background-color: #002000;
+}
+
+.border-dark-forest {
+  border-color: #002000 !important;
+}
+
+.text-form-grey {
+  color: #999f99;
+}
+
+.bg-form-grey {
+  background-color: #999f99;
+}
+
+.border-form-grey {
+  border-color: #999f99 !important;
+}
+
+.text-omni-green {
+  color: #46b555;
+}
+
+.bg-omni-green {
+  background-color: #46b555;
+}
+
+.border-omni-green {
+  border-color: #46b555 !important;
+}
+
+
+
+
+::-moz-selection {
+  background: #25abd1;
+  color: #fff;
+}
+
+::selection {
+  background: #25abd1;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #46B555;
+  border-color: #46B555;
+}
+
+.btn-primary:hover {
+  background-color: #1e3a2e !important;
+  border-color: #1e3a2e !important;
+}
+
+.btn-primary:focus {
+  background-color: #1e3a2e !important;
+  border-color: #1e3a2e !important;
+}
+
+.btn-primary:active {
+  border-color: #1e3a2e !important;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #46B555;
+}
+
+#mainNav.navbar-shrink {
+  background-color: #fff;
+  padding: 1rem 0;
+  -webkit-box-shadow: 0px 1px 10px #999;
+          box-shadow: 0px 1px 10px #999;
+}
+
+#mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+  color: #001000;
+}
+
+#mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+  color: #46B555;
+}
+
+.navbar-shrink .navbar-brand {
+  background-image: url("https://go.omnicell.com/l/862671/2021-07-28/7fdz5/862671/1627485668LzfTma7q/omni_logo.svg");
+  background-size: cover;
+  width: 262px;
+  height: 65px;
+  display: block;
+}
+
+.navbar-brand {
+  background-image: url("https://go.omnicell.com/l/862671/2021-07-29/7g2t9/862671/16275683220LjNZ05O/omnicell_logo_white_transparent.svg");
+  background-size: cover;
+  width: 262px;
+  height: 65px;
+  display: block;
+}
+
+#mainNav .navbar-toggler {
+  background-color: #46B555;
+}
+
+footer {
+  background-color: #001000;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #46B555;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  background-color: rgba(40, 172, 79, 0.7);
+}
+/*# sourceMappingURL=style.css.map */

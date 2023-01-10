@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://storage.pardot.com/33192/236755/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <style type="text/css">
+span.value span label.inline {
+    display: inline;
+}
+span.value span input {
+    display: inline-block;
+}
+p.errors {
+    display: block;
+    width: 100%;
+}
+form.form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+form.form .value span {
+    vertical-align: top;
+}
+form.form p span.description {
+    color: #000000;
+    clear: both;
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 0 !important;
+}
+form.form input.text {
+    width: 100% !important;
+    padding-left: 46px !important;
+}
+p.first_name input[type='text'] {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79qz/33192/236863/ico_fname.jpg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+p.last_name input[type='text'] {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79qz/33192/236863/ico_fname.jpg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+p.company input[type='text'] {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79qs/33192/236859/ico_company.jpgg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+p.phone input[type='text'] {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79r2/33192/236867/ico_phone.jpg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+p.email input[type='text'] {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79qv/33192/236857/ico_email.jpg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+p.job_title input[type='text'] {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79r4/33192/236869/ico_title.jpg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+p.industry select {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79qx/33192/236865/ico_industry.jpg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+p.country select {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79qq/33192/236861/ico_country.jpg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+p.state select {
+    background-image: url(http://go.pardot.com/l/33192/2018-10-01/8k79qn/33192/236855/ico_state.jpg);
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 18px 24px;
+}
+        
+        ::-webkit-input-placeholder {
+ color: #000000;
+}
+        
+        :-moz-placeholder {
+ / Firefox 18- / color: #000000;
+}
+        
+        ::-moz-placeholder {
+ / Firefox 19+ / color: #000000;
+}
+        
+        :-ms-input-placeholder {
+ color: #000000;
+}
+.red-background,  form.form p.errors {
+    background-color: transparent !important;
+    color: #ff0909 !important;
+    font-weight: bold;
+    padding-left: .5em;
+    margin-bottom: 1em;
+}
+:focus {
+    outline: none;
+    border: none;
+}
+textarea:focus,  input:focus,  input[type]:focus {
+    border-color: #ddd !important;
+    outline: 0 none;
+}
+form.form p.required label,  form.form span.required label {
+    background: none !important;
+}
+form.form p.required label.field-label:after {
+    content: " *";
+}
+form.form {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+}
+input[type=checkbox],  input[type=radio] {
+    margin: 0 3px 0 0 !important;
+    line-height: normal;
+}
+form.form select {
+    width: 100% !important;
+}
+form.form p {
+    clear: none !important;
+}
+form.form p {
+    margin: 0 !important;
+    padding: 10px;
+}
+form.form p.form-field.error input,  form.form p.form-field.error select,  form.form p.form-field.error textarea.standard {
+    border-color: #ff0909;
+}
+form.form select {
+    text-indent: 46px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #1daeec;
+    font-size: 14px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 18px;
+    line-height: 1.428571429 !important;
+    height: 54px;
+}
+form.form input.text,  form.form textarea.standard,  form.form input.date {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #1daeec;
+    font-size: 14px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 18px;
+    padding-right: 18px;
+    line-height: 1.428571429 !important;
+}
+form.form textarea.standard {
+    width: 100% !important;
+    height: 150px !important;
+    overflow: auto;
+    padding: 15px 18px 15px 18px !important;
+    float: none;
+}
+form.form input.text {
+    width: 100% !important;
+}
+form.form p label {
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 14px;
+    color: #000000 !important;
+    font-weight: normal;
+    padding-top: 14px !important;
+    padding-bottom: 10px !important;
+}
+form.form p.submit input {
+    background-color: #eef3f7 !important;
+    text-transform: uppercase;
+    border: solid 1px #000000 !important;
+    font-size: 14px !important;
+    color: #000000 !important;
+    font-weight: 400 !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    line-height: 1.428571429 !important;
+    margin: 0 !important;
+    cursor: pointer;
+}
+form.form p.submit input:hover {
+    background-color: #22adeb !important;
+    transition: 0.3s;
+    text-transform: uppercase;
+    border: solid 1px #22adeb !important;
+}
+form.form p.What_Caught_Your_Eye label.field-label {
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+form.form p.submit {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 6px;
+}
+form.form p.submit input {
+    margin-top: 10px !important;
+    border-top: 1px solid #cccbd0;
+}
+form.form p label {
+    float: none;
+    text-align: left
+}
+form.form span.value {
+    margin-left: 0 !important;
+    text-align: left !important;
+}
+form.form p.submit {
+    margin-left: 6px;
+}
+p.error.no-label {
+    display: none;
+}
+span.value span {
+    display: inline-block !important;
+    width: 100%;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+form.form textarea.standard {
+    width: 100% !important;
+}
+}
+
+@media (min-width: 0px) and (max-width: 997px) {
+span.value span {
+    display: inline-block !important;
+    width: 100% !important;
+}
+}
+</style>
+    <style>
+        p.form-field.col-sm-12.opted_out.pd-checkbox {
+            padding-top: 20px;
+        }
+        /* Base for label styling */
+        
+        [type="checkbox"]:not(:checked),
+        [type="checkbox"]:checked {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        [type="checkbox"]:not(:checked) + label,
+        [type="checkbox"]:checked + label {
+            position: relative;
+            padding-left: 1.95em;
+            cursor: pointer;
+        }
+        /* checkbox aspect */
+        
+        [type="checkbox"]:not(:checked) + label:before,
+        [type="checkbox"]:checked + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 1em;
+            height: 1em;
+            border: 2px solid #1daeec;
+            background: #fff;
+            border-radius: 4px;
+            color: #000000;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+        }
+        /* checked mark aspect */
+        
+        [type="checkbox"]:not(:checked) + label:after,
+        [type="checkbox"]:checked + label:after {
+            content: '✔';
+            position: absolute;
+            left: .1em;
+            font-size: 1.25em;
+            line-height: 0.8;
+            color: #000000;
+            transition: all .2s;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        /* checked mark aspect changes */
+        
+        [type="checkbox"]:not(:checked) + label:after {
+            opacity: 0;
+            transform: scale(0);
+        }
+        
+        [type="checkbox"]:checked + label:after {
+            opacity: 1;
+            transform: scale(1);
+        }
+        /* accessibility */
+        
+        [type="checkbox"]:checked:focus + label:before,
+        [type="checkbox"]:not(:checked):focus + label:before {
+            border: 2px solid #1daeec;
+            background-color: #1daeec;
+            color: #ffffff !important;
+        }
+        /* hover style just for information */
+        
+        label:hover:before {
+            border: 2px solid #1daeec!important;
+        }
+    </style>
+    <style>
+        .get-bg {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="http://form-cdn.pardot.com/js/piUtils.js?ver=201911071221"></script><script type="text/javascript">
+piAId = '34192';
+piCId = '1664';
+piHostname = 'pi.pardot.com';
+if(!window['pi']) { window['pi'] = {}; } pi = window['pi']; if(!pi['tracker']) { pi['tracker'] = {}; } pi.tracker.pi_form = true;
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script></head>
+
+    <body bgcolor="#eef3f7">
+<div class="col-md-12"> <form accept-charset="UTF-8" method="post" action="http://go.pardot.com/l/33192/2018-09-26/8k53j2" class="form" id="pardot-form">
+
+<style type="text/css">
+form.form p label { color: #000000; }
+</style>
+
+
+
+
+
+	
+
+		
+		
+		
+			<p class="form-field col-sm-6 first_name pd-text required    ">
+				
+					<label class="field-label" for="33192_225603pi_33192_225603">First Name</label>
+				
+				
+				<input type="text" name="33192_225603pi_33192_225603" id="33192_225603pi_33192_225603" value="" class="text" size="30" maxlength="40" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_33192_225603pi_33192_225603" style="display:none"></div>
+			
+		
+			<p class="form-field col-sm-6 last_name pd-text required    ">
+				
+					<label class="field-label" for="33192_225605pi_33192_225605">Last Name</label>
+				
+				
+				<input type="text" name="33192_225605pi_33192_225605" id="33192_225605pi_33192_225605" value="" class="text" size="30" maxlength="80" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_33192_225605pi_33192_225605" style="display:none"></div>
+			
+		
+			<p class="form-field col-sm-6 company pd-text     ">
+				
+					<label class="field-label" for="33192_225607pi_33192_225607">Company</label>
+				
+				
+				<input type="text" name="33192_225607pi_33192_225607" id="33192_225607pi_33192_225607" value="" class="text" size="30" maxlength="255" onchange="" onfocus="" />
+				
+			</p>
+			<div id="error_for_33192_225607pi_33192_225607" style="display:none"></div>
+			
+		
+			<p class="form-field col-sm-6 email pd-text required    ">
+				
+					<label class="field-label" for="33192_225609pi_33192_225609">Email</label>
+				
+				
+				<input type="text" name="33192_225609pi_33192_225609" id="33192_225609pi_33192_225609" value="" class="text" size="30" maxlength="255" onchange="piAjax.auditEmailField(this, 33192, 225609, 183170251);" onfocus="piAjax.loadEmailIndicator(this, 225609, 'https://go.pardot.com/images/indicator2.gif');" />
+				
+			</p>
+			<div id="error_for_33192_225609pi_33192_225609" style="display:none"></div>
+			
+		
+			<p class="form-field col-sm-6 state pd-select required    ">
+				
+					<label class="field-label" for="33192_225611pi_33192_225611">State</label>
+				
+				
+				<select name="33192_225611pi_33192_225611" id="33192_225611pi_33192_225611" class="select" onchange=""><option value="" selected="selected"></option>
+<option value="3623513">AB</option>
+<option value="3623515">AK</option>
+<option value="3623517">AL</option>
+<option value="3623519">AR</option>
+<option value="3623521">AZ</option>
+<option value="3623523">BC</option>
+<option value="3623525">CA</option>
+<option value="3623527">CO</option>
+<option value="3623529">CT</option>
+<option value="3623531">DC</option>
+<option value="3623533">DE</option>
+<option value="3623535">FL</option>
+<option value="3623537">GA</option>
+<option value="3623539">HI</option>
+<option value="3623541">IA</option>
+<option value="3623543">ID</option>
+<option value="3623545">IL</option>
+<option value="3623547">IN</option>
+<option value="3623549">KS</option>
+<option value="3623551">KY</option>
+<option value="3623553">LA</option>
+<option value="3623555">MA</option>
+<option value="3623557">MB</option>
+<option value="3623559">MD</option>
+<option value="3623561">ME</option>
+<option value="3623563">MI</option>
+<option value="3623565">MN</option>
+<option value="3623567">MO</option>
+<option value="3623569">MS</option>
+<option value="3623571">MT</option>
+<option value="3623573">NB</option>
+<option value="3623575">NC</option>
+<option value="3623577">ND</option>
+<option value="3623579">NE</option>
+<option value="3623581">NF</option>
+<option value="3623583">NH</option>
+<option value="3623585">NJ</option>
+<option value="3623587">NM</option>
+<option value="3623589">NS</option>
+<option value="3623591">NT</option>
+<option value="3623593">NU</option>
+<option value="3623595">NV</option>
+<option value="3623597">NY</option>
+<option value="3623599">OH</option>
+<option value="3623601">OK</option>
+<option value="3623603">ON</option>
+<option value="3623605">OR</option>
+<option value="3623607">PA</option>
+<option value="3623609">PE</option>
+<option value="3623611">QC</option>
+<option value="3623613">RI</option>
+<option value="3623615">SC</option>
+<option value="3623617">SD</option>
+<option value="3623619">SK</option>
+<option value="3623621">TN</option>
+<option value="3623623">TX</option>
+<option value="3623625">UT</option>
+<option value="3623627">VA</option>
+<option value="3623629">VT</option>
+<option value="3623631">WA</option>
+<option value="3623633">WI</option>
+<option value="3623635">WV</option>
+<option value="3623637">WY</option>
+<option value="3623639">YT</option>
+</select>
+				
+			</p>
+			<div id="error_for_33192_225611pi_33192_225611" style="display:none"></div>
+			
+		
+			<p class="form-field col-sm-6 Are_you_a_patient_ pd-select required    ">
+				
+					<label class="field-label" for="33192_225615pi_33192_225615">Are you a patient?</label>
+				
+				
+				<select name="33192_225615pi_33192_225615" id="33192_225615pi_33192_225615" class="select" onchange=""><option value="" selected="selected"></option>
+<option value="3623641">yes</option>
+<option value="3623643">no</option>
+</select>
+				
+			</p>
+			<div id="error_for_33192_225615pi_33192_225615" style="display:none"></div>
+			
+		
+			<p class="form-field col-sm-12 comments pd-textarea required    ">
+				
+					<label class="field-label" for="33192_225613pi_33192_225613">Comments</label>
+				
+				
+				<textarea name="33192_225613pi_33192_225613" id="33192_225613pi_33192_225613" onchange="" cols="40" rows="10" class="standard"></textarea>
+				
+			</p>
+			<div id="error_for_33192_225613pi_33192_225613" style="display:none"></div>
+			
+		
+		
+		
+	<p style="position:absolute; width:190px; left:-9999px; top: -9999px;visibility:hidden;">
+		<label for="pi_extra_field">Comments</label>
+		<input type="text" name="pi_extra_field" id="pi_extra_field"/>
+	</p>
+		
+		
+		<!-- forces IE5-8 to correctly submit UTF8 content  -->
+		<input name="_utf8" type="hidden" value="&#9731;" />
+		
+		<p class="submit">
+			<input type="submit" accesskey="s" value="Submit" />
+		</p>
+	
+	
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+	var anchors = document.getElementsByTagName("a");
+	for (var i=0; i<anchors.length; i++) {
+		var anchor = anchors[i];
+		if(anchor.getAttribute("href")&&!anchor.getAttribute("target")) {
+			anchor.target = "_top";
+		}
+	}
+		
+//]]>
+</script>
+<input type="hidden" name="hiddenDependentFields" id="hiddenDependentFields" value="" /></form>
+<script type="text/javascript">(function(){ pardot.$(document).ready(function(){ (function() {
+	var $ = window.pardot.$;
+	window.pardot.FormDependencyMap = [];
+
+	$('.form-field-master input, .form-field-master select').each(function(index, input) {
+		$(input).on('change', window.piAjax.checkForDependentField);
+		window.piAjax.checkForDependentField.call(input);
+	});
+})(); });})();</script> </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+<script>
+        var labels = document.querySelectorAll("p.pd-text label, p.pd-select label, p.pd-textarea label");
+        var i = labels.length;
+        while (i--) {
+            var label = labels.item(i);
+            var text = label.textContent;
+            label.parentNode.classList.contains("required") && (text += " *");
+            var nextElement = label.nextElementSibling;
+
+            // This is what I changed:
+            if (nextElement) {
+                if (nextElement.tagName == 'SELECT') {
+                    nextElement.options[0].text = text;
+                } else {
+                    nextElement.setAttribute("placeholder", text);
+                }
+
+                label.parentNode.removeChild(label);
+            }
+        }
+        var elements = document.querySelectorAll('div.errors, .no-label');
+        Array.prototype.forEach.call(elements, function (el, i) {
+            el.parentNode.removeChild(el);
+        });
+    </script> 
+<script type="text/javascript" src="http://jamesallardice.github.io/Placeholders.js/assets/js/placeholders.min.js"></script> 
+<script>
+        $(document).ready(function () {
+            $('.set-bg').each(function () {
+                var imgSrc2 = $(this).find('.get-bg img').attr('src');
+                $(this).css('background-image', 'url(' + imgSrc2 + ')');
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+$omnicell-green: #46B555;
+$forrest-green: #001000;
+
+#sidebar {
+  background-color: $forrest-green;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20%;
+  height: 100vh;
+}
+
+#template-wrapper {
+  width: 100%;
+  text-align: center;
+  width: 80%;
+  margin-left: 20%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+#form-template-wrapper {
+  width: 80%;
+  margin-left: 20%;
+  text-align: center;
+  padding: 2rem;
+}

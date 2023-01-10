@@ -1,0 +1,84 @@
+$omnicell-green: #46B555;
+$forrest-green: #001000;
+
+::selection {
+  background: #25abd1;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: $omnicell-green;
+  border-color: $omnicell-green;
+  &:hover {
+    background-color: $forrest-green !important;
+    border-color: $forrest-green !important;
+  }
+  &:focus {
+    background-color: $forrest-green !important;
+    border-color: $forrest-green !important;
+  }
+  &:active {
+    border-color: $forrest-green !important;
+  }
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-weight: bold;
+  letter-spacing: 2px;
+  &:hover {
+    color: $omnicell-green;
+  }
+}
+
+#mainNav.navbar-shrink {
+  background-color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0px 1px 10px #999;
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: $forrest-green;
+        &:hover {
+          color: $omnicell-green;
+        }
+      }
+    }
+  }
+}
+
+.navbar-shrink {
+  .navbar-brand {
+    background-image: url("../img/cheshire-impact-creative-hub-logo-color.png");
+    background-size: cover;
+    width: 300px;
+    height: 65px;
+    display: block;
+  }
+}
+
+.navbar-brand {
+  background-image: url("../img/cheshire-impact-creative-hub-logo.png");
+  background-size: cover;
+  width: 300px;
+  height: 65px;
+  display: block;
+}
+
+#mainNav .navbar-toggler {
+  background-color: $omnicell-green;
+}
+
+footer {
+  background-color: $forrest-green;
+  color: #fff;
+  a {
+    color: #fff;
+    &:hover {
+      color: $omnicell-green;
+    }
+  }
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  background-color: rgba(243, 124, 56, 0.7);
+}

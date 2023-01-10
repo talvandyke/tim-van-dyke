@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Creative Hub | Omnicell</title>
+    <link rel="shortcut icon"
+        href="https://mktg.omnicell.com/l/862671/2020-04-23/nj58/862671/37151/omnicell_favicon.ico"
+        type="image/x-icon" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://www.cheshireimpact.com/wp-content/uploads/2018/07/new-favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="../../../assets/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Unitext,Roboto:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../../assets/style/style.css" />
+    <link rel="stylesheet" href="../../../assets/style/template-demo.css" />
+    <style>
+      
+    </style>
+  </head>
+
+  <body id="page-top">
+    <div id="sidebar">
+      <div class="row pt-3 pr-5" style="background-color: #46b555; margin:0 !important;">
+        <div class="col-md-12 " >
+          
+          <p style="margin-bottom: 0px !important;">Category: Events</p>
+          <h2 style="padding-top:0px !important;margin-bottom:0px !important;">Event Microsite</h2>
+          
+          <p style="font-size: 13px;margin-top:0px !important;"><strong>Tags:</strong> Modal | Image Hover | Jiralax
+          </p>
+            
+          
+        </div>
+      </div>
+      <div class="row  pl-4 pr-4">
+       <div class="col-md-12 pt-4">
+        
+            <h4>Elements:</h4>
+          <ul >
+            <li>Image Hover - Page Anchors</li>
+            <li>Slideshow</li>
+            <li>Unique Mobile Experience </li>
+            <li>Jiralax (Components move on scroll)</li>
+          </ul>
+          <div class="btn-group btn-group-toggle py-3 pt-4 pb-5">
+            <label class="btn btn-secondary active">
+              <input
+                type="radio"
+                name="options"
+                id="desktop"
+                autocomplete="off"
+                checked
+              />
+              Desktop
+            </label>
+             <label class="btn btn-secondary">
+              <input
+                type="radio"
+                name="options"
+                id="mobile"
+                class="mobile"
+                autocomplete="off"
+              />
+              Mobile
+            </label>
+          </div>
+          <div>
+            <a href="../../lp-index.html" style="color:#ffffff;">Back to Gallery</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div id="template-wrapper">
+      <div id="template-display">
+        <iframe
+        id="template"
+        src="https://go.omnicell.com/omnicell-thank-you-confirmation"
+        frameborder="0"
+        style="height:100vh; width:90%;padding-top:20px;"
+      ></iframe>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="../../../assets/js/agency.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#mobile").click(function() {
+          $("#template").css("width", "479px");
+          $(this)
+            .parent()
+            .addClass("active");
+          $("#desktop")
+            .parent()
+            .removeClass("active");
+        });
+        $("#desktop").click(function() {
+          $("#template").css("width", "80%");
+          $(this)
+            .parent()
+            .addClass("active");
+          $("#mobile")
+            .parent()
+            .removeClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

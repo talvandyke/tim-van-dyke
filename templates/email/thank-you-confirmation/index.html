@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Creative Hub | Omnicell</title>
+     <link rel="shortcut icon"
+        href="https://mktg.omnicell.com/l/862671/2020-04-23/nj58/862671/37151/omnicell_favicon.ico"
+        type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="../../../assets/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Unitext,Roboto:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../../../assets/style/style.css" />
+    <link rel="stylesheet" href="../../../assets/style/template-demo.css" />
+  </head>
+
+  <body id="page-top">
+    <div id="sidebar" class="position-absolute">
+      <div class="row pt-5 h-100">
+        <div class="col-md-12 text-center">
+          <h1>Thank You Email Template</h1>
+          <div class="btn-group btn-group-toggle py-3">
+            <label class="btn btn-secondary active">
+              <input
+                type="radio"
+                name="options"
+                id="desktop"
+                autocomplete="off"
+                checked
+              />
+              Desktop
+            </label>
+             <label class="btn btn-secondary">
+              <input
+                type="radio"
+                name="options"
+                id="mobile"
+                class="mobile"
+                autocomplete="off"
+              />
+              Mobile
+            </label>
+          </div>
+          <div class="pt-5">
+            <a href="../../email-templates.html" style="color:#ffffff;">&#171; Back to Gallery</a>
+          </div>
+          <!-- <div class="position-absolute" style="bottom:0%;">
+            <a href="../../" class="btn btn-primary"
+              ><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Back to
+              Templates</a
+            >
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div id="template-wrapper">
+      <div id="template-display">
+        <iframe
+          id="template"
+          src="template/"
+          frameborder="0"
+          style="height:100vh; width:100%;"
+        ></iframe>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="../../../assets/js/agency.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#mobile").click(function() {
+          $("#template").css("width", "368px");
+          $(this)
+            .parent()
+            .addClass("active");
+          $("#desktop")
+            .parent()
+            .removeClass("active");
+        });
+        $("#desktop").click(function() {
+          $("#template").css("width", "100%");
+          $(this)
+            .parent()
+            .addClass("active");
+          $("#mobile")
+            .parent()
+            .removeClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
