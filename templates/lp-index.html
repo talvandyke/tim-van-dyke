@@ -40,7 +40,109 @@
       z-index: 2 !important;
     }
     #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #c1c1c1;
+    color: #1e3a2e;
+}
+
+#portfolio .portfolio-item {
+   
+    border-radius: 30px !important;}
+    #portfolio .portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px 25px 5px 25px;
+    text-align: left;
+    background-color: #fff;
+    min-height:300px;
+   
+}
+#portfolio .portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px 25px 5px 25px;
+    text-align: left;
+    background-color: #e5e5e5;
+}
+#portfolio .portfolio-item .portfolio-cta{
+  max-width: 400px;
+    margin: 0 auto;
+    padding: 5px 25px 25px 25px;
+    text-align: center;
+    background-color: #e5e5e5;
+    border-radius: 0 0 30px 30px;
+}
+/*With Simple Caption*/
+.column#caption {
+	position: relative;
+  box-shadow: -1px -6px #46b555;
+}
+.img-size {
+  padding-top: 25px;
+    width: 349px;
+    display: block;
+    margin: 0 auto;
+}
+.column#caption .text {
+		position: absolute;		
+    top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+    opacity: 0;
+    transition: all 0.8s ease;			
+}
+.column#caption .text h1 {		
+		margin: 0;		
+		color: #ffffff;
+    font-weight:400;
+    font-size:35px;
+    text-shadow: 1px 1px 3px #001000;
+}
+.column#caption:hover .text {
+	opacity: 1;
+	
+}
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-weight: 600;
+    letter-spacing: 1px !important;
+    text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    background-color: rgba(40, 172, 79, 0.8);
+    border-radius: 30px 30px 0 0;
+}
+.btn-primary {
+    background-color: #46B555;
+    border-color: #46B555;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+ul li{
+  color:#001000;
+}
+h1, h2, h3, h4, h5, h6 {
+    
+    color: #46b555;
+}
+h5{
+  font-weight: 400;}
+.flag {        
+  width: 210px;
+    background-color: #46b555;
+    position: relative;
+    top: 0px;
+    padding-left: 20px;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    margin-bottom: -35px;
+    float: right;
+    font-size: 14px;
+    border-radius: 0px 0 0 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
     </style>
   </head>
@@ -51,10 +153,18 @@
         <a class="navbar-brand" href="../index.html"></a
         >
          <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="nav navbar-nav ml-auto text-uppercase">
+          <ul class="nav navbar-nav ml-auto ">
+            
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link js-scroll-trigger"
+                href="../templates/email-templates.html"
+                >Email Templates</a
+              >
+            </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link js-scroll-trigger" href="../templates/lp-index.html"
-                >Landing Pages</a
+                >Landing Pages Templates</a
               >
             </li>
             
@@ -62,16 +172,10 @@
               <a
                 class="nav-link js-scroll-trigger"
                 href="../templates/microsites.html"
-                >Microsites</a
+                >Microsites Templates</a
               >
             </li>
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link js-scroll-trigger"
-                href="../templates/lp-components.html"
-                >Landing Page Components</a
-              >
-            </li>
+           
           </ul>
           <div class="pb-4 pt-4 pl-5">
             <a
@@ -115,292 +219,655 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/event1/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASA - Stand alone Registration 2022/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Registration<br>ID: 011</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2023-01-03/34n88c/862671/1672738369V6iiHaLe/microsite.jpg"
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp4m/862671/1673378877W9vNDFeM/ASA_Stand_Alone_Registration.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Event Microsite</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="https://go.omnicell.com/ashp-midyear-2022" target="_blank"
-                >Live Preview</a
-              ></div>
+            <div class="flag">
+              Event Registration
             </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Standalone Registration</h5> 
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>One-page</li>
+                 <li>2-speakers with short bios</li>
+                 <li>Form for capturing Registration</li>
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/registration-anes22" target="_blank"
+              >Live Preview</a
+            ></div>
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Dinner Event/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Registration<br>ID: 012</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp4q/862671/167337887788uGYp3z/Dinner_Reception.jpg"
+            /></a>
+            <div class="flag">
+              Event Registration
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Dinner Event</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Header with video backgroun</li>
+                 <li>3-column section for resources</li>
+                 <li>Visit booth section</li>
+                 <li>Special callout for a giveaway</li>
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-it-advisory-board-invitation-only" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Event Demo Welcome Screen/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event - Demo<br>ID: 013</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp3t/862671/1673378876oCzDNCq2/Event_Demo_Welcome_Screen.jpg"
+            /></a>
+            <div class="flag">
+              Event - Demo
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Demo Welcome Screen </h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>One-page</li>
+                 <li>4-column section for booth demos</li>
+                 <li>CTA to Register Attendee</li>
+              </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/nasp-demo-welcome-screen" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Event Follow up Survey/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Follow-up<br>ID: 014</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp3f/862671/1673378876naPy3gA2/Event_Follow_up_Survey.jpg"
+            /></a>
+            <div class="flag">
+              Event Follow-up
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Follow-up Survey </h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Survey for attendee satisfaction</li>
+                 <li>2-column form</li>
+                 <li>Scaling questions (1-5)</li>
+                  
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/l/862671/2022-08-09/2q7df2" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Event - Scratch Off Reveal/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Promotional<br>ID: 015</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp34/862671/1673378875Cr3kzcEw/Event_Scratch_Off_Reveal.jpg"
+            /></a>
+            <div class="flag">
+              Promotional
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Scratch Off Reveal  </h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>One-page</li>
+                 <li>Interactive (scratch off ticket)</li>
+                 <li>Double CTA (Video + More Info)</li>
+                 <li>Video - full screen embedded video </li>
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/guess-the-big-reveal" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Event - Stand alone form with podcast/">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Follow-up<br>ID: 016</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp2j/862671/1673378874w0WreNTd/Event_Stand_alone_Form_with_Podcast.jpg"
+            /></a>
+            <div class="flag">
+              Event Follow-up
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Stand Alone Form + Podcast</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Gift card giveaway </li>
+                 <li>Podcast Player</li>
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/abm-henryford-ivpodcast" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Event Template - one page - video/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Promotional<br>ID: 017</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp47/862671/16733788773TfH7pKj/Event_One_page_with_Video.jpg"
+            /></a>
+            <div class="flag">
+              Promotional
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>One-Page with Video</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>One-page</li>
+                 <li>Embedded fullscreen video</li>
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/oracle-cerner-health-conference-2022" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a
               class="portfolio-link"
               href="/templates/landing-page/form-only/"
             >
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Stand-Alone Form <br>ID: 018</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
+              class="img-fluid img-size"
                 src="https://go.omnicell.com/l/862671/2023-01-03/34n88g/862671/1672738369Nmwb3kve/Form_only.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Form Only</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="https://go.omnicell.com/mobile-truck-tour-registration" target="_blank"
-                >Live Preview</a
-              ></div>
+            <div class="flag">
+              Stand-Alone Form
             </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Stand-Alone Form</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>One-page</li>
+                 <li>Form-only</li>
+                
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/mobile-truck-tour-registration" target="_blank"
+              >Live Preview</a
+            ></div>
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/promotional_campaign/">
+          
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/IV Mailer Demo Request/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Promotional<br>ID: 019</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2023-01-03/34n88r/862671/167273836970leasLB/promotional_campaign.jpg"
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp4j/862671/16733788770YBRVWap/IVX_Mailer_Demo_Request.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Promotional Event</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="https://go.omnicell.com/iv-roadshow" target="_blank"
-                >Live Preview</a
-              ></div>
+            <div class="flag">
+              Promotional
             </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Direct Mailer Demo Request</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>QR code experience</li>
+                 <li>Informative Product Section</li>
+                 <li>2-column upcoming event section</li>
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/ivx-station-demo-request" target="_blank"
+              >Live Preview</a
+            ></div>
           </div>
-       
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/IV Roadshow Event Microsite/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Microsite<br>ID: 020</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp44/862671/167337887650wFbcbS/IV_Roadshow_Microsite.jpg"
+            /></a>
+            <div class="flag">
+              Event Microsite
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Roadshow Event </h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Agenda breakdown</li>
+                 <li>Fullscreen embedded video</li>
+                 <li>Form for capturing RSVPs</li>
+                 <li>Image swap on Mobile (Header)</li>
+              
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/iv-roadshow" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Net Promoter Score - Invitation/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Customer Survey<br>ID: 021</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp31/862671/16733788756WON032I/Net_Promoter_Score___Invitation.jpg"
+            /></a>
+            <div class="flag">
+              Customer Survey
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Net Promoter Score - Invite </h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Invitation to complete survey</li>
+                 
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/customer-relationship-survey-invitation" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Net Promoter Score - Gift/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Customer Survey<br>ID: 022</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp2t/862671/1673378875D3K5Ar4E/Net_Promoter_Score___Gift.jpg"
+            /></a>
+            <div class="flag">
+              Customer Survey
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Net Promoter Score - Gift </h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Thank you confirmation</li>
+                 <li>Visual of giveaway offered</li>
+                 <li>Form to record best mailing address</li>
+                 
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/l/862671/2021-10-25/7xwq2" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Net Promoter Score - Thank you/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Customer Survey<br>ID: 023</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp2x/862671/1673378875lMymWdOz/Net_Promoter_Score___Thank_you.jpg"
+            /></a>
+            <div class="flag">
+              Customer Survey
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Net Promoter Score - Thank You </h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Survey Confirmation</li>
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/customer-relationship-survey-confirmation" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Onboarding Swag Template/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: On-Boarding Giveaway<br>ID: 024</p></span>
+                </div>
+              </div>
+              <img
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp2q/862671/16733788749VSTi5jN/Onboarding_Swag.jpg"
+            /></a>
+            <div class="flag">
+              Giveaway
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>On-Boarding Swag Giveaway</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Visual of Giveaway</li>
+                 <li>Form capturing mailing address</li>
+                 
+               </ul>
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/onboarding-swag" target="_blank"
+              >Live Preview</a
+            ></div>
+          </div>
+          
+          
+        
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a class="portfolio-link" href="/templates/landing-page/thank-you-dynamic">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Confirmation<br>ID: 025</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
+              class="img-fluid img-size"
                 src="https://go.omnicell.com/l/862671/2023-01-03/34n88k/862671/1672738369wGfNNOd5/Thank_you_dynamic.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Thank you (Dynamic Content)</h5>
-              <div class="pt-4"><a
+            <div class="flag">
+              Confirmation
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Thank you - Dynamic Content</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+              <ul class="text-muted" style="text-align: left;">
+                <li>Confirmation</li>
+                <li>Dynamic Content</li>
+                <li>Content-based off last page visited</li>
+                
+              </ul>
+           </div>
+           <div class="portfolio-cta  text-center"><a
                 class="btn btn-primary btn-md  "
                 role="button"
                 href="https://go.omnicell.com/omnicell-thank-you-confirmation" target="_blank"
                 >Live Preview</a
               ></div>
             </div>
-          </div>
-          <!-- <div class="col-sm-6 col-md-4 portfolio-item">
-            <a
-              class="portfolio-link"
-              href="/templates/landing-page/video/"
-            >
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Product Specific</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="#portfolio"
-                >Live Preview</a
-              ></div>
-            </div>
-          </div> -->
-          <!-- <div class="col-sm-6 col-md-4 portfolio-item">
-            <a
-              class="portfolio-link"
-              href="/templates/landing-page/webinar/"
-            >
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Multiple Products</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="#portfolio"
-                >Live Preview</a
-              ></div>
-            </div>
-          </div>-->
+          
+          
        
        
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a class="portfolio-link" href="/templates/landing-page/webinar">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Promotional<br>ID: 026</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
+              class="img-fluid img-size"
                 src="https://go.omnicell.com/l/862671/2023-01-03/34n89v/862671/1672738885hzFcosit/webinar_one_speaker.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Webinar (One Speaker)</h5>
-              <div class="pt-4"><a
+            <div class="flag">
+              Event Promotional
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Webinar - 1 Speaker</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+              <ul class="text-muted" style="text-align: left;">
+                <li>One speaker layout with bio</li>
+                <li>Live virtual event</li>
+                <li>Form for capturing RSVPs</li>
+                
+              </ul>
+           </div>
+           <div class="portfolio-cta  text-center"><a
                 class="btn btn-primary btn-md  "
                 role="button"
                 href="https://go.omnicell.com/webinar-omnicell-live-transforming-pharmacy-technology" target="_blank"
                 >Live Preview</a
               ></div>
             </div>
-          </div>
-          <!-- <div class="col-sm-6 col-md-4 portfolio-item">
-            <a
-              class="portfolio-link"
-              href="/templates/landing-page/microsite/"
-            >
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Webinar (Two Speaker)</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="#portfolio"
-                >Live Preview</a
-              ></div>
-            </div>
-          </div> -->
-          <div class="col-sm-6 col-md-4 portfolio-item">
+         
+         
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a class="portfolio-link" href="/templates/landing-page/webinar-5-speaker/">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Promotional<br>ID: 027</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
+              class="img-fluid img-size"
                 src="https://go.omnicell.com/l/862671/2023-01-03/34n88n/862671/1672738369dTUAmls6/webinar_5_speaker.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Webinar (5 Speakers)</h5>
-              <div class="pt-4"><a
+            <div class="flag">
+              Event Promotional
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Webinar - 5 Speakers</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+              <ul class="text-muted" style="text-align: left;">
+                <li>Five speaker layout with bio</li>
+                <li>Live virtual event</li>
+                <li>Form for capturing RSVPs</li>
+              </ul>
+           </div>
+           <div class="portfolio-cta  text-center"><a
                 class="btn btn-primary btn-md  "
                 role="button"
                 href="https://go.omnicell.com/webinar-omnicell-live-caregiver-crisis-empowering-clinicians" target="_blank"
                 >Live Preview</a
               ></div>
             </div>
-          </div>
-        
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/giveaway/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2023-01-03/34n888/862671/1672738369Lnbt7z4B/give_away.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Giveaway Template</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="https://go.omnicell.com/l/862671/2021-10-25/7xwq2" target="_blank"
-                >Live Preview</a
-              ></div>
-            </div>
-          </div>
-          <!-- <div class="col-sm-6 col-md-4 portfolio-item">
-            <a
-              class="portfolio-link"
-              href="/templates/landing-page/microsite/"
-            >
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Thank you (Addt'l Content)</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="#portfolio"
-                >Live Preview</a
-              ></div>
-            </div>
-          </div> -->
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/omcl-live-template/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2023-01-03/34n89r/862671/1672738885YNrFmjGK/Webinar_live.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>OMCL Live Template</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="#portfolio"
-                >Live Preview</a
-              ></div>
-            </div>
-          </div>
-      
-          <div class="col-sm-6 col-md-4 portfolio-item">
+         <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a class="portfolio-link" href="/templates/landing-page/omcl-on-demand/">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Promotional<br>ID: 028</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
+              class="img-fluid img-size"
                 src="https://go.omnicell.com/l/862671/2023-01-03/34n89y/862671/1672738885c2Q40e20/webinar_on_demand.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>OMCL Live On-Demand</h5>
-              <div class="pt-4"><a
+            <div class="flag">
+              Event Follow-up
+            </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
+              <img
+                class="img-fluid"
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Webinar On-Demand</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+              <ul class="text-muted" style="text-align: left;">
+                <li>One speaker layout with bio</li>
+                <li>On-Demand gated event</li>
+                
+              </ul>
+           </div>
+           <div class="portfolio-cta  text-center"><a
                 class="btn btn-primary btn-md  "
                 role="button"
                 href="https://go.omnicell.com/webinar-replay-omnicell-live-transforming-pharmacy-technology" target="_blank"
@@ -408,52 +875,43 @@
               ></div>
             </div>
           </div>
-          <!-- <div class="col-sm-6 col-md-4 portfolio-item">
-            <a
-              class="portfolio-link"
-              href="/templates/landing-page/microsite/"
-            >
+         
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/landing-page/omcl-on-demand/">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Category Name<br>ID: 029</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+              class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-03/34n89y/862671/1672738885c2Q40e20/webinar_on_demand.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Components Landing Page</h5>
-              <div class="pt-4"><a
-                class="btn btn-primary btn-md  "
-                role="button"
-                href="#portfolio"
-                >Live Preview</a
-              ></div>
+            <div class="flag">
+              Category Name
             </div>
-          </div> -->
-          <!-- <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/microsite/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
+            <div class="portfolio-caption pt-5" style="margin-top:-35px;">
               <img
                 class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Thank you Template</h5>
-              <div class="pt-4"><a
+                src="https://go.omnicell.com/l/862671/2023-01-13/34py6m/862671/1673601018ZFPh4gfk/pardot_logo.png" width="95" style="padding-bottom:15px; padding-right:10px;"
+            />
+              <h5>Template Name</h5>
+              <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+              <ul class="text-muted" style="text-align: left;">
+                <li>Lorem ipsum dolor sit </li>
+                <li>Amet consectetur adipisicing elit</li>
+                <li>Ipsum dolor sit</li>
+              </ul>
+           </div>
+           <div class="portfolio-cta  text-center"><a
                 class="btn btn-primary btn-md  "
                 role="button"
-                href="#portfolio"
+                href="https://go.omnicell.com/webinar-replay-omnicell-live-transforming-pharmacy-technology" target="_blank"
                 >Live Preview</a
               ></div>
             </div>
-          </div> -->
-        </div>
+          </div>
 
         
         

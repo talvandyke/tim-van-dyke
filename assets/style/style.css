@@ -199,8 +199,9 @@
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-weight: bold;
+  font-weight: 300;
   letter-spacing: 2px;
+  text-transform: none;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link:hover {

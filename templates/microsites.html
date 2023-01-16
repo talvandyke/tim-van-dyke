@@ -40,7 +40,110 @@
       z-index: 2 !important;
     }
     #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #c1c1c1;
+    color: #1e3a2e;
+}
+
+#portfolio .portfolio-item {
+   
+    border-radius: 30px !important;}
+    #portfolio .portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px 25px 5px 25px;
+    text-align: left;
+    background-color: #fff;
+   
+}
+#portfolio .portfolio-item .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px 25px 5px 25px;
+    text-align: left;
+    background-color: #e5e5e5;
+    min-height: 275px;
+}
+#portfolio .portfolio-item .portfolio-cta{
+  max-width: 400px;
+    margin: 0 auto;
+    padding: 5px 25px 25px 25px;
+    text-align: center;
+    background-color: #e5e5e5;
+    border-radius: 0 0 30px 30px;
+}
+/*With Simple Caption*/
+.column#caption {
+	position: relative;
+  box-shadow: -1px -6px #46b555;
+}
+.img-size {
+  padding-top: 25px;
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+.column#caption .text {
+		position: absolute;		
+    top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+    opacity: 0;
+    transition: all 0.8s ease;	
+    width:100%;		
+}
+.column#caption .text h1 {		
+		margin: 0;		
+		color: #ffffff;
+    font-weight:400;
+    font-size:35px;
+    text-shadow: 1px 1px 3px #001000;
+}
+.column#caption:hover .text {
+	opacity: 1;
+	
+}
+#mainNav .navbar-nav .nav-item .nav-link {
+    font-weight: 600;
+    letter-spacing: 1px !important;
+    text-transform: none;
+}
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    background-color: rgba(40, 172, 79, 0.8);
+    border-radius: 30px 30px 0 0;
+}
+.btn-primary {
+    background-color: #46B555;
+    border-color: #46B555;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+ul li{
+  color:#001000;
+}
+h1, h2, h3, h4, h5, h6 {
+    
+    color: #46b555;
+}
+h5{
+  font-weight: 400;}
+.flag {        
+  width: 255px;
+    background-color: #46b555;
+    position: relative;
+    top: 0px;
+    padding-left: 20px;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    margin-bottom: -35px;
+    float: right;
+    font-size: 14px;
+    border-radius: 0px 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
     </style>
   </head>
@@ -51,10 +154,18 @@
         <a class="navbar-brand" href="../index.html"></a
         >
          <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="nav navbar-nav ml-auto text-uppercase">
+          <ul class="nav navbar-nav ml-auto ">
+            
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link js-scroll-trigger"
+                href="../templates/email-templates.html"
+                >Email Templates</a
+              >
+            </li>
             <li class="nav-item" role="presentation">
               <a class="nav-link js-scroll-trigger" href="../templates/lp-index.html"
-                >Landing Pages</a
+                >Landing Pages Templates</a
               >
             </li>
             
@@ -62,16 +173,10 @@
               <a
                 class="nav-link js-scroll-trigger"
                 href="../templates/microsites.html"
-                >Microsites</a
+                >Microsites Templates</a
               >
             </li>
-            <li class="nav-item" role="presentation">
-              <a
-                class="nav-link js-scroll-trigger"
-                href="../templates/lp-components.html"
-                >Landing Page Components</a
-              >
-            </li>
+           
           </ul>
           <div class="pb-4 pt-4 pl-5">
             <a
@@ -107,911 +212,1071 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class=" section-heading pt-5">
-              Microsites Templates
+              Microsite Templates
             </h2>
             <h3 class="section-subheading text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+              When it comes to picking the right layout for your event, you need to think of what experience you want for your customer. Our library has a large selection of pre-developed template and components or you can select a la carte and pick the specific components to build your own template.
             </h3>
           </div>
         </div>
         <div class="row">
-          
-          
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/journey/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            
+            <a class="portfolio-link" href="/templates/microsite/340B Coalition - Run of Show/index.html">
+              <div class="portfolio-hover" >
+                <div class="portfolio-hover-content">
+                  <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Run of Show<br>ID: 030</p></span>
+                </div>
+              </div>
+             
+              <img
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp3j/862671/1673378876HGJu0vVg/340B_Summer_Colation_Microsite.jpg" 
+            /></a>
+            <div class="flag">
+              Run of Show
+            </div>
+            <div class="portfolio-caption pt-5">
+              <h5>340B Coalition - Run of Show </h5>
+               <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Agenda breakdown</li>
+                 <li>3-speakers with titles</li>
+                 <li>Form for capturing demos</li>
+                 <li>4-column resource section</li>
+                 <li>Special callout for a giveaway</li>
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/l/862671/2022-06-21/2c5svn" target="_blank"
+              >Live Preview</a
+            ></div>
+            
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ABM Personalized Microsite/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: ABM Marketing<br>ID: 031</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp4b/862671/1673378877z6WpybKp/ABM_Personalized_Microsite.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASHP Midyear 2022</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              ABM Marketing
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ABM Microsite Dynamic Content</h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Dynamic Content + Personalization</li>
+                 <li>Click icons with modal</li>
+                 <li>Serve content based on Account</li>
+                 <li>Testimonial Slider</li>
+                 <li>Kaon Virtual Product Experience</li>
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/autonomous-pharmacy-journey" target="_blank"
+              >Live Preview</a
+            ></div>
+            
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASA Run of Show 2022/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Run of Show<br>ID: 032</p></span>
+                </div>
+              </div>
+              <img
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp4t/862671/1673378877WCN2IHyB/ASA_2022_Microsite.jpg"
+            /></a>
+            <div class="flag">
+              Run of Show
+            </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ASA 2022 Run of Show</h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Agenda breakdown</li>
+                 <li>2-speakers with short bios</li>
+                 <li>Form for capturing demos</li>
+                 <li>3-column resource section</li><br>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/registration-anes22" target="_blank"
+              >Live Preview</a
+            ></div>
+            
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASHP-2022/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category:  Event Microsite<br>ID: 033</p></span>
+                </div>
+              </div>
+              <img
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp6m/862671/1673378880FzBEZe13/ASHP_microsite_2022.jpg"
+            /></a>
+            <div class="flag">
+              Event Microsite
+            </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ASHP Midyear 2022<br><br></h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Special image over hover</li>
+                 <li>Anchored images to sections</li>
+                 <li>Slideshow</li>
+                 <li>Jiralax (components in motion)</li>
+                 <li>Unique Mobile Experience</li>
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/ashp-midyear-2022" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
         
           
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a
               class="portfolio-link"
-              href="/templates/landing-page/video/"
+              href="/templates/microsite/ASHP-2022-Promotional Theater/index.html"
             >
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Promotional<br>ID: 034</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp6f/862671/16733837794DJ0SPkW/ASHP_2022___Promotional_Theater___Public.jpg"
             /></a>
-            <div class="portfolio-caption">
+            <div class="flag">
+              Promotional
+            </div>
+            <div class="portfolio-caption pt-5">
               <h5>ASHP Midyear 2022 <br> Promotional Theater</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Breadcrumb to Run of Show</li>
+                 <li>Form for capturing Registrations</li>
+                 
+               </ul>
+                 
+              
+              
             </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/ashp-midyear-promo-theater" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a
               class="portfolio-link"
-              href="/templates/landing-page/webinar/"
+              href="/templates/microsite/ASHP-2022-Promotional Theater-public/"
             >
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Promotional<br>ID: 035</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp6f/862671/16733788790pifE4cA/ASHP_2022___Promotional_Theater___Public.jpg"
             /></a>
-            <div class="portfolio-caption">
+            <div class="flag">
+              Promotional
+            </div>
+            <div class="portfolio-caption pt-5">
               <h5>ASHP Midyear 2022 <br> Promotional Theather (Public)</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>One-page</li>
+                 <li>Form to capture registrants</li>
+                 <li>Visit booth section</li>
+                 
+               </ul>
+                 
+              
+              
             </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/ashp-midyear-promotional-theater" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a
               class="portfolio-link"
-              href="/templates/landing-page/webinar/"
+              href="/templates/microsite/ASHP-2022-visit booth/index.html"
             >
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Microsite<br>ID: 036</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp67/862671/1673378879WWeCU4hC/ASHP_2022___Visit_Booth.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASHP Midyear 2022 <br> Visit Booth</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Event Microsite
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ASHP Midyear 2022 <br> Visit Booth</h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>One-page</li>
+                 <li>CTA - View Solutions</li>
+                 <li>Jiralax (components in motion)</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/ashp-midyear-2022-stop-by-booth" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
           
        
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/thank-you/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASHP-2022-customer reception/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Microsite<br>ID: 037</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp64/862671/1673378879otGHLoUw/ASHP_2022___Customer_Reception.jpg"
             /></a>
-            <div class="portfolio-caption">
+            <div class="flag">
+              Event Microsite
+            </div>
+            <div class="portfolio-caption pt-5">
               <h5>ASHP Midyear 2022 <br> Customer Reception</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Four quadrant image hover</li>
+                 <li>CTA to registration</li>
+                
+               </ul>
+                 
+              
+              
             </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/ashp-midyear-customer-reception" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a
               class="portfolio-link"
-              href="/templates/landing-page/microsite/"
+              href="/templates/microsite/ASHP-2022-specialty reception/"
             >
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Microsite<br>ID: 038</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp61/862671/1673378879UpIUzw0a/ASHP_2022___Specialty_Cocktail.jpg"
             /></a>
-            <div class="portfolio-caption">
+            <div class="flag">
+              Event Microsite
+            </div>
+            <div class="portfolio-caption pt-5">
               <h5>ASHP Midyear 2022 <br> Specialty Cocktail Reception</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                <li>Jiralax (components in motion)</li>
+                 <li>Custom form for two events</li>
+                 <li>Image swap on Mobile (Header)</li>
+               </ul>
+                 
+              
+              
             </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/ashp-specialty-cocktail-reception" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/microsite/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASHP-2022-registration confirmation/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Dynamic Confirmation<br>ID: 039</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp5x/862671/1673378879qkuuClns/ASHP_2022___Registration_Confirmation.jpg"
             /></a>
-            <div class="portfolio-caption">
+            <div class="flag">
+              Dynamic Confirmation
+            </div>
+            <div class="portfolio-caption pt-5">
               <h5>ASHP Midyear 2022 <br> Registration Confirmation</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Dynamic Content for two events</li>
+                 <li>Event details and reminders</li>
+                 <li>Jiralax (components in motion)</li>
+
+                 
+               </ul>
+                 
+              
+              
             </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/ashp-midyear-registration-confirmation" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a
               class="portfolio-link"
-              href="https://go.omnicell.com/india-career-opportunities"
+              href="/templates/microsite/ASHP-2021/index.html"
             >
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Run of Show<br>ID: 040</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp5t/862671/1673378879I0kmd5r7/ASHP_2021___microsite.jpg"
             /></a>
-            <div class="portfolio-caption">
+            <div class="flag">
+              Run of Show
+            </div>
+            <div class="portfolio-caption pt-5">
               <h5>ASHP Midyear 2021<br><br></h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                <li>Header with video background</li>
+                <li>Agenda breakdown</li>
+                 <li>2-column event section</li>
+                 <li>Visit booth section</li>
+                
+               </ul>
+                 
+              
+              
             </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-ashp-midyear-2021" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/microsite/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASHP-2021 promotional theater/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Promotional<br>ID: 041</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp5m/862671/1673378878Rkd8zESu/ASHP_2021___Promotional_Theater.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASHP Midyear 2021<br>Promotional Theater</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Promotional
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ASHP Midyear 2021<br>Promotional Theater</h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                <li>Breadcrumb to Run of Show</li>
+                 <li>3 speakers with bios</li>
+                 <li>Form to watch session replay</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-ashp-promotional-theater" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a
               class="portfolio-link"
-              href="/templates/landing-page/microsite/"
+              href="/templates/microsite/ASHP-2021 keynote session/index.html"
             >
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Microsite<br>ID: 042</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp5q/862671/1673378878iVWa85ZF/ASHP_2021___Keynote_Session.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASHP Midyear 2021<br>Keynote Session</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Event Microsite
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ASHP Midyear 2021<br>Keynote Session</h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                <li>Breadcrumb to Run of Show</li>
+                 <li>4 speakers with bios</li>
+                 <li>Form for capturing registrants</li>
+                
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-ashp-keynote" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/microsite/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASHP-2021 promotional theater on-demand/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Follow-up<br>ID: 043</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp5j/862671/16733788789J4D7hoj/ASHP_2021___Promo_Theater_On_demand.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASHP Midyear 2021<br> Promo Theater (On-demand) </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Event Follow-up
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ASHP Midyear 2021<br> Promo Theater On-Demand </h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                <li>Breadcrumb to Run of Show</li>
+                 <li>3 speakers with bios</li>
+                 <li>Form for capturing replays</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/promotional-theater-replay-patient-care-labor-changes" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
           
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/microsite/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASHP-2021 promotional theater thank you/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Follow-up<br>ID: 044</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp57/862671/1673378878Ak8hRd6R/ASHP_2021___Promo_Theater___Thank_You.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASHP Midyear 2021<br> Promo Theater Thank You </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Event Follow-up
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ASHP Midyear 2021<br> Promo Theater Thank You </h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Confirmation</li>
+                 <li>3 speakers with bios</li>
+                 <li>Event Details</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/l/862671/2022-06-21/2c5svn" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a
               class="portfolio-link"
-              href="/templates/landing-page/microsite/"
+              href="/templates/microsite/ASHP-2020 promotional theater1/index.html"
             >
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Promotional<br>ID: 045</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp5f/862671/1673378878iqzyIufm/ASHP_2020___Promo_Theater_1.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASHP Midyear 2020<br> Promotional Theater 1 </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Promotional
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>ASHP Midyear 2020<br> Promotional Theater </h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Event Details</li>
+                 <li>2 speakers with bios</li>
+                 <li>Form for capturing registrants</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-ashp-promotional-theater-thank-you" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/microsite/">
+         
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/ASHP-2020 promotional theater-on-demand/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Follow-up<br>ID: 046</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp5b/862671/1673378878l54aDjNW/ASHP_2020___Promotional_Theater_On_Demand.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASHP Midyear 2020<br> Promotional Theater 2 </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Event Follow-up
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/landing-page/microsite/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
+            <div class="portfolio-caption pt-5">
               <h5>ASHP Midyear 2020<br> Promotional Theater On-Demand </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                <li>Event Details</li>
+                <li>2 speakers with bios</li>
+                <li>Form for capturing replays</li>
+               </ul>
+                 
+              
+              
             </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/webinar-replay-ashp-midyear-fully-autonomous-pharmacy" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/india/index.html">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/DemoDay/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Internal Microsite<br>ID: 047</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp2m/862671/1673378874ZMZZEB1t/Demo_Day_Microsite_Internal.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>India Career Microsite</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Internal Demo Microsite
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>Demo Day - Internal Microsite<br><br></h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Step-by-step ordering</li>
+                 <li>Compact Form with 3-section accordion functionality. </li>
+                 <li>3-column team section</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/demo-day-shop" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Event - Gated Keynote Video Registration/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Follow-up<br>ID: 048</p></span>
+                </div>
+              </div>
+              <img
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp3b/862671/1673378875beqCiwkF/Event_Gated_Keynote_Video_Registration.jpg"
+            /></a>
+            <div class="flag">
+              Event Follow-up
+            </div>
+            <div class="portfolio-caption pt-5">
+              <h5>Gated Keynote Video Registration </h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                <li>Breadcrumb to Run of Show</li>
+                 <li>Form for capturing registrants</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-ashp-keynote" target="_blank"
+              >Live Preview</a
+            ></div>
+            
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Event - Gated Keynote Video/index.html">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Follow-up<br>ID: 049</p></span>
+                </div>
+              </div>
+              <img
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp37/862671/1673378875KPYpSRuU/Event_Gated_Keynote_Video.jpg"
+            /></a>
+            <div class="flag">
+              Event Follow-up
+            </div>
+            <div class="portfolio-caption pt-5">
+              <h5>Gated Keynote Video  </h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>One-page</li>
+                 <li>Embedded video - full screen</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-ashp-keynote-video" target="_blank"
+              >Live Preview</a
+            ></div>
+            
+          </div>
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
             <a class="portfolio-link" href="/templates/microsite/himss-2022/">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Run of Show<br>ID: 050</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp4x/862671/1673378877DzDZ7czK/HIMSS_2022.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Omnicell Branding Template</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Run of Show
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>340B Competitive Conversion</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
+            <div class="portfolio-caption pt-5">
               <h5>HIMSS 2022</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Agenda breakdown</li>
+                 <li>3-speakers with short bios</li>
+                 <li>Form for capturing demos</li>
+                 <li>4-column resource section</li>
+                
+               </ul>
+                 
+              
+              
             </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/himss22" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Event - Gated Registration/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Microsite<br>ID: 051</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp3m/862671/1673378876UTeLzUR1/Event___Gated_Registration.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Dinner Event Template</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Event Microsite
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>Illuminate LIVE 2021 <br>Gated Registration </h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Page Navigation</li>
+                 <li>Full agenda with times</li>
+                 <li>Collapsable agenda descriptions</li>
+                 <li>Gated form for specific list</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-illuminate-live-ARCHIVE" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
+        
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Illuminate 2022 In-person Microsite - March/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Microsite<br>ID: 052</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp3q/862671/1673378876ge3dMK80/Illuminate_LIVE___March_2021.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASA 2022 Run of Show</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Event Microsite
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>Illuminate LIVE In-Person <br>Microsite - March 2022  </h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Full agenda breakdown</li>
+                 <li>3-column speakers section</li>
+                 <li>Modal for speaker biographys</li>
+                 <li>Collapsable agenda descriptions</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/illuminate-live-ARCHIVE" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
+         
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Illuminate 2022 In-person Microsite/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Event Microsite<br>ID: 053</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp41/862671/1673378876IOwSO0mD/Illuminate_In_person_LIVE_2022.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ASA 2022 Run of Show (Standalone Registration)</h5> 
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Event Microsite
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>Illuminate LIVE In-Person Microsite - October 2022</h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Event sizzle video embeded</li>
+                 <li>Special image hover effect</li>
+                 <li>4-column speaker section</li>
+                 <li>Hover effect for detailed info</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/illuminate-live-october" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
+          
+          
+          
+          
+          
+          
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/career/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Informative Microsite<br>ID: 054</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp54/862671/1673378878Ndo25W9s/India_Career_Microsite.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>IV Mailer<br>Demo Request</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Informative Microsite
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>India Career Microsite<br><br></h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Zig-zag content sections</li>
+                 <li>3-column icon section</li>
+                 <li>Featured testimony section</li>
+                 <li>Accordion section for content</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/india-career-opportunities" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
+          
+          
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/NASP Microsite/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Run of Show<br>ID: 055</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp3x/862671/1673378876w3yYWZUi/NASP_Microsite.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Omnicell Solutions<br>Informative & Demo Microsite</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Run of Show 
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>NASP Microsite<br><br></h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Agenda breakdown</li>
+                 <li>3 speakers with titles</li>
+                 <li>Visit booth section</li>
+                 <li>4-column resource section</li>
+                
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/nasp" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Omnicell Branding/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Informative Microsite<br>ID: 056</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp51/862671/1673378878SLK4Ia09/Omnicell_General_Branding.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>ABM Personalized Microsite<br>(Dynamic Content)</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Informative Microsite
             </div>
+            <div class="portfolio-caption pt-5">
+              <h5>Omnicell Branding Template<br><br></h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Header with video background</li>
+                 <li>Top of page form</li>
+                 <li>Testimonial slider</li>
+                 <li>Icon solutions section 3x3</li>
+                 
+               </ul>
+                 
+              
+              
+            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/omnicell-brand" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
+          <div class=" column col-sm-6 col-md-4 portfolio-item" id="caption">
+            <a class="portfolio-link" href="/templates/microsite/Solutions Informative - Demo/index.html">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                <span class="text"><h1>Preview</h1>
+                  <p style="line-height: 24px;font-size:14px;">Category: Informative Microsite<br>ID: 057</p></span>
                 </div>
               </div>
               <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
+                class="img-fluid img-size"
+                src="https://go.omnicell.com/l/862671/2023-01-10/34pp4f/862671/1673378877H8rqvSOU/Omnicell_Informative_Solutions_Microsite.jpg"
             /></a>
-            <div class="portfolio-caption">
-              <h5>Event Template<br>One-Page with Video</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="flag">
+              Informative Microsite
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>IV Roadshow<br>Event Microsite</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
+            <div class="portfolio-caption pt-5">
+              <h5>Omnicell Solutions Informative Microsite with Video Carousel</h5>
+             <p class=" pt-3 pb-2" style="line-height: 18px; text-align: left;font-size:18px;">Features:</p> 
+               <ul class="text-muted" style="text-align: left;">
+                 <li>Full-page background with header</li>
+                 <li>3x3 column solution hover effect</li>
+                 <li>Video Carousel with navigation</li>
+                 <li>Customer Success Section</li>
+               </ul>
+                 
+              
+              
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Illuminate LIVE 2022<br>In-Person Microsite</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Illuminate LIVE 2022<br>In-Person Microsite (New Layout)</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Event Template One-Page<br> with Video + Related Content<br>(Illuminate LIVE LinkedIn inMail)</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>NASP Microsite</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Event Demo Welcome Screen </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Event - Gated Registration </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>340B Coalition - Run of Show </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Event Follow-up Survey </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Event - Gated Keynote Video Registration </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Event - Gated Keynote (Video)  </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Illuminate LIVE In-Person 2022 (March)  </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Event - Scratch Off Reveal Component </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Net Promoter Score - Invitation </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Net Promoter Score - Gift </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Net Promoter Score - Thank You </h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>On-Boarding Swag Template</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Video Template - Password Protected</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Video Header Microsite</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Event - Stand Alone Form & Podcast</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 portfolio-item">
-            <a class="portfolio-link" href="/templates/microsite/himss-2022/">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img
-                class="img-fluid"
-                src="https://go.omnicell.com/l/862671/2021-11-23/979pd/862671/1637675204pwUNzeFR/landing_page_thumbnail.jpg"
-            /></a>
-            <div class="portfolio-caption">
-              <h5>Demo Day - Internal Microsite</h5>
-              <!-- <p class="text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
-              </p> -->
-            </div>
+            <div class="portfolio-cta  text-center"><a
+              class="btn btn-primary btn-md  "
+              role="button"
+              href="https://go.omnicell.com/autonomous-pharmacy-path-to-intelligent-infrastructure" target="_blank"
+              >Live Preview</a
+            ></div>
+            
           </div>
         </div>
-
-
-
-
-       
-
-
-
-
-
-    
-       
-       
-       
-       
-       
-       
-       
-       
-        
-        
-      </div>
+          
+</div>
     </section>
 
     <footer>
