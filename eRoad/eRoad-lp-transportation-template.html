@@ -300,10 +300,10 @@
             border-left: none;
             border-right: none;
             padding: 1px;
-            background-position: top center !important;
+            background-position: bottom center !important;
             background-size: contain !important;
             padding-bottom: 0rem;
-            min-height: 130px;
+            min-height: 122px;
         }
 
         .video-container {
@@ -313,6 +313,17 @@
             height: 70%;
             width: 100%;
             overflow: hidden;
+        }
+      
+
+        .videoheadline {
+            color: #ffffff;
+            font-size: 64px !important;
+            line-height: 70px;
+            font-weight: bold !important;
+            position: relative;
+            top: -65px;
+
         }
 
         video {
@@ -377,27 +388,7 @@
             background-color: #06a2dd;
         }
 
-        .header-container {
-            width: 100%;
-            height: 0px;
-            border-left: none;
-            border-right: none;
-            padding: 1px;
-            background-position: center;
-            background-size: cover;
-            padding-bottom: 0rem;
-            min-height: 130px;
-        }
-
-        .videoheadline {
-            color: #ffffff;
-            font-size: 64px !important;
-            line-height: 70px;
-            font-weight: bold !important;
-            position: relative;
-            top: -65px;
-
-        }
+       
 
         @media (min-width: 1200px) {
             .container {
@@ -937,7 +928,11 @@
 }
 
 
-
+.btn-primary:hover {
+    color: #fff;
+    background-color: #D51F1B !important;
+    border-color: #D51F1B !important;
+}
 
 
     </style>
@@ -962,10 +957,10 @@
         <div class="container-fluid" style="padding-top:0px !important; padding-bottom:0px !important;">
 
             <div class="row ">
-                <div class="col-11 pt-3 pt-xl-4 mb-xl-4 mb-sm-3  ">
+                <div class="col-11 pt-3 pt-xl-4 mb-xl-4 mb-sm-3 pl-4 ">
                     <a href="#">
                         <img alt="" class="img-fluid mobileLogo" pardot-region="Logo"
-                            src="https://storage.pardot.com/105232/62153/EROAD_Logo_Wordmark_220px.png" width="200" />
+                            src="https://www.eroad.com/wp-content/themes/eroad-divi/images/logo-wordmark-w.png" width="200" />
                     </a>
 
                 </div>
@@ -975,24 +970,25 @@
             </div>
         </div>
     </section>
-    <section class="pt-0 pb-0">
+    <section class="pt-0 pb-0 pl-0">
         <div class="container-fluid">
 
             <div class="row justify-content-center">
-                <div class="col-10 pt-3 pt-xl-4 mb-xl-4 mb-sm-3  ">
+                <div class="col-md-12 pt-3 pt-xl-4 mb-xl-4 mb-sm-3  ">
 
                     <div pardot-region="Left Column - Content 1" pardot-region-type="pardot"
-                        class="col-sm-12 col-md-11 pt-5">
-                        <h4 class="videoheadline mobilePad text-center" style="font-weight: 300;"> Experience a New Era
+                        class="col-sm-12 col-md-12 pt-5">
+                        <h4 class="videoheadline mobilePad " style="font-weight: 300;"> Experience a New Era
                             of Fleet Management Excellence </h4>
 
-                        <p class="text-white text-center hide  pr-xl-5 pl-xl-5 col-sm-12  "
-                            style="position: relative; top:-30px;letter-spacing:1px;font-size:21px;">Go beyond the
-                            basics. Unlock fleet-wide performance insights to drive safety, compliance, and lower
+                        <p class="text-white  hide  pr-xl-5  col-sm-12 pl-0 "
+                            style="position: relative; top:-30px;letter-spacing:1px;font-size:21px;line-height:27px">Go beyond the
+                            basics. Unlock fleet-wide performance insights to <br>drive safety, compliance, and lower
                             emissions
                         </p>
-                        <p class="col-12 col-sm-12 text-center font-light pt-3"><a href="#"
-                                class="btn btn-xl btn-primary">Learn More</a></p>
+                        <div pardot-region="Call to Action - CTA">
+                            <a href="https://www.eroad.com/integrations" class="btn btn-xl btn-primary" style="z-index: 999;">Learn more </a>
+                        </div>
                     </div>
                 </div>
 
@@ -1004,7 +1000,7 @@
     <div class="header-container video">
         <div class="video-container">
             <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="true">
-                <source src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/video/Sunrise%20to%20sunset_TLP%20video%201_v2.mp4"
+                <source src="https://www.eroad.com/wp-content/uploads/2023/08/Sunrise-to-sunset_TLP-video-1_v2.mp4"
                     type="video/mp4">
                 <!--<source src = "#" type = "video/webm">	
             <source src = "#" type = "video/ogg">-->
@@ -1015,156 +1011,25 @@
         </div>
 
 
-    </div>
-    <header>
-        <div class="container h-100 ">
-            <div class="d-flex h-100 text-left ">
-                <div class="row justify-content-center">
-                    <div class="col-10 pt-3 pt-xl-4 mb-xl-4 mb-sm-3 pl-4" pardot-region="Header - logo">
-                        <a href="###">
-                            <img alt="" class="img-fluid mobileLogo pb-3"
-                                src="https://storage.pardot.com/105232/62153/EROAD_Logo_Wordmark_220px.png"
-                                width="200" />
-                        </a>
-
-                    </div>
-                    <div class="col-11 pt-3 pt-xl-4 mb-xl-4 mb-sm-3  pt-5">
-
-                        <div pardot-region="Left Column - Content 1" pardot-region-type="pardot"
-                            class="col-sm-12 col-md-11 pt-5">
-                            <h4 class="videoheadline mobilePad text-center" style="font-weight: 300;"> Experience a New
-                                Era
-                                of Fleet Management Excellence </h4>
-
-                            <p class="text-white text-center hide  pr-xl-5 pl-xl-5 col-sm-12  "
-                                style="position: relative; top:-30px;letter-spacing:1px;font-size:21px;">Go beyond the
-                                basics. Unlock fleet-wide performance <br>insights to drive safety, compliance, and
-                                lower emissions
-                            </p>
-                            <p class="col-12 col-sm-12 text-center font-light"><a href="#"
-                                    class="btn btn-xl btn-primary">Learn More</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <code pardot-region="Update Header - Background Image">
-
-              <style>
-                   @media only screen and (max-width: 512px){
+    </div>  
   
-  header {
-     background-image: none important;
-               
-               background-repeat: no-repeat;
-               background-position: bottom right;
-                min-height: 0px !important; 
-               background-color: #46b555 ;
-               padding-bottom:2rem !important ; 
-               background-size: cover !important;
-               
-  }
-  .h1, h1 {    font-size: 2rem !important;
-      line-height: 2.75rem !important;
-      position: relative;
-      top: 18px;
-  }
-  }
-  
-  @media only screen and (max-width: 768px){
-  
-  header {
-     background-image: url("https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/transportation-header.png?raw=true");
-     background-repeat: no-repeat;
-               background-position: bottom center;
-                min-height: 0px !important; 
-               background-color: #001000 ;
-               padding-bottom:5rem;
-               background-size: cover !important;
-               
-  }
-  .h1, h1 {
-      font-size: 2.25rem !important;
-      line-height: 2.25rem !important;
-  }
-  
-  }
-           
-           
-  header {
-      background-image: url("https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/transportation-header.png?raw=true");
-      background-repeat: no-repeat;
-      background-position: bottom center;
-      min-height: 650px;
-      background-color: #001000;
-      padding-bottom: 3rem;
-      background-size: cover;}
-  
-  /* Landscape tablets and medium desktops */
-  @media (min-width: 992px) and (max-width: 1199px) {
-  
-        header {
-          background-image: none;
-      }
-  
-  }
-  
-  /* Portrait tablets and small desktops */
-  @media (min-width: 768px) and (max-width: 991px) {
-  
-            header {
-          background-image: none;
-      }
-  
-  }
-  
-  /* Portrait phones and smaller */
-  @media (max-width: 480px) {
-  
-  header {
-  background-image: none !important;
-  }
-  #small-banner{
-        background-image:  none;
-  
-  }}
-  /* Landscape phones and portrait tablets */
-  @media (max-width: 767px) {
-  
-            header {
-          background-image: none !important;
-      }
-      .collaborate-fix{
-        margin-left:0px !important;
-        margin-right:0px !important;
-      }
-  .mobile-fix{
-    position: relative;
-    top:0px;
-    left:0px;
-  }
-  }
-              </style>
-              
-              </code>
-    </header>
 
     <main style="position:relative;top:-123px;margin-bottom: -125px !important;">
 
 
         <section class="bg-white pt-5  ">
-            <div class="container-fluid  ">
+            <div class="container ">
 
-                <div class="row justify-content-center ">
+                <div class="row justify-content-center text-center">
 
-                    <div class="col-sm-12 col-xl-8 mt-xl-0  pb-3 pt-1 text-center">
-                        <div class="row  ">
-                            <h2 pardot-region="Section 1 - Title" class=" pb-4  font-light "
-                                style="font-weight:bold; color:#EE3124">Fleet management doesn't have to be problematic.<br>
-                                It should be effortless, connected, and future-ready for your heavy-duty operation.</h2>
+                    <div class="col-sm-12 col-xl-10 mt-xl-0   pt-1 text-center">
+                        
+                            <h2 pardot-region="Section 1 - Title" class="pb-3"
+                                style="font-size:2.5rem;font-weight:bold; color:#EE3124">Fleet management doesn't have to be problematic.</h2>
+                               <p style="font-size:2rem;line-height:35px;" class="text-center"> It should be effortless, connected, and future-ready <br>for your heavy-duty operation.</p>
 
 
-                        </div>
+                        
 
                     </div>
 
@@ -1279,11 +1144,11 @@
                             <div class=" pt-4" pardot-region="Section 2 - Logo Image 2" pardot-region-type="" >
                                 <p pardot-region="Section 3 - Column 1 - Content"
                                     style="font-size:24px;line-height:32px;" class="">
-                                    Reduced the time to manage unidentified drive times (UDTs) by 25% and caused a 50%
-                                    reduction in hours of service (HOS) violations
+                                    "Reduced the time to manage unidentified drive times (UDTs) by 25% and caused a 50%
+                                    reduction in hours of service (HOS) violations."
                                 </p>
                                 <p pardot-region="Section 3 - Column 1 - Content" class="pt-2">
-                                    <span style="color:#EE3124;">Brian Widder</span>, Manager of Driver Safety and
+                                   Brian Widder, Manager of Driver Safety and
                                     Compliance, ABC Supply Co. Inc.
 
                                 </p>
@@ -1303,76 +1168,7 @@
         </section>
 
 
-        <!-- Testimonials Section -->
-        <section id="testimonial" class=" " style="background-color:#f4f8ff;">
-            <div class="container pt-3 ">
-                <div class="row">
-
-                    <div class="col-12">
-                        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- Slide Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#testimonialCarousel" data-slide-to="1"></li>
-                                <li data-target="#testimonialCarousel" data-slide-to="2"></li>
-
-                            </ol>
-                            <div class="carousel-inner" role="listbox">
-                                <!-- Slide 1 -->
-                                <div class="carousel-item active pb-2">
-                                    <div class="carousel-content">
-                                        <div class="client-img"><img
-                                                src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/ABC%20Supply%20logo.png?raw=true"
-                                                alt="Testimonial Slider" /></div>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat iusto nihil
-                                            qui incidunt pariatur quas natus nulla laudantium obcaecati vero, odio cum.
-                                            Ipsam autem tempora est numquam, iure possimus labore?</p>
-                                        <h3>
-                                            Firstname Lastname, Professional Title </h3>
-                                    </div>
-                                </div>
-
-                                <!-- Slide 2 -->
-                                <div class="carousel-item pb-2">
-                                    <div class="carousel-content">
-                                        <div class="client-img"><img
-                                                src="https://raw.githubusercontent.com/talvandyke/Omnicell-Creative-Hub/42385424fe8c8d45140de93f6eb68249a859f335/eRoad/images/holcim_logo_color.svg"
-                                                alt="Testimonial Slider" /></div>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat iusto nihil
-                                            qui incidunt pariatur quas natus nulla laudantium obcaecati vero, odio cum.
-                                            Ipsam autem tempora est numquam, iure possimus labore?</p>
-                                        <h3>
-                                            Firstname Lastname, Professional Title </h3>
-                                    </div>
-                                </div>
-                                <!-- Slide 3 -->
-                                <div class="carousel-item pb-2">
-                                    <div class="carousel-content">
-                                        <div class="client-img"><img
-                                                src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/ABC%20Supply%20logo.png?raw=true"
-                                                alt="Testimonial Slider" /></div>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat iusto nihil
-                                            qui incidunt pariatur quas natus nulla laudantium obcaecati vero, odio cum.
-                                            Ipsam autem tempora est numquam, iure possimus labore?</p>
-                                        <h3>
-                                            Firstname Lastname, Professional Title </h3>
-                                    </div>
-                                </div>
-
-                                <!-- Slider pre and next arrow -->
-                                <!--<a class="carousel-control-prev text-white" href="#testimonialCarousel" role="button" data-slide="prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </a>
-                    <a class="carousel-control-next text-white" href="#testimonialCarousel" role="button" data-slide="next">
-                        <i class="fas fa-chevron-right"></i>
-                    </a>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End testimonials Section -->
+       
 
 
 
@@ -1381,7 +1177,7 @@
             <div class="container">
                 <div class="row pt-5 ">
                     <div class=" text-center mx-auto pt-5 font-bold col-md-8" pardot-region="Section header - 2">
-                        <h2 class="font-bold">Your Partner for Operational Transformation</h2>
+                        <h2 class="font-bold">Your partner for operational transformation</h2>
                         <p>Empowering transformation through advanced data intelligence, integrated workflows, driver safety, asset tracking and compliance solutions on a single platform for superior fleet performance management.</p>
                     </div>
 
@@ -1472,8 +1268,8 @@
             <div class="container-fluid">
                 <div class="row pt-5 ">
                     <div class=" text-center mx-auto pt-5 font-bold" pardot-region="Section header - 2">
-                        <h2 class="font-bold">Expand and Simplify Your Fleet’s Performance. <br>Connect to the Tools you
-                            Already Use</h2>
+                        <h2 class="font-bold">Expand and simplify your fleet’s performance. <br>connect to the tools you
+                            already use</h2>
                     </div>
 
                 </div>
@@ -1592,7 +1388,7 @@
                 <div class="row">
                     <div pardot-region="Services - Headline" class="col-md-12">
                         <h3 class="h2 mb-5 font-bold">
-                            Access EROAD anytime, anywhere
+                            Access EROAD anytime, anywhere.
                         </h3>
                     </div>
                 </div>
@@ -1654,7 +1450,7 @@
                                 pardot-region-type=""><a href="https://apps.apple.com/us/app/myeroad/id1592368620"
                                     target="_blank"><img
                                         src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Apple%20App%20Store.png?raw=true"
-                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" alt=""></a></div>
+                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" style="width: 130px !important;"  alt=""></a></div>
 
 
                         </div>
@@ -1672,7 +1468,7 @@
 
 
         <!-- Headline with CTA Section  -->
-        <section class="pt-3 pb-5" style="background-color:#f4f8ff;">
+        <section class="pt-3 pb-5" >
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -1695,7 +1491,7 @@
             <div class="container">
                 <div class="row pt-5">
                     <div class=" text-center mx-auto pt-5 font-bold" pardot-region="Section header - 2">
-                        <h2 class="font-bold">Trusted to protect the reputation of industry Leaders</h2>
+                        <h2 class="font-bold">Trusted to protect the reputation of industry leaders.</h2>
                     </div>
 
                 </div>
