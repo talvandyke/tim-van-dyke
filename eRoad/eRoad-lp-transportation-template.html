@@ -656,8 +656,8 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  width: 1000px;
-  height: 400px;
+  width: 80%;
+  height: 600px;
  position: relative;
   top: 0;
   bottom: 0;
@@ -671,6 +671,8 @@
 
 #scene h4{
     color:#EE3124;
+    font-size:2rem !important;
+    font-weight:bold;
 }
 #scene a{
     color:#EE3124;
@@ -680,8 +682,8 @@
   height: 75%;
   flex-grow: 0;
   display: flex;
-  width: 350px;
-  align-items: center;
+  width: 220px;
+  /* align-items: center; */
   justify-content: left;
 }
 #scene #left-zone .list {
@@ -710,59 +712,12 @@
   opacity: 0.75;
   cursor: pointer;
 }
-#scene #left-zone .list li.item input[type=radio] ~ label.label_strawberry:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/83067-200.png");
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
-}
-#scene #left-zone .list li.item input[type=radio] ~ label.label_banana:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/53209-200.png");
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
-}
-#scene #left-zone .list li.item input[type=radio] ~ label.label_apple:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/14333-200.png");
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
-}
-#scene #left-zone .list li.item input[type=radio] ~ label.label_orange:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/9636-200.png");
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
-}
+
 #scene #left-zone .list li.item input[type=radio] ~ .content {
   position: absolute;
   left: 350px;
-  top: -400px;
-  width: 650px;
+  top: -600px;
+  width: 70%;
   height: 400px;
   -webkit-animation-duration: 0.75s;
           animation-duration: 0.75s;
@@ -779,7 +734,7 @@
 #scene #left-zone .list li.item input[type=radio] ~ .content.content_strawberry .picto {
   height: 100px;
   width: 100px;
-  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/83067-200.png");
+  background-image: url("https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Elevate%20Safety%20and%20Minimize%20Risk-Bettendorf%20Trucking%20Garage.jpg?raw=true");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -831,22 +786,25 @@
   opacity: 1;
   -webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
           animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          background-color: red;
+color:#ffffff !important;
+padding-left:30px;
 }
 #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_strawberry {
   color: #D64541;
   border-right: solid 4px #D64541;
 }
 #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_banana {
-  color: #F5D76E;
-  border-right: solid 4px #F5D76E;
+    color: #D64541;
+  border-right: solid 4px #D64541;
 }
 #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_apple {
-  color: #00B16A;
-  border-right: solid 4px #00B16A;
+    color: #D64541;
+  border-right: solid 4px #D64541;
 }
 #scene #left-zone .list li.item input[type=radio]:checked ~ label.label_orange {
-  color: #F27935;
-  border-right: solid 4px #F27935;
+    color: #D64541;
+  border-right: solid 4px #D64541;
 }
 #scene #left-zone .list li.item input[type=radio]:checked ~ .content {
   -webkit-animation-duration: 0.75s;
@@ -934,7 +892,17 @@
     border-color: #D51F1B !important;
 }
 
+#scene #left-zone .list li.item input[type=radio] ~ label {
+    display: block;
+    opacity: 0.5;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size:24px;
+text-align: left;
 
+      
+}
     </style>
 </head>
 
@@ -964,42 +932,35 @@
                     </a>
 
                 </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-12 pt-3 pt-xl-4 mb-xl-4 mb-sm-3  ">
 
+        <div pardot-region="Left Column - Content 1" pardot-region-type="pardot"
+            class="col-sm-12 col-md-12 pt-5">
+            <h4 class="videoheadline mobilePad " style="font-weight: 300;"> Experience a New Era
+                of Fleet Management Excellence </h4>
 
-
+            <p class="text-white  hide  pr-xl-5  col-sm-12 pl-0 "
+                style="position: relative; top:-30px;letter-spacing:1px;font-size:21px;line-height:27px">Go beyond the
+                basics. Unlock fleet-wide performance insights to <br>drive safety, compliance, and lower
+                emissions
+            </p>
+            <div pardot-region="Call to Action - CTA">
+                <a href="https://www.eroad.com/integrations" class="btn btn-xl btn-primary">Learn more </a>
             </div>
         </div>
-    </section>
-    <section class="pt-0 pb-0 pl-0">
-        <div class="container-fluid">
-
-            <div class="row justify-content-center">
-                <div class="col-md-12 pt-3 pt-xl-4 mb-xl-4 mb-sm-3  ">
-
-                    <div pardot-region="Left Column - Content 1" pardot-region-type="pardot"
-                        class="col-sm-12 col-md-12 pt-5">
-                        <h4 class="videoheadline mobilePad " style="font-weight: 300;"> Experience a New Era
-                            of Fleet Management Excellence </h4>
-
-                        <p class="text-white  hide  pr-xl-5  col-sm-12 pl-0 "
-                            style="position: relative; top:-30px;letter-spacing:1px;font-size:21px;line-height:27px">Go beyond the
-                            basics. Unlock fleet-wide performance insights to <br>drive safety, compliance, and lower
-                            emissions
-                        </p>
-                        <div pardot-region="Call to Action - CTA">
-                            <a href="https://www.eroad.com/integrations" class="btn btn-xl btn-primary" style="z-index: 999;">Learn more </a>
-                        </div>
-                    </div>
-                </div>
+    </div>
 
 
 
-            </div>
+</div>
         </div>
     </section>
+    
     <div class="header-container video">
         <div class="video-container">
-            <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="true">
+            <video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="true" >
                 <source src="https://www.eroad.com/wp-content/uploads/2023/08/Sunrise-to-sunset_TLP-video-1_v2.mp4"
                     type="video/mp4">
                 <!--<source src = "#" type = "video/webm">	
@@ -1172,7 +1133,7 @@
 
 
 
-        <section class="bg-white">
+        <section class="bg-white hide">
 
             <div class="container">
                 <div class="row pt-5 ">
@@ -1182,9 +1143,10 @@
                     </div>
 
                 </div>
+</div>
+</section>
 
-
-         <section class="pt-5 pb-5 bg-white">
+         <section class="pt-5 pb-5 bg-white hide">
             <div class="container-fluid">
 
                 <div class="row justify-content-center">
@@ -1195,30 +1157,42 @@
                 <li class="item">
                   <input type="radio" id="radio_Elevate Safety & Minimize Risk" name="basic_carousel" value="Elevate Safety & Minimize Risk" checked="checked"/>
                   <label class="label_strawberry" for="radio_Elevate Safety & Minimize Risk">Safety</label>
-                  <div class="content content_strawberry"><!--  <span class="picto"></span> -->
-                    <h4>Elevate Safety & Minimize Risk</h4>
+                  <div class="content content_strawberry">
+                    <!-- <img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Elevate%20Safety%20and%20Minimize%20Risk-Bettendorf%20Trucking%20Garage.jpg?raw=true" width="480" > -->
+                       <!-- <span class="picto"></span> -->
+                    <h4 class="pt-3">Elevate Safety & Minimize Risk</h4>
                     <p>Improve outcomes, reduce costs, and encourage safer journeys</p>
                     <ul class="pl-2" style="list-style-type: none;">
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Video%20Telematics%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/product/video-telematics">Video Telematics</a></li>
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/ELD%20Compliance%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/product/video-telematics">ELD Compliance</a></li>
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/GPS%20and%20Asset%20Tracking.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/product/video-telematics">GPS and Asset Tracking</a></li>
                     </ul>
-                    <p class="pt-3">"Nuclear verdicts that reach seven or eight figures drive up insurance costs and potentially put a company out of business. If cameras stop one of those, they’ve paid for themselves."</p>
+                    <img
+                        src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Bettendorf%20Trucking%20logo.png?raw=true"
+                        class="  img-fluid pt-5" style="width:100px" alt="">
+                        
+                    <p class="pt-3"> "Nuclear verdicts that reach seven or eight figures drive up insurance costs and potentially put a company out of business. If cameras stop one of those, they’ve paid for themselves."</p>
                     <p class="text-right"><span style="color:#EE3124;font-weight:bold;">Chris Freeman</span> &ndash; Controller, Bettendorf Trucking</p>
+                    
                   </div>
                   
                 </li>
                 <li class="item">
                   <input type="radio" id="radio_Enhance Tax Automation & Compliance" name="basic_carousel" value="Enhance Tax Automation & Compliance"/>
                   <label class="label_banana" for="radio_Enhance Tax Automation & Compliance">Tax Automation</label>
-                  <div class="content content_banana"><!-- <span class="picto"></span> -->
-                    <h4>Enhance Tax Automation & Compliance</h4>
+                  <div class="content content_banana">
+                    <!-- <img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Enhance%20Tax%20Automation%20and%20Compliance-Recoil%20Oilfield%20Services.jpg?raw=true" width="480" > -->
+                    <!-- <span class="picto"></span> -->
+                    <h4 class="pt-3">Enhance Tax Automation & Compliance</h4>
                     <p>End manual record keeping with solutions that automate and digitize key functions.</p>
                     <ul class="pl-2" style="list-style-type: none;">
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Weight%20Mileage%20Tax%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/compliance">Weight Mileage Tax</a></li>
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Fuel%20Tax%20Automation%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/compliance">Fuel Tax Automation</a></li>
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Road%20User%20Assessment%20Fee%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/compliance">Road User Assessment Fee</a></li>
                     </ul>
+                    <img
+                        src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Recoil%20Oilfield%20Services%20logo.png?raw=true"
+                        class="   img-fluid pt-5" style="width:100px;"  alt="">
                     <p class="pt-3">"With EROAD, we are saving a few thousand dollars per month in administrative time for fuel tax reporting and realizing fuel tax savings of at least $200,000 annually based on the ability to accurately capture and track off road mileage.”</p>
                     <p class="text-right"><span style="color:#EE3124;font-weight:bold;">Aaron Henderson</span> &ndash; DOT Compliance Officer, Recoil Oilfield Services</p>
                   </div>
@@ -1226,14 +1200,19 @@
                 <li class="item">
                   <input type="radio" id="radio_The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus." name="basic_carousel" value="The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus."/>
                   <label class="label_apple" for="radio_The apple tree (Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple. It is cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus.">Maintenance</label>
-                  <div class="content content_apple"><!-- <span class="picto"></span> -->
-                    <h4>Streamline Fleet Maintenance & Service</h4>
+                  <div class="content content_apple">
+                    <!-- <img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Streamline%20Fleet%20Maintenance%20and%20Service%20image-jubitz.jpg?raw=true" width="480" > -->
+                    <!-- <span class="picto"></span> -->
+                    <h4 class="pt-3">Streamline Fleet Maintenance & Service</h4>
                     <p>Reduce costly unplanned repairs and extend the life of your fleet.</p>
                     <ul class="pl-2" style="list-style-type: none;">
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Predictive%20Maintenance%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/solutions/fleet-management/fleet-maintenance/">Predictive maintenance</a></li>
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/DVIR%20checklists%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/compliance">DVIR Checklists</a></li>
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Fault%20Code%20Insights%20Dashboard%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="#">Fault Code Insights Dashboard</a></li>
                     </ul>
+                   <img
+                        src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Jubitz%20logo.png?raw=true"
+                        class="   img-fluid pt-5" style="width:150px" alt="">
                     <p class="pt-3">"An unanticipated benefit of EROAD is the Service module, which has allowed us to manage our fleet’s maintenance based on truck hours. The system is very well laid out and easy to use."</p>
                     <p class="text-right"><span style="color:#EE3124;font-weight:bold;">Ed Guasco</span> &ndash; Controller, Jubitz Corporation</p>
                   </div>
@@ -1241,14 +1220,19 @@
                 <li class="item">
                   <input type="radio" id="radio_Reduce your Carbon Footprint" name="basic_carousel" value="Reduce your Carbon Footprint"/>
                   <label class="label_orange" for="radio_Reduce your Carbon Footprint">Sustainability</label>
-                  <div class="content content_orange"><!-- <span class="picto"></span> -->
-                    <h4>Reduce your Carbon Footprint</h4>
+                  <div class="content content_orange">
+                    <!-- <img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Reduce%20Your%20Carbon%20Footprint%20image-EA%20Sween%20office.png?raw=true" width="480" > -->
+                    <!-- <span class="picto"></span> -->
+                    <h4 class="pt-3">Reduce your Carbon Footprint</h4>
                     <p>Lower fuel costs and reduce harmful emissions.</p>
                     <ul class="pl-2" style="list-style-type: none;">
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Sustainability%20Solutions.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/sustainable-transportation">Sustainability Solutions</a></li>
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Fuel-Idle%20Reporting%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="https://www.eroad.com/sustainable-transportation">Fuel/idle reporting</a></li>
                         <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Dwell-Detention%20Time%20icon.png?raw=true" width="50px" style="padding-right:10px;"><a href="#">Dwell/Detention Time </a></li>
                     </ul>
+                    <img
+                        src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/EA%20Sween%20logo.png?raw=true"
+                        class="   img-fluid pt-5" style="width:150px" alt="">
                     <p class="pt-3">"With that data, we went from 21 minutes average stop time per day and knocked that down under 18 minutes per day. We beat our goal of $80,000; we were able to realize cost savings over $200,000."</p>
                     <p class="text-right"><span style="color:#EE3124;font-weight:bold;">Robert Forte</span> &ndash; Division Vice President, E.A. Sween Company</p>
                   </div>
@@ -1263,13 +1247,13 @@
 </div>
 </section>
 
-        <section >
+        <section style="background-color: #f4f8ff;">
 
             <div class="container-fluid">
                 <div class="row pt-5 ">
                     <div class=" text-center mx-auto pt-5 font-bold" pardot-region="Section header - 2">
-                        <h2 class="font-bold">Expand and simplify your fleet’s performance. <br>connect to the tools you
-                            already use</h2>
+                        <h2 class="font-bold">Expand and simplify your fleet’s performance. <br>Connect to the tools you
+                            already use.</h2>
                     </div>
 
                 </div>
@@ -1301,10 +1285,10 @@
                     </div>
                     <div class="col-md-3 pb-4">
                         <div class="border_set2">
-                            <div class="cardTextHeadnew text-center pt-4" pardot-region="CorrTrac Icon"
+                            <div class="cardTextHeadnew text-center pt-4" pardot-region="CorrTrim Icon"
                                 pardot-region-type=""><a href="###" target="_blank"><img
-                                        src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Here-maps%20logo.png?raw=true"
-                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" alt=""></a></div>
+                                        src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Penske%20logo.png?raw=true"
+                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" style="width:100px !important" alt=""></a></div>
 
 
                         </div>
@@ -1328,7 +1312,7 @@
                             <div class="cardTextHeadnew text-center pt-4" pardot-region="Profile Icon"
                                 pardot-region-type=""><a href="###" target="_blank"><img
                                         src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/WEX%20logo.png?raw=true"
-                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" alt=""></a></div>
+                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" style="width:100px !important" alt=""></a></div>
 
                         </div>
                     </div>
@@ -1354,13 +1338,14 @@
                     </div>
                     <div class="col-md-3 pb-4">
                         <div class="border_set2">
-                            <div class="cardTextHeadnew text-center pt-4" pardot-region="CorrTrim Icon"
+                            <div class="cardTextHeadnew text-center pt-4" pardot-region="CorrTrac Icon"
                                 pardot-region-type=""><a href="###" target="_blank"><img
-                                        src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Penske%20logo.png?raw=true"
-                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" alt=""></a></div>
+                                        src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Here-maps%20logo.png?raw=true"
+                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" style="width:100px !important" alt=""></a></div>
 
 
                         </div>
+                        
                     </div>
 
                 </div>
@@ -1396,28 +1381,28 @@
                     <div class="col-md-3">
                         <img pardot-region="Services 1 - Image"
                             src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/EROAD%20Mobile%201.png?raw=true"
-                            class="img-fluid" style="width:100%" />
+                            class="img-fluid pb-5" style="width:100%" />
 
 
                     </div>
                     <div class="col-md-3">
                         <img pardot-region="Services 2 - Image"
                             src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/EROAD%20Mobile%202.jpg.png?raw=true"
-                            class="img-fluid" style="width:100%" />
+                            class="img-fluid pb-5" style="width:100%" />
 
 
                     </div>
                     <div class="col-md-3">
                         <img pardot-region="Services 3 - Image"
                             src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/EROAD%20Mobile%203.png?raw=true"
-                            class="img-fluid" style="width:100%" />
+                            class="img-fluid pb-5" style="width:100%" />
 
 
                     </div>
                     <div class="col-md-3">
                         <img pardot-region="Services 3 - Image"
                             src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/EROAD%20Mobile%204.png?raw=true"
-                            class="img-fluid" style="width:100%" />
+                            class="img-fluid pb-5" style="width:100%" />
 
 
                     </div>
@@ -1426,7 +1411,7 @@
         </section>
 
 
-        <section class="pt-5 pb-0 bg-white">
+        <section class="pt-0 pb-0 bg-white">
             <div class="container-fluid">
 
                 <div class="row justify-content-center">
@@ -1437,7 +1422,7 @@
                                     href="https://play.google.com/store/apps/details?id=com.eroad.myeroad&hl=en_US&gl=US"
                                     target="_blank"><img
                                         src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Google%20Play.png?raw=true"
-                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" alt=""></a></div>
+                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" style="width: 145px !important;"  alt=""></a></div>
 
 
                         </div>
@@ -1450,7 +1435,7 @@
                                 pardot-region-type=""><a href="https://apps.apple.com/us/app/myeroad/id1592368620"
                                     target="_blank"><img
                                         src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Apple%20App%20Store.png?raw=true"
-                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" style="width: 130px !important;"  alt=""></a></div>
+                                        class="card-img-top card-img-top_ss10 mx-auto img-fluid" style="width: 125px !important;position: relative; top:3px;"   alt=""></a></div>
 
 
                         </div>
@@ -1464,24 +1449,24 @@
 
 
        
-
-
-
-        <!-- Headline with CTA Section  -->
-        <section class="pt-3 pb-5" >
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2 pardot-region="Call to Action - Headline" class="my-4 font-bold pb-3 ">
-                            Ready to see how EROAD helps you<br> transform your operations?
-                        </h2>
-                        <div pardot-region="Call to Action - CTA">
-                            <a href="#" class="btn btn-xl btn-primary">Contact Us</a>
-                        </div>
+     <!-- Headline with CTA Section  -->
+     <section class="pt-3 pb-5"  style="background-color:#f4f8ff;" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 pardot-region="Call to Action - Headline" class="my-4 font-bold pb-3 ">
+                        Ready to see how EROAD helps you<br> transform your operations?
+                    </h2>
+                    <div pardot-region="Call to Action - CTA">
+                        <a href="#" class="btn btn-xl btn-primary">Contact Us</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+
+   
 
         
       
@@ -1535,24 +1520,7 @@
 </div>
 </section>
 
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </main>
+</main>
 
     <!-- Footer -->
     <footer class="">
@@ -1570,16 +1538,16 @@
                     <div id="social-share">
 
                         <!-- Facebook -->
-                        <a pardot-region="Facebook" href="#" target="blank"><i class="fab fa-facebook-f"></i></a>
+                        <a pardot-region="Facebook" href="https://www.facebook.com/eroadglobal" target="blank"><i class="fab fa-facebook-f"></i></a>
 
                         <!-- Twitter -->
-                        <a pardot-region="Twitter" href="#" target="blank"><i class="fab fa-twitter"></i></a>
+                        <a pardot-region="Twitter" href="https://twitter.com/EroadGlobal" target="blank"><i class="fab fa-twitter"></i></a>
 
                         <!-- Youtube -->
-                        <a pardot-region="Youtube" href="#" target="blank"><i class="fab fa-youtube"></i></a>
+                        <a pardot-region="Youtube" href="https://www.youtube.com/c/EroadGlobal" target="blank"><i class="fab fa-youtube"></i></a>
 
                         <!-- Linkedin -->
-                        <a pardot-region="Linkedin" href="#" target="blank"><i class="fab fa-linkedin"></i></a>
+                        <a pardot-region="Linkedin" href="https://www.linkedin.com/company/234629" target="blank"><i class="fab fa-linkedin"></i></a>
 
                     </div>
                 </div>
