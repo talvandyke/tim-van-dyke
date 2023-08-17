@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <base href="https://go.eroad.com" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="%%description%%" />
+  <meta property="og:image" content="" />
+  <title>%%title%%</title>
+
+
+
+
+  <link rel="shortcut icon" href="https://www.eroad.com/wp-content/uploads/2019/01/apple-touch-icon-144x144.png"
+    type="image/x-icon" />
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous" />
+
+
+
+
+  <!-- Base LP Styles - CI -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script>
+      $(document).ready(function () {
+          $('#Myimg').click(function () {
+              $('#Mymodal').modal('show')
+          });
+          $('#Myimg1').click(function () {
+              $('#Mymodal1').modal('show')
+          });
+          
+      });
+  </script>
+
+
+
+  <link rel="stylesheet" href="https://go.omnicell.com/l/862671/2021-07-19/7brwf/862671/1626725344AyO7VSjw/boxes.css" />
+  <link rel="stylesheet" href="https://www.eroad.com/stylesheets/style.css" />
+  <link rel="stylesheet"
+    href="https://go.omnicell.com/l/862671/2021-07-09/739jy/862671/1625826630zdzav6OE/custom.css" />
+
+  <link rel="stylesheet" href="https://mktg.omnicell.com/l/862671/2020-04-24/npwz/862671/37371/lp_base_styles.css" />
+
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    body {
+      margin: 0px !important;
+    }
+
+    .bg-green {
+      background-color: #4ab555;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    .no-pad {
+      padding: 0px !important;
+
+    }
+
+    .content-pad {
+      min-height: 288px !important;
+    }
+
+    .quote {
+      font-size: 15px;
+      font-weight: 500;
+      padding-left: 25px !important;
+    }
+
+    header {
+      background-color: #EE3124;
+      padding-bottom: 12rem;
+      min-height: 600px;
+    }
+
+    img[pardot-region="Logo"] {
+
+      padding-bottom: 10px;
+    }
+
+    .img-hover-zoom {
+
+      width: 657px;
+      height: auto;
+      display: block;
+      z-index: 999;
+      cursor: pointer;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease;
+      overflow: hidden;
+    }
+
+    .img-hover-zoom img {
+      transition: transform .5s ease;
+    }
+
+    .img-hover-zoom:hover img {
+      transform: scale(1.5);
+    }
+
+    .thumbnail-img-hover-zoom {
+
+      width: 313px;
+      height: auto;
+      display: block;
+      z-index: 999;
+      cursor: pointer;
+      -webkit-transition-property: all;
+      -webkit-transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease;
+      overflow: hidden;
+    }
+
+    .thumbnail-img-hover-zoom img {
+      transition: transform .5s ease;
+    }
+
+    .thumbnail-img-hover-zoom:hover img {
+      transform: scale(1.5);
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\27F6';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 40px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .button.button--outline {
+      border: 1px solid #F9FAFA;
+      box-sizing: border-box;
+      width: 236px;
+      height: 96px;
+      color: #F9FAFA;
+      display: block;
+      border-radius: 0 0 24px 0;
+      padding: 10px 16px 16px 16px;
+      margin-top: auto;
+      margin-bottom: 40px;
+    }
+
+    .button {
+      border: 1px solid #F9FAFA;
+      box-sizing: border-box;
+      width: 236px;
+      height: 96px;
+      color: #F9FAFA;
+      display: block;
+      border-radius: 0 0 24px 0;
+      padding: 10px 16px 16px 16px;
+      margin-top: auto;
+      margin-bottom: 40px;
+    }
+
+    .rounded-img-right {
+      border-bottom-right-radius: 40px !important;
+    }
+
+    #quote:after {
+      border-bottom: 4px solid #EE3124;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "roboto", Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 20px;
+      background: #f4f4f6;
+      font-family: "roboto", Arial, Helvetica, sans-serif;
+    }
+
+
+
+    @media only screen and (max-width: 767px) {
+      .videoheadline {
+        color: #ffffff !important;
+        z-index: 1 !important;
+        font-family: "roboto", Arial, Helvetica, sans-serif !important;
+        font-weight: 100 !important;
+        position: relative !important;
+        top: -30px !important;
+        font-size: 35px !important;
+        line-height: 41px !important;
+        width: 275px !important;
+
+      }
+
+      .video-container {
+        position: absolute !important;
+        top: 0% !important;
+
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .header-container {
+
+        min-height: 30px !important;
+      }
+
+      .border-top {
+        border-top: 1px solid #dee2e6 !important;
+      }
+
+      .border-top-white {
+        border-top: 1px solid #ffffff !important;
+      }
+
+      .wrapper,
+      .wrapper--sticky-content {
+        margin-bottom: 40px !important;
+      }
+
+      .quote-card {
+
+        color: #222222;
+        padding: 20px;
+
+        box-sizing: border-box;
+
+        position: relative;
+        overflow: hidden;
+        min-height: 120px;
+      }
+
+      .quote-card p {
+        font-size: 22px;
+        line-height: 1.5;
+        margin: 0;
+
+      }
+
+    }
+
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgba(6, 60, 3, 0.9);
+      /* background-color: #063c03; */
+    }
+
+    .container2:hover .overlay {
+      opacity: 1;
+    }
+
+
+    .header-container {
+      width: 100%;
+      height: 0px;
+      border-left: none;
+      border-right: none;
+      padding: 1px;
+      background-position: top center !important;
+      background-size: contain !important;
+      padding-bottom: 10rem;
+      min-height: 500px !important;
+    }
+
+    .video-container {
+      position: absolute;
+      top: -5%;
+      left: 0%;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    video {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.78;
+      width: 100%;
+    }
+
+
+    .form {
+      position: relative;
+
+      width: 375px;
+      background-color: #ffffff;
+      height: 100%;
+      border-radius: 0px 0px 30px 0px;
+      top: -10px;
+      padding-top: 10px !important;
+    }
+
+    .form-container {
+      position: relative;
+      top: -12px;
+      z-index: 9 !important;
+    }
+
+
+    #pardot-form p.form-field {
+      float: left;
+      padding: 0 5px 10px;
+      width: 60% !important;
+      margin: 0;
+      clear: none;
+    }
+
+    .form {
+      position: relative;
+
+      width: 525px;
+      background-color: #ffffff;
+      height: 100%;
+      border-radius: 0px 0px 30px 0px;
+      top: -10px;
+    }
+
+    #pardot-form p:not([class]) {
+      font-weight: 300;
+      width: 100%;
+      float: left;
+      padding: 0;
+      margin: 1em 0;
+      width: 300px;
+    }
+
+
+
+
+
+    .blueBG {
+      background-color: #06a2dd;
+    }
+
+    .header-container {
+      width: 100%;
+      height: 0px;
+      border-left: none;
+      border-right: none;
+      padding: 1px;
+      background-position: center;
+      background-size: cover;
+      padding-bottom: 0rem;
+      min-height: 130px;
+    }
+
+    .videoheadline {
+      color: #ffffff;
+      font-size: 75px !important;
+      line-height: 79px;
+      font-weight: bold !important;
+      position: relative;
+      top: -65px;
+
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 1280px !important;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .container-fluid {
+        padding-left: 5rem !important;
+        padding-right: 5rem !important;
+      }
+    }
+
+    section#three-col-services {
+      background-color: #f4f8ff;
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    footer {
+      padding-top: 2em;
+      padding-bottom: 1em;
+      background-color: #EE3124 !important;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    #social-share {
+      margin: inherit auto;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    .fab {
+      font-family: "Font Awesome 5 Brands";
+    }
+
+    #social-share a {
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      margin: 7px;
+      border-radius: 50%;
+      font-size: 28px;
+      color: #fff;
+      opacity: 0.75;
+      transition: opacity 0.15s linear;
+      background-color: transparent;
+
+    }
+
+    .cardTextHeadnew {
+      font-size: 30px;
+      font-weight: 800;
+      color: #42afe3;
+      min-height: 150px;
+    }
+
+    .card-img-top_ss10 {
+      width: 60% !important;
+    }
+
+    @media (min-width: 576px) {
+
+      .btn-primary,
+      .btn-secondary,
+      .btn-light {
+        font-size: 22px;
+        font-size: 1.375rem;
+        padding: 1rem 2rem;
+      }
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-light {
+      font-size: 18px;
+      font-size: 1.125rem;
+      color: #ffffff;
+      background-color: #EE3124 !important;
+      border-color: #EE3124 !important;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .btn-primary:hover {
+    color: #fff;
+    background-color: #D51F1B !important;
+    border-color: #D51F1B !important;
+}
+a{
+    color:#000000 !important;
+    text-decoration: underline !important;
+}
+a:hover {
+    color: #EE3124 !important ;
+    text-decoration: underline !important;
+}
+.link {
+    color:#ffffff !important;
+    text-decoration: none !important;
+}
+.link:hover{
+    color:#000000 !important;
+    text-decoration: none !important;
+}.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #000000;
+    background-color: #D51F1B !important;
+    border-color: #D51F1B !important;
+}
+  </style>
+</head>
+
+<body>
+
+
+  <code pardot-region="CSS Options">
+      <style>
+        /* Disable Asset Image Shadow */
+        /* .asset-shadow {
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+      } */
+      </style>
+    </code>
+  <!-- Webinar - Standard Header -->
+  <!-- Green Header - With Text -->
+  <header>
+    <div class="container h-100 ">
+      <div class="d-flex h-100 text-left align-items-left">
+        <div class="row align-items-left">
+          <div class="col-11 pt-3 pt-xl-4 mb-xl-4 mb-sm-3 pl-4" pardot-region="Header - logo">
+            <a href="###">
+              <img alt="" class="img-fluid mobileLogo"
+                src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/EROAD_LogoWithWordmark_Reversed.png?raw=true" width="200" />
+            </a>
+
+          </div>
+          <div class=" w-100 h-100 text-white pt-5">
+            <h2 class="  pl-xs-5 pl-sm-5 pl-md-5 pl-lg-4 pl-xl-4  mobilePadding pb-3 pt-5"
+              style="font-weight:300 !important;font-size:54px !important;line-height:60px;"
+              pardot-region="Header - Title">Artificial Intelligence<br> in Unexpected Places</h2>
+            <p class=" lead w-80  pt-3 pb-2 mb-5 pl-xs-5 pl-sm-5 pl-md-5 pl-lg-4 pl-xl-4 mobileWidth mobilePadding"
+              style="color:#d1a632;font-size:26px !important;" pardot-region="Header - Content">Applications for Cold Chain Temperature Management</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <code pardot-region="Update Header - Background Image">
+                
+              <style>
+                   @media only screen and (max-width: 512px){
+  
+  header {
+     background-image: none important;
+               
+               background-repeat: no-repeat;
+               background-position: bottom right;
+                min-height: 0px !important; 
+               background-color: #EE3124 ;
+               padding-bottom:2rem !important ; 
+               background-size: cover !important;
+               
+  }
+  .h1, h1 {    font-size: 2rem !important;
+      line-height: 2.75rem !important;
+      position: relative;
+      top: 18px;
+  }
+  }
+  
+  @media only screen and (max-width: 768px){
+  
+  header {
+     background-image: url("https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/static-Image-Replacing-Video-vs3.png?raw=true");
+     background-repeat: no-repeat;
+               background-position: bottom center;
+                min-height: 0px !important; 
+               background-color: #EE3124 ;
+               padding-bottom:5rem;
+               background-size: cover !important;
+               
+  }
+  .h1, h1 {
+      font-size: 2.25rem !important;
+      line-height: 2.25rem !important;
+  }
+  
+  }
+           
+           
+  header {
+      background-image: url("https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/static-Image-Replacing-Video-vs3.png?raw=true");
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      min-height: 650px;
+      background-color: #EE3124;
+      padding-bottom: 3rem;
+      background-size: cover;}
+  
+  /* Landscape tablets and medium desktops */
+  @media (min-width: 992px) and (max-width: 1199px) {
+  
+        header {
+          background-image: none;
+      }
+  
+  }
+  
+  /* Portrait tablets and small desktops */
+  @media (min-width: 768px) and (max-width: 991px) {
+  
+            header {
+          background-image: none;
+      }
+  
+  }
+  
+  /* Portrait phones and smaller */
+  @media (max-width: 480px) {
+  
+  header {
+  background-image: none !important;
+  }
+  #small-banner{
+        background-image:  none;
+  
+  }}
+  /* Landscape phones and portrait tablets */
+  @media (max-width: 767px) {
+  
+            header {
+          background-image: none !important;
+      }
+      .collaborate-fix{
+        margin-left:0px !important;
+        margin-right:0px !important;
+      }
+  .mobile-fix{
+    position: relative;
+    top:0px;
+    left:0px;
+  }
+  }
+
+              </style>
+              
+              </code>
+  </header>
+<!--<div class = "header-container video">
+		<div class = "video-container">
+			<video playsinline="playsinline" autoplay="autoplay" loop="loop" muted="true" >
+		<source src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Construction Video with words.mp4?raw=true" type="video/mp4">-->
+  <!-- <source src="https://www.eroad.com/wp-content/uploads/2023/04/0423_NA_homepage_B_1.3.mp4" type="video/mp4"> -->
+  <!--<source src = "#" type = "video/webm">	
+				<source src = "#" type = "video/ogg">-->
+
+  <!--</video>
+    
+   
+		</div>
+		
+		
+	</div>-->
+  <!-- // End Green Header - With Text -->
+  <!-- // End Webinar - Standard Header -->
+
+  <main>
+
+
+   
+    <section class="bg-white pt-5  ">
+      <div class="container-fluid  ">
+
+        <div class="row ">
+          <div class="col-12 col-sm-12 col-xl-5 mt-xl-0 pb-5 order-xl-2 offset-xl-1 pt-5">  %%content%%
+            <div class="col-12 col-sm-12 font-light pb-5 pl-0 pt-5" style="font-size: 10px;line-height:15px;">
+                <p>By registering, I acknowledge and agree to AC Business Media’s use of my contact information to communicate with me about offerings by AC Business Media, its brands and affiliates consistent with AC Business Media’s Privacy Policy. In addition, I understand that my personal information will be shared with any sponsor(s) of this webinar, so they can contact me directly about their products or services.</p>
+            </div>
+          </div>
+          
+          <div class="col-12 col-sm-12 col-xl-6 mt-xl-0  pb-3 pt-5">
+            <div class="row  ">
+              <!--<h2 pardot-region="Section 1 - Title" class="pl-3 pb-4  font-light "
+                style="font-weight:bold; color:#EE3124">A Better Way to Manage Your Fleet</h2>-->
+              <div pardot-region="Section 1 - Content">
+                <p class="col-12 col-sm-12  font-light ">
+                    Artificial Intelligence (AI) is getting a lot of attention right now, and for good reason. When transporting perishable goods, a single degree can be the difference between products going on the shelf or in the dumpster – and potentially thousands of dollars lost.<br><br>
+
+                    From predicting potential temperature excursions, to making pro-active adjustments, AI and predictive analytics are revolutionizing how we monitor, control, and optimize the transportation of perishable goods.</p>
+                    <ul class="font-light pl-5" style="list-style-type:disc;">
+                        <li>Accurately predict core product temperatures with Artificial Intelligence</li>
+                        <li>Prevent unnecessary maintenance and detention time with predictive analytics</li>
+                        <li>Track and share every touch point to increase visibility for you and your customers</li>
+                    </ul>
+                    <p class="col-12 col-sm-12  font-light" >Register for this free webinar today and learn how AI can help your fleet outmaneuver its competition today and into the future.</p>
+              </div>
+              <div pardot-region="Section 1 - CTA" class="pt-4 pl-3 pb-5">
+                <a id="Myimg1" class="btn btn-xl btn-primary link">Save Your Seat!</a>
+              </div>
+              
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+<!----------------------------------- Contact Us Modal -------------------------------------------------->
+
+<div class="modal fade" id="Mymodal1">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header pl-5 pr-5">
+              
+              <button class="close" data-dismiss="modal" type="button">&times;</button>
+          </div>
+
+          <div class="modal-body text-left pl-5 pr-5 ">
+
+            
+              <p>
+                  Fill out the form below to schedule your demo.
+              </p>
+              %%content%%
+          </div>
+
+
+      </div>
+  </div>
+</div>
+
+<!----------------------------------- End Contact Us Modal -------------------------------------------------->
+
+  <!-- Two-Column, Image Left, Content Right -->
+<section id="image-left-content-right pt-5 pb-5" style="background-color: #ffffff;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 pb-5">
+          <img pardot-region="Left Column 2 - Image" src="https://on24static.akamaized.net/event/43/11/21/0/rt/1/images/speakerbiowidgetimage1691077124907/steven_perrin_eroad_v2.jpg?t=846120900000" style="width:480px;" class="img-fluid" />
+        </div>
+        <div pardot-region="Left Column 2 - Content" class="col-md-7 offset-md-1 pt-4">
+            <h3>Steven Perrin</h3>
+          <p class="lead pb-4 pt-0" style="font-size:17px;">
+            Product Solutions Manager, Cold Chain & Reefer<br> EROAD
+          </p>
+          
+          <p class="font-light">
+            Steven’s early interest in cold chain logistics inspired him to cultivate a deeper understanding of the industry, taking on roles from Sustaining Engineer to Quality Assurance. In 2016, Steven began managing EROAD’s reefer and asset management hardware and SaaS product portfolio and continues to develop innovative solutions that help fleets achieve revenue goals, greater operational efficiency, and compliance on a global scale. Steven holds a certificate in electronics and electrical engineering from the Unitec Institute of Technology and a Master of Science from the University of Auckland in New Zealand.
+          </p>
+          
+        </div>
+      </div>
+
+      <div class="row pt-5-pb-5">
+        <div class="col-md-4 pb-5">
+          <img pardot-region="Left Column 2 - Image" src="https://on24static.akamaized.net/event/43/11/21/0/rt/1/images/speakerbiowidgetimage1691073041677/tim_bates_qcd.jpg?t=846120900000" style="width:480px;" class="img-fluid" />
+        </div>
+        <div pardot-region="Left Column 2 - Content" class="col-md-7 offset-md-1 pt-4">
+            <h3>Tim Bates</h3>
+          <p class="lead pb-4 pt-0" style="font-size:17px;">
+            Corporate Quality Systems Director, Quality Custom Distribution<br>Golden State Foods
+          </p>
+          
+          <p class="font-light">
+            Over 30 years’ experience in food distribution and food manufacturing, Tim has held several management positions including Director of Logistics and Quality Systems, General Manager and owner with a proven record of implementing innovative technologies to improve quality, operations, and profitability in the refrigerated sector. Established in 2006 as a division of Golden State Foods, Tim has been with Quality Custom Distribution since 2014 and is responsible for food safety and quality across 26 North American facilities.
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+   
+    
+  
+
+    <!-- Headline with CTA Section  -->
+    <section id="headline-cta"  style="background-color:#eeeeee;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 pardot-region="Call to Action - Headline" class="my-4 font-bold pb-3 ">
+              It's time to optimize your operations. Our experts are here to help.
+            </h2>
+            <div pardot-region="Call to Action - CTA">
+              <a id="Myimg" class="btn btn-xl btn-primary link">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<!----------------------------------- Demo Modal -------------------------------------------------->
+
+<div class="modal fade" id="Mymodal">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header pl-5 pr-5">
+              
+              <button class="close" data-dismiss="modal" type="button">&times;</button>
+          </div>
+
+          <div class="modal-body text-left pl-5 pr-5 ">
+
+            
+              <p>
+                  Fill out the form below to schedule your demo.
+              </p>
+              %%content%%
+          </div>
+
+
+      </div>
+  </div>
+</div>
+
+<!----------------------------------- End Demo Modal -------------------------------------------------->
+    <section id="three-col-services" class="bg-white">
+      <div class="container">
+        <div class="row">
+          <div  class="col-md-12">
+            <h3 pardot-region="Boilerplate - Headline" class="h2 mb-5 font-bold" style="color:#EE3124">
+              Why EROAD?
+            </h3>
+            <p pardot-region="Boilerplate - Content" class="pb-5">
+              Transform your fleet with a partner you can trust. Solutions that make a difference to your bottom line.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <img pardot-region="Boilerplate - Column 1 - Image"
+              src="https://www.eroad.com/wp-content/uploads/2022/10/icon-Reliable-120x120-1.png" class="img-fluid" />
+
+            <h4 pardot-region="Boilerplate - Column 1 - Headline" class="display-5 mt-3 font-bold" style="color:#EE3124">
+              Reliable
+            </h4>
+            <p pardot-region="Boilerplate - Column 1 - Content">
+              Minimize costly interruptions to your business with highly reliable service up-time.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <img pardot-region="Boilerplate - Column 2 - Image"
+              src="https://www.eroad.com/wp-content/uploads/2022/10/icon-Acurate-120x120-1.png" class="img-fluid" />
+
+            <h4 pardot-region="Boilerplate - Column 2 - Headline" class="display-5 mt-3 font-bold" style="color:#EE3124">
+              Accurate
+            </h4>
+            <p pardot-region="Boilerplate - Column 2 - Content">
+              Be empowered to make efficient job workflow decisions with accurate vehicle location, speed and other
+              contextual data accurately.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <img pardot-region="Boilerplate - Column 3 - Image"
+              src="https://www.eroad.com/wp-content/uploads/2022/10/icon-Service-120x120-1.png" class="img-fluid" />
+
+            <h4 pardot-region="Boilerplate - Column 3 - Headline" class="display-5 mt-3 font-bold" style="color:#EE3124">
+              Service
+            </h4>
+            <p pardot-region="Boilerplate - Column 3 - Content">
+              Our 24/7 responsive customer service team is dedicated to your success.
+            </p>
+          </div>
+          <div class="col-md-3">
+            <img pardot-region="Boilerplate - Column 4 - Image"
+              src="https://www.eroad.com/wp-content/uploads/2022/10/icon-Secure-120x120-1.png" class="img-fluid" />
+
+            <h4 pardot-region="Boilerplate - Column 4 - Headline" class="display-5 mt-3 font-bold" style="color:#EE3124">
+              Secure
+            </h4>
+            <p pardot-region="Boilerplate - Column 4 - Content">
+              Your data is securely recorded, confidentially stored, and always remains your property.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="">
+    <div class="container-fluid">
+      <div class="row justify-content-center pb-4">
+        <div class="col-12 d-flex justify-content-center ">
+          <img pardot-region="Footer Logo"
+            src="https://www.eroad.com/wp-content/themes/eroad-divi/images/logo-wordmark-w.png" alt=""
+            style="width:150px !important;" />
+
+        </div>
+      </div>
+      <div class="row justify-content-center pt-2">
+        <div class="col-12  ">
+          <div id="social-share">
+
+            <!-- Facebook -->
+            <a pardot-region="Facebook" href="https://www.facebook.com/eroadglobal" target="blank"><i
+                class="fab fa-facebook-f" style="color: #ffffff;"></i></a>
+
+            <!-- Twitter -->
+            <a pardot-region="Twitter" href="https://twitter.com/EroadGlobal" target="blank"><i
+                class="fab fa-twitter" style="color: #ffffff;"></i></a>
+
+            <!-- Youtube -->
+            <a pardot-region="Youtube" href="https://www.youtube.com/c/EroadGlobal" target="blank"><i
+                class="fab fa-youtube" style="color: #ffffff;"></i></a>
+
+            <!-- Linkedin -->
+            <a pardot-region="Linkedin" href="https://www.linkedin.com/company/234629" target="blank"><i
+                class="fab fa-linkedin" style="color: #ffffff;"></i></a>
+
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12  ">
+          <p class=" text-clean-white font-extra-light"
+            style="font-size:14px; padding-top:0px !important; padding-bottom:0px !important;">
+            &copy; 2023 EROAD Inc. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- // End Footer -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick.min.js"></script>
+
+  <!-- jQuery, Popper, Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
+  <!-- Inline Form Fields -->
+  <script>
+    var labels = document.querySelectorAll(
+      "p.pd-text label, p.pd-select label, p.pd-textarea label, p.pd-date label"
+    );
+    var i = labels.length;
+    while (i--) {
+      var label = labels.item(i);
+      var text = label.textContent;
+      label.parentNode.classList.contains("required") && (text += " *");
+      var nextElement = label.nextElementSibling;
+      if (nextElement) {
+        if (nextElement.tagName == "SELECT") {
+          nextElement.options[0].text = text;
+        } else {
+          nextElement.setAttribute("placeholder", text);
+        }
+        label.parentNode.removeChild(label);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
