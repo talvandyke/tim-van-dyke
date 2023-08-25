@@ -979,8 +979,8 @@
 
             .videoheadline {
                 color: #ffffff;
-                font-size: 24px !important;
-                line-height: 25px !important;
+                font-size: 35px !important;
+                line-height: 40px !important;
                 font-weight: bold !important;
                 position: relative;
                 top: -54px !important;
@@ -994,14 +994,14 @@
             }
 
             .mobile-subheader {
-                font-size: 1.5rem !important;
-                line-height: 35px;
+                font-size: 1rem !important;
+                line-height: 20px !important;
             }
-            header {
+            /* header {
     background: url('https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/transportation-header-vs2.png?raw=true') black no-repeat;
     background-size: cover;
     background-position: center center;
-  }
+  } */
    header .overlay {
   position: absolute;
   top: 0;
@@ -1013,9 +1013,9 @@
   z-index: 1;
 } 
 
-  header video {
+  /* header video {
     display: none;
-  }
+  } */
   h1 {
       font-size: 30px !important;
   }
@@ -1055,7 +1055,7 @@
 
 header video {
   position: absolute;
-  top: 75%;
+  top: 50%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
@@ -1099,21 +1099,7 @@ header .container {
     height: 50%!important;
 }
     </style>
-    <script type="text/javascript">
-        piAId = '106232';
-        piCId = '180076';
-        piHostname = 'pi.pardot.com';
-
-        (function () {
-            function async_load() {
-                var s = document.createElement('script'); s.type = 'text/javascript';
-                s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
-                var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
-            }
-            if (window.attachEvent) { window.attachEvent('onload', async_load); }
-            else { window.addEventListener('load', async_load, false); }
-        })();
-    </script>
+   
 </head>
 
 <body>
@@ -1133,27 +1119,35 @@ header .container {
       
         <!-- The HTML5 video element that will create the background video on the header -->
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-          <source src="https://www.eroad.com/wp-content/uploads/2023/08/Sunrise-to-sunset_TLP-video-1_v2.mp4" type="video/mp4">
+          <source src="https://www.eroad.com/wp-content/uploads/2023/08/Birdeye-view_TLP-video-2.mp4" type="video/mp4">
         </video>
       
         <!-- The header content -->
         <div class="container h-100">
-            <div class="w-100 pb-0 mb-0">
+            <div class="w-100 pb-0 mb-0 pl-3">
             <a href="https://www.eroad.com" target="_blank">
                 <img alt="" class="img-fluid mobileLogo pt-5 pb-0" pardot-region="Logo"
                     src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/EROAD_LogoWithWordmark_Reversed.png?raw=true"
                     width="200"></a>
                     </div>
-          <div class="d-flex h-50 text-center align-items-center" >
+          <div class="d-flex h-50 pt-5" >
               
-            <div class="w-100 text-white col-md-8 offset-md-2">
-              <h1 class="" style="font-size: 50px;">Experience a New Era
+            <div class="w-100 text-white col-md-8 ">
+              <!-- <h1 class="" style="font-size: 50px;">Experience a New Era
                 of Fleet Management Excellence</h1>
-              <p class="hide lead mb-0 pt-3 col-md-8 offset-md-2">Go beyond the basics. Unlock fleet-wide performance insights to drive safety, compliance, and lower
-                emissions</p>
-                <div class="pt-4">
+              <p class="hide lead mb-0 pt-3 col-md-8 ">Go beyond the basics. Unlock fleet-wide performance insights to drive safety, compliance, and lower
+                emissions</p> -->
+                <h5 class="videoheadline mobilePad pt-5 pl-0" style="font-weight: 300;"> Experience a New Era
+                    of Fleet Management Excellence </h5>
+    
+                <p class="text-white    pr-xl-5  col-sm-12 pl-0 mobile-subheader"
+                    style="position: relative; top:-30px;letter-spacing:1px;font-size:21px;line-height:27px">Go beyond the
+                    basics. Unlock fleet-wide performance insights to drive safety, compliance, and lower
+                    emissions
+                </p>
+                <div class="pt-0">
                     
-                    <a id="Myimg" style="color:#ffffff;position: relative;z-index: 999;"" class="btn btn-xl btn-primary link">Contact Us</a>
+                    <a href="http://www.go.eroad.com/fleet-management.html#integration" class="btn btn-xl btn-primary link" style="position: relative;z-index: 999;">Learn more </a>
                 </div>
             </div>
           </div>
@@ -1264,7 +1258,7 @@ header .container {
             </div>
         </section>
         <section class="pt-5 pb-5" style="background-color:#f4f8ff;">
-            <div class="container">
+            <div class="container-fluid">
 
                 <div class="row pt-4 justify-content-center ">
                     <div class="col-md-4 pb-2 " data-mdb-toggle="animation" data-mdb-animation-start="onScroll"
@@ -1305,13 +1299,28 @@ header .container {
             </div>
 
         </section><a name="integration" id="integration"></a>
+        <section class="bg-white ">
+            <div class="container">
+                <div class="row pt-5 ">
+                    <div class=" text-center mx-auto pt-5 font-bold col-md-9">
+                        <h2 pardot-region="Section 3 - header" class="pb-3 mobile-header"
+                            style="font-size:2.5rem;font-weight:bold; color:#EE3124; ">Your partner for operational
+                            transformation.</h2>
+                        <p pardot-region="Section 3 subheader " style="font-weight:300">Empowering transformation
+                            through advanced data intelligence, integrated workflows, driver safety, asset tracking and
+                            compliance solutions on a single platform for superior fleet performance management.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
         <section class="bg-white hide-desktop mobile-show">
             <div class="container">
                 <div class="row pt-5" pardot-region="Safety - Mobile-Only">
                     <div class=" text-left mx-auto  font-bold col-md-7">
                         <h3 class=" text-left" style="color: #EE3124;font-weight: bold;">Safety</h3>
                         <h4 class="pt-3">Elevate Safety &amp; Minimize Risk</h4>
-                        <p>Improve outcomes, reduce costs, and encourage safer journeys</p>
+                        <p>Improve outcomes, reduce costs, and encourage safer journeys.</p>
                         <img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Logos/Bettendorf%20Trucking%20logo.png?raw=true"
                             class="  img-fluid pt-5" style="width:100px" alt="">
                         <p class="pt-3"> "Nuclear verdicts that reach seven or eight figures drive up insurance costs
@@ -1465,21 +1474,7 @@ header .container {
             </div>
         </section>
 
-        <section class="bg-white ">
-            <div class="container">
-                <div class="row pt-5 ">
-                    <div class=" text-center mx-auto pt-5 font-bold col-md-9">
-                        <h2 pardot-region="Section 3 - header" class="pb-3 mobile-header"
-                            style="font-size:2.5rem;font-weight:bold; color:#EE3124; ">Your partner for operational
-                            transformation.</h2>
-                        <p pardot-region="Section 3 subheader " style="font-weight:300">Empowering transformation
-                            through advanced data intelligence, integrated workflows, driver safety, asset tracking and
-                            compliance solutions on a single platform for superior fleet performance management.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+       
         <section class="pt-5 pb-5 bg-white hide">
             <div class="container-fluid">
 
@@ -1497,7 +1492,7 @@ header .container {
                                         <!-- <img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/images/Elevate%20Safety%20and%20Minimize%20Risk-Bettendorf%20Trucking%20Garage.jpg?raw=true" width="480" > -->
                                         <!-- <span class="picto"></span> -->
                                         <h4 class="pt-3">Elevate Safety &amp; Minimize Risk</h4>
-                                        <p>Improve outcomes, reduce costs, and encourage safer journeys</p>
+                                        <p>Improve outcomes, reduce costs, and encourage safer journeys.</p>
                                         <ul class="pl-2" style="list-style-type: none;">
                                             <li><img src="https://github.com/talvandyke/Omnicell-Creative-Hub/blob/main/eRoad/Icons/Video%20Telematics%20icon.png?raw=true"
                                                     width="50px" style="padding-right:10px;"><a
