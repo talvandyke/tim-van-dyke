@@ -1,0 +1,219 @@
+
+.accordion{
+    width: 760px;
+    height: 60px;
+    margin: 0 auto;
+        background-color: #eeeeee;
+    
+    
+    overflow: hidden;
+    transition: height 0.3s ease;
+    margin-bottom: 20px;
+	border-left: 6px solid #003f02;
+}
+
+.accordion .accordion_tab{
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: none;
+  
+  position: relative;
+}
+
+.accordion .accordion_tab .accordion_arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  transition: all 0.3s ease;
+}
+
+.accordion .accordion_tab .accordion_arrow img{
+  width: 100%;
+  height: 100%;
+}
+
+.accordion .accordion_tab.active .accordion_arrow{
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion.active{
+  height: 240px;
+	    border-left: 6px solid #4ab555;
+	    background-color: #ffffff;
+	box-shadow: 0 0 5px rgb(225 225 225);
+}
+
+.accordion .accordion_content{
+  padding: 20px;
+	padding-top:0px;
+	padding-bottom:10px;
+  
+	   
+}
+
+.accordion .accordion_content .accordion_item{
+  margin-bottom: 20px;
+}
+
+.accordion .accordion_content .accordion_item p.item_title{
+  font-weight: 300;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #6adda2;
+}
+
+.accordion .accordion_content .accordion_item p:last-child{
+  color: #9a9b9f;
+  font-size: 14px;
+  line-height: 20px;
+}
+		
+	.border-top {
+    border-top: 1px solid #dee2e6 !important;
+}	
+		.border-top-white {
+    border-top: 1px solid #ffffff !important;
+}	
+		.wrapper, .wrapper--sticky-content {
+    margin-bottom: 40px !important;
+}
+		.quote-card {
+ 
+  color: #222222;
+  padding: 20px;
+ 
+  box-sizing: border-box;
+  
+  position: relative;
+  overflow: hidden;
+  min-height: 120px;
+}
+.quote-card p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin: 0;
+ 
+}
+.quote-card cite {
+  font-size: 16px;
+  margin-top: 10px;
+  display: block;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+
+@media (max-width: 640px) {
+  .quote-card:after {
+    font-size: 22em;
+    right: -25px;
+  }
+}
+.quote-card.blue-card {
+ 
+  color: #333333;
+ 
+}
+.quote-card.blue-card:before, .quote-card.blue-card:after {
+  color: #5FAAFF;
+}
+	 .button.button--outline {
+    border: 1px solid #F9FAFA;
+    box-sizing: border-box;
+    width: 236px;
+    height: 96px;
+    color: #F9FAFA;
+    display: block;
+    border-radius: 0 0 24px 0;
+    padding: 10px 16px 16px 16px;
+    margin-top: auto;
+    margin-bottom: 40px;
+}
+		.button.button--text-top {
+    padding-top: 22px;
+    align-items: flex-start;
+}
+		a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+		.accordion .accordion_content .accordion_item p.item_title {
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #002000;
+}
+		
+		
+		 @media only screen and (max-width: 512px){
+ .mobile-pad{
+			    padding-right: 440px;
+  }
+			 .accordion .accordion_tab{
+ 
+  font-size: 17px;
+  
+}
+			 .reduce-pad{
+				 Padding-left:0px !important;
+			 }
+		
+		
+
+		}
+		
+		@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+	  .hide{display: none;}
+}
+	/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.hide{display:none;}}
+		/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+		.hide{display:none;}}
+		
+		.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+		.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+			background-color: rgba(6, 60, 3, 0.9);
+ /* background-color: #063c03; */
+}
+
+.container2:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  -webkit-transform: translate(-40%, -40%);
+  -ms-transform: translate(-40%, -40%);
+  transform: translate(-40%, -40%);
+  text-align: left;
+	width:85%;
+	
+}
