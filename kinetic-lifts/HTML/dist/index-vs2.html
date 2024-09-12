@@ -70,6 +70,26 @@
     transition: none !important;
     text-shadow: none !important;
 }
+
+.hs-button {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 12px;
+    position: relative;
+    text-align: center;
+    transition: all .15s linear;
+    background-color: #46b555 !important;
+    border-color: #ff7a59;
+    color: #fff;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    padding: 12px 24px;
+}
 </style>
     </head>
     
@@ -177,23 +197,14 @@
                         <div class="bg-white dark:bg-black rounded-xl shadow md:p-10 p-6 ltr:lg:ml-10 rtl:lg:mr-10 z-10 relative">
                             <h4 class="mb-5 font-medium text-1xl dark:text-white">Schedule your free consultation today!</h4>
 
-                            <form>
-                                <div class="grid grid-cols-1">
-                                    <div class="mb-5">
-                                        <label class="dark:text-white">Name</label>
-                                        <input name="name" id="fName" type="text" class="form-input mt-2" placeholder="Name">
-                                    </div>
-                                    <div class="mb-5">
-                                        <label class="dark:text-white">Email</label>
-                                        <input name="email" id="yEmail" type="email" class="form-input mt-2" placeholder="Email">
-                                    </div> 
-                                    <div class="mb-5">
-                                        <label class="dark:text-white">Phone No.</label>
-                                        <input name="number" id="phNumber" class="form-input mt-2" placeholder="412 124-5854">
-                                    </div>
-                                    <a href="javascript:void (0)" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md w-full">Schedule a free evaluation today!</a>
-                                </div><!--end row-->
-                            </form>
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                            <script>
+                              hbspt.forms.create({
+                                region: "na1",
+                                portalId: "47379304",
+                                formId: "33b46daf-8202-4851-9b5c-8a6af09a5f96"
+                              });
+                            </script>
                             <!-- end form -->
                         </div>
                     </div>
