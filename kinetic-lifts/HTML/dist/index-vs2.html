@@ -14,13 +14,63 @@
         <link href="assets/images/favicon.icoX" rel="shortcut icon">
 
         <!-- Css -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
         <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
         <!-- Main Css -->
         <link href="assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/icons.css">
         <link rel="stylesheet" href="assets/css/tailwind.css">
-
+       
+        
+        <link href="https://go.omnicell.com/l/862671/2022-09-01/2tml9s/862671/1662062553lcmCYeiI/hover.css" rel="stylesheet"/>
+<style>
+    .tray--agenda .card .card-title {
+        font-weight: 100;
+        font-size: 40px;
+        line-height: 41px;
+       /* font-family: "Unitext-extra-light";  */
+       
+    }
+    .tray--agenda .tray-block-card2 {
+        margin-top: -88px;
+        margin-bottom: -85px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card {
+    /* min-height: 440px; */
+    min-height: 150px;
+}
+.card-wrapper {
+    padding-left: 1rem;
+    position: relative;
+    min-height: 277px;
+}
+.item .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #35a599;
+    transition: opacity 0.15s ease-in;
+    opacity: 0;
+    padding-top: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1pxrgba(0,0,0,0.15);
+}
+.item .cover {
+    background-color:none !important;
+    transition: none !important;
+    text-shadow: none !important;
+}
+</style>
     </head>
     
     <body class="font-rubik text-base text-black dark:text-white dark:bg-slate-900">
@@ -213,14 +263,37 @@
                             <i class="uil uil-jackhammer"></i>
                         </div>
 
-                        <div class="content mt-7">
+                        <div class="content mt-7 pb-4">
                             <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">Construction & Modernization</a>
-                            <p class="text-slate-400 mt-3">Kinetic Elevator brings world-wide elevator installation and modernization experience right to your building. Our team conveniently located in New Castle County Delaware has completed elevator projects across the America and across the world. Our elevator installation & modernization teams have successfully completed hundreds of projects. Let us complete your project next.</p>
+                            <p class="text-slate-400 mt-3">Kinetic Elevator brings world-wide elevator installation and modernization experience right to your building. </p>
                             
                            <!-- <div class="mt-5">
                                 <a href="" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
                             </div> -->
                         </div>
+                         <!-- Button trigger modal -->
+<button type="button" class="" data-toggle="modal" data-target="#Construction" style="color:#000000;">
+    Read More  </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="Construction" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Construction & Modernization</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                Our team conveniently located in New Castle County Delaware has completed elevator projects across the America and across the world. Our elevator installation & modernization teams have successfully completed hundreds of projects. Let us complete your project next.
+            </div>
+            <!-- <div class="modal-footer">
+             
+            </div> -->
+          </div>
+        </div>
+      </div>
                     </div>
 
                     <div class="features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
@@ -228,32 +301,79 @@
                             <i class="uil uil-building"></i>
                         </div>
 
-                        <div class="content mt-7">
+                        <div class="content mt-7 pb-5">
                             <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">Maintenance & Repair</a>
-                            <p class="text-slate-400 mt-3">Vertical transportation is a significant asset in your property. It is the responsibility of the property stakeholder to provide ADA Accessibility for any person who may enter the property. Safe and reliable elevators are a major part of these requirements. Kinetic Elevator understands the importance of safe and reliable elevators. Our elevator maintenance program will help to provide a welcoming environment for all individuals. We know there is no good time for elevator down time! Our team of dispatchers will prioritize your elevator brake down service call and route an technician to your location ASAP so we can get your elevator operating ASAP.<br><br>
- 
-
-                                An investment into a maintenance program with Kinetic Elevator will prolong the lifecycle of your device(s) and reduce costly repairs. Proper maintenance can significantly reduce or eliminate repair cost and downtime. When the unfortunate repair is required, Kinetic's service fleet, with fully stocked vehicles will repair your device(s) quickly and cost effectively. We are factory trained to work on most makes and models including but not limiting to Otis, TKE, Schindler, Kone, Delaware, Dover, MEI, GALaxy, MCE, and many more.</p>
+                            <p class="text-slate-400 mt-3">Vertical transportation is a significant asset in your property.  </p>
                             
                          <!--   <div class="mt-5">
                                 <a href="" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
                             </div> -->
                         </div>
+                         <!-- Button trigger modal -->
+<button type="button" class="" data-toggle="modal" data-target="#maintenance" style="color:#000000;">
+    Read More  </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="maintenance" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Maintenance & Repair</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                It is the responsibility of the property stakeholder to provide ADA Accessibility for any person who may enter the property.<br><br>
+                Safe and reliable elevators are a major part of these requirements. Kinetic Elevator understands the importance of safe and reliable elevators. Our elevator maintenance program will help to provide a welcoming environment for all individuals. We know there is no good time for elevator down time! Our team of dispatchers will prioritize your elevator brake down service call and route an technician to your location ASAP so we can get your elevator operating ASAP.<br><br>
+ 
+
+                An investment into a maintenance program with Kinetic Elevator will prolong the lifecycle of your device(s) and reduce costly repairs. Proper maintenance can significantly reduce or eliminate repair cost and downtime. When the unfortunate repair is required, Kinetic's service fleet, with fully stocked vehicles will repair your device(s) quickly and cost effectively. We are factory trained to work on most makes and models including but not limiting to Otis, TKE, Schindler, Kone, Delaware, Dover, MEI, GALaxy, MCE, and many more.
+            </div>
+            <!-- <div class="modal-footer">
+              
+            </div> -->
+          </div>
+        </div>
+      </div>
                     </div>
+                    
 
                     <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
                         <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
                             <i class="uil uil-cloud-database-tree"></i>
                         </div>
 
-                        <div class="content mt-7">
+                        <div class="content mt-7 pb-4">
                             <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">Smart & Safe Devices</a>
-                            <p class="text-slate-400 mt-3">Elevator safety and elevator compliance are critical to the undisrupted use of your facility. Kinetic Elevator understands this and prioritizes this. We have focused teams which are ready to complete your elevator inspection and elevator test. We can react quickly and complete these tests within 72 hours in most cases. If your elevator or escalator has a violation from a previous inspection, we will perform the corrective repairs to resolve the elevator violation and perform and reinspection of your devis(s) to ensure you receive an elevator certificate right away. Several of our technicians hold elevator inspector certifications themselves which helps to ensure our work is completed the correct way the first time. If you have any questions about elevator inspections or elevator violations, please email <a href="mailto:liz@kineticlifts.com">liz@kinetcilifts.com</a> directly. Liz is a licensed inspector and can help resolve any concerns you may have ASAP.</p>
+                            <p class="text-slate-400 mt-3">Elevator safety and elevator compliance are critical to the undisrupted use of your facility. </p>
+                           
                             
-                            <div class="mt-5">
-                                <a href="" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
-                            </div>
                         </div>
+                        <!-- Button trigger modal -->
+<button type="button" class="" data-toggle="modal" data-target="#exampleModalCenter" style="color:#000000;">
+Read More  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Smart & Safe Devices</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            Kinetic Elevator understands this and prioritizes this. We have focused teams which are ready to complete your elevator inspection and elevator test. We can react quickly and complete these tests within 72 hours in most cases. If your elevator or escalator has a violation from a previous inspection, we will perform the corrective repairs to resolve the elevator violation and perform and reinspection of your devis(s) to ensure you receive an elevator certificate right away. Several of our technicians hold elevator inspector certifications themselves which helps to ensure our work is completed the correct way the first time. If you have any questions about elevator inspections or elevator violations, please email <a href="mailto:liz@kineticlifts.com">liz@kinetcilifts.com</a> directly. Liz is a licensed inspector and can help resolve any concerns you may have ASAP.
+        </div>
+        <!-- <div class="modal-footer">
+          
+          
+        </div> -->
+      </div>
+    </div>
+  </div>
                     </div>
 
                     
@@ -263,7 +383,17 @@
            
         </section><!--end section-->
         <!-- End -->
-
+        
+              
+    
+            
+         
+    
+        </div>
+            <!-- EOF container-fluid --> 
+          
+    
+          <a name="agenda-list"></a> </section>
         <!-- Start -->
         <section class="relative md:py-24 py-16 bg-zinc-50 dark:bg-gray-800" id="portfolio">
             <div class="container">
@@ -511,7 +641,7 @@
         <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-orange-600 text-white leading-9"><i class="uil uil-arrow-up"></i></a>
         <!-- Back to top -->
 
-      
+       
 
         <!-- JAVASCRIPTS -->
         <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
