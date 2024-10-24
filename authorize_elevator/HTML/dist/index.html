@@ -85,6 +85,9 @@
     font-size: 14px;
     padding: 12px 24px;
 }
+.desktop-hide {
+    display:none !important;
+}
 @media (min-width: 992px) {
     .navbar.is-sticky .navbar-nav.nav-light .active .nav-link {
         --tw-text-opacity: 1;
@@ -96,7 +99,18 @@
         color: #cecece;
     }
 }
-
+@media (max-width: 767px) {
+    .py-36 {
+    padding-top: 6rem !important;
+    padding-bottom: 9rem !important;
+}
+.mobile-hide-image {
+    display:none;
+}
+.mobile-show {
+    display: inline !important;
+}
+}
 </style>
     </head>
     
@@ -132,7 +146,7 @@
 
                 <div class="nav-icons flex items-center lg_992:order-2 ltr:ml-auto rtl:mr-auto">
                     <!-- Navbar Button -->
-                    <ul class="list-none menu-social mb-0">
+                    <ul class="list-none menu-social mb-0 mobile-hide-image">
                         <li class="inline">
                             <a href="https://www.linkedin.com/company/kinetic-elevator-llc" target="_blank">
                                 <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-linkedin"></i></span></span>
@@ -148,7 +162,7 @@
                         
                         
                     </ul>
-                    <a href="https://usfcr.com"><img src="https://usfcr.com/assets/img/verified-vendor-seal-2024-sm.png" alt="USFCR Verified Vendor" title="US Federal Contractor Registration System for Award Management Verified Vendor Seal"></a>
+                    <a href="https://usfcr.com"><img class="mobile-hide-image" src="https://usfcr.com/assets/img/verified-vendor-seal-2024-sm.png" alt="USFCR Verified Vendor" title="US Federal Contractor Registration System for Award Management Verified Vendor Seal"></a>
 
                     <!-- Navbar Collapse Manu Button -->
                     <button data-collapse="menu-collapse" type="button" class="collapse-btn inline-flex items-center ml-3 text-dark dark:text-white lg_992:hidden" aria-controls="menu-collapse" aria-expanded="false">
@@ -611,34 +625,40 @@ Read More  </button>
         </section><!--end section-->
         <!-- End -->
 
-        <!-- Start Footer -->
-        <footer class="py-8 bg-slate-800 dark:bg-gray-900">
-            <div class="container">
-                <div class="grid md:grid-cols-12 items-center">
-                    <div class="md:col-span-3">
-                        <a href="#" class="logo-footer">
-                            <img src="assets/images/AE_Logo-200px-white.png" width="100" class="ltr:md:ml-0 rtl:md:mr-0 mx-auto" alt="">
-                        </a>
-                    </div>
-
-                    <div class="md:col-span-5 md:mt-0 mt-8">
-                        <div class="text-center">
-                            <p class="text-gray-400">© <script>document.write(new Date().getFullYear())</script> Authorized Elevator LLC. </p>
-                        </div>
-                    </div>
-
-                    <div class="md:col-span-4 md:mt-0 mt-8">
-                        <ul class="list-none foot-icon ltr:md:text-right rtl:md:text-left text-center">
-                           
-                            <li class="inline"><a href="http://linkedin.com/company/kineticliftsllc" target="_blank" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-linkedin" title="Linkedin"></i></a></li>
-                            <li class="inline"><a href="https://www.facebook.com/kineticliftsllc" target="_blank" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
-                            
-                           
-                        </ul><!--end icon-->
-                    </div><!--end col-->
-                </div><!--end row-->
-            </div><!--end container-->
-        </footer><!--end footer-->
+ 
+                <!-- Start Footer -->
+                <footer class="py-8 bg-slate-800 dark:bg-gray-900">
+                    <div class="container">
+                        <div class="grid md:grid-cols-12 items-center">
+                            <div class="md:col-span-3">
+                                <a href="#" class="logo-footer">
+                                    <img src="assets/images/AE_Logo-200px-white.png" width="100" class="ltr:md:ml-0 rtl:md:mr-0 mx-auto" alt="">
+                                </a>
+                            </div>
+        
+                            <div class="md:col-span-5 md:mt-0 mt-8">
+                                <div class="text-center">
+                                    <a href="https://usfcr.com"><img class="mobile-show desktop-hide"  src="https://usfcr.com/assets/img/verified-vendor-seal-2024-sm.png" width="75" alt="USFCR Verified Vendor" title="US Federal Contractor Registration System for Award Management Verified Vendor Seal"></a>
+                                </div>
+                                <div class="text-center">
+                                    
+                                    <p class="text-gray-400">© <script>document.write(new Date().getFullYear())</script> Kinetic Elevator LLC. </p>
+                                </div>
+                            </div>
+        
+                            <div class="md:col-span-4 md:mt-0 mt-8">
+                                <ul class="list-none foot-icon ltr:md:text-right rtl:md:text-left text-center">
+                                   
+                                    <li class="inline"><a href="https://www.linkedin.com/company/kinetic-elevator-llc" target="_blank" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-linkedin" title="Linkedin"></i></a></li>
+                                    <li class="inline"><a href="https://www.facebook.com/kineticelevator/?paipv=0&eav=AfYBgS0m_ZRxPYL38kgfib54Lx0-jFsmMB1rGp100O4IeQcYqW8s3cKCWtSv0n_ikYQ&_rdr" target="_blank" class="btn btn-icon btn-sm border rounded-md border-slate-700 dark:border-slate-800 hover:border-orange-600 bg-slate-800 dark:bg-gray-900 hover:bg-orange-600 dark:hover:bg-orange-600 text-gray-400 hover:text-white"><i class="uil uil-facebook-f align-middle" title="facebook"></i></a></li>
+                                   
+                                   
+                                </ul><!--end icon-->
+                                
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </div><!--end container-->
+                </footer><!--end footer-->
         <!-- End Footer -->
 
         <!-- Back to top -->
