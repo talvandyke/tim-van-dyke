@@ -4,27 +4,110 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kinetic Elevator</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="">
-        <meta name="website" content="">
-        <meta name="email" content="">
-        <meta name="version" content="">
+        
         <!-- favicon -->
         <link href="assets/images/favicon.icoX" rel="shortcut icon">
 
         <!-- Css -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
         <link href="assets/libs/tiny-slider/tiny-slider.css" rel="stylesheet">
         <!-- Main Css -->
         <link href="assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/icons.css">
-        <link rel="stylesheet" href="assets/css/tailwind.css">
+        <link rel="stylesheet" href="assets/css/kinetic.css">
+       
+        
+        <link href="/dist/assets/css/hover.css" rel="stylesheet"/>
+<style>
+    .tray--agenda .card .card-title {
+        font-weight: 100;
+        font-size: 40px;
+        line-height: 41px;
+       /* font-family: "Unitext-extra-light";  */
+       
+    }
+    .tray--agenda .tray-block-card2 {
+        margin-top: -88px;
+        margin-bottom: -85px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .card {
+    /* min-height: 440px; */
+    min-height: 150px;
+}
+.card-wrapper {
+    padding-left: 1rem;
+    position: relative;
+    min-height: 277px;
+}
+.item .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #35a599;
+    transition: opacity 0.15s ease-in;
+    opacity: 0;
+    padding-top: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 1pxrgba(0,0,0,0.15);
+}
+.item .cover {
+    background-color:none !important;
+    transition: none !important;
+    text-shadow: none !important;
+}
 
+.hs-button {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 12px;
+    position: relative;
+    text-align: center;
+    transition: all .15s linear;
+    background-color: #46b555 !important;
+    border-color: #ff7a59;
+    color: #fff;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    padding: 12px 24px;
+}
+@media (min-width: 992px) {
+    .navbar.is-sticky .navbar-nav.nav-light .active .nav-link {
+        --tw-text-opacity: 1;
+        color: rgb(30 41 59 / 1) !important;
+    }
+    
+    .navbar.is-sticky .navbar-nav.nav-light .nav-link:hover {
+        --tw-text-opacity: 1;
+        color: #cecece;
+    }
+}
+
+@media (max-width: 767px) {
+
+}
+
+</style>
     </head>
     
     <body class="font-rubik text-base text-black dark:text-white dark:bg-slate-900">
-
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/47379304.js"></script>
+<!-- End of HubSpot Embed Code -->
         <!-- Loader Start -->
         <!-- <div id="preloader">
             <div id="status">
@@ -45,23 +128,23 @@
             <div class="container flex flex-wrap items-center justify-end">
                 <a class="navbar-brand" href="index.html">
                     <span class="inline-block dark:hidden">
-                        <img src="assets/images/logo-dark.png" width="100" class="l-dark" alt="">
-                        <img src="assets/images/logo-light.png" width="175" class="l-light" alt="">
+                        <img src="../dist/assets/images/KINETIC-eLEVATOR TRANSPARENT-logo-1.jpeg" width="225" class="l-dark" alt="">
+                        <img src="../dist/assets/images/logo-light.png" width="225" class="l-light" alt="">
                     </span>
-                    <img src="assets/images/logo-light.png" class="hidden dark:inline-block" alt="">
+                    <img src="../src/assets/images/logo-light.png" class="hidden dark:inline-block" alt="">
                 </a>
 
                 <div class="nav-icons flex items-center lg_992:order-2 ltr:ml-auto rtl:mr-auto">
                     <!-- Navbar Button -->
                     <ul class="list-none menu-social mb-0">
                         <li class="inline">
-                            <a href="">
+                            <a href="https://www.linkedin.com/company/kinetic-elevator-llc" target="_blank">
                                 <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-linkedin"></i></span></span>
                                 <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-linkedin"></i></span></span>
                             </a>
                         </li>
                         <li class="inline">
-                            <a href="">
+                            <a href="https://www.facebook.com/kineticelevator/?paipv=0&eav=AfYBgS0m_ZRxPYL38kgfib54Lx0-jFsmMB1rGp100O4IeQcYqW8s3cKCWtSv0n_ikYQ&_rdr" target="_blank">
                                 <span class="login-btn-primary"><span class="btn btn-sm btn-icon rounded-full bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white"><i class="uil uil-facebook-f"></i></span></span>
                                 <span class="login-btn-light"><span class="btn btn-sm btn-icon rounded-full bg-gray-50 hover:bg-gray-200 dark:bg-slate-900 dark:hover:bg-gray-700 hover:border-gray-100 dark:border-gray-700 dark:hover:border-gray-700"><i class="uil uil-facebook-f"></i></span></span>
                             </a>
@@ -69,6 +152,8 @@
                         
                         
                     </ul>
+                    <a href="https://usfcr.com"><img src="https://usfcr.com/assets/img/verified-vendor-seal-2024-sm.png" alt="USFCR Verified Vendor" title="US Federal Contractor Registration System for Award Management Verified Vendor Seal"></a>
+
                     <!-- Navbar Collapse Manu Button -->
                     <button data-collapse="menu-collapse" type="button" class="collapse-btn inline-flex items-center ml-3 text-dark dark:text-white lg_992:hidden" aria-controls="menu-collapse" aria-expanded="false">
                         <span class="sr-only">Navigation Menu</span>
@@ -118,8 +203,8 @@
                         <p class="text-white opacity-50 mb-0 max-w-2xl text-lg">We offer a comprehensive client experience that includes seamless communication, dedicated project management, and help with design and value engineering.</p>
                     
                         <div class="relative mt-10">
-                            <a href="" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-full ltr:mr-1 rtl:ml-1">Talk to a Technician</a>
-                            <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="btn btn-icon btn-lg bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-full lightbox"><i class="mdi mdi-play text-xl align-middle"></i></a><small class="text-white text-sm uppercase align-middle ltr:ml-2 rtl:mr-1">Watch Now</small>
+                            <!-- <a href="" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-full ltr:mr-1 rtl:ml-1">Talk to a Technician</a> -->
+                            <!-- <a href="#!" data-type="youtube" data-id="yba7hPeTSjk" class="btn btn-icon btn-lg bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-full lightbox"><i class="mdi mdi-play text-xl align-middle"></i></a><small class="text-white text-sm uppercase align-middle ltr:ml-2 rtl:mr-1">Watch Now</small> -->
                         </div>
                     </div>
 
@@ -127,23 +212,14 @@
                         <div class="bg-white dark:bg-black rounded-xl shadow md:p-10 p-6 ltr:lg:ml-10 rtl:lg:mr-10 z-10 relative">
                             <h4 class="mb-5 font-medium text-1xl dark:text-white">Schedule your free consultation today!</h4>
 
-                            <form>
-                                <div class="grid grid-cols-1">
-                                    <div class="mb-5">
-                                        <label class="dark:text-white">Name</label>
-                                        <input name="name" id="fName" type="text" class="form-input mt-2" placeholder="Name">
-                                    </div>
-                                    <div class="mb-5">
-                                        <label class="dark:text-white">Email</label>
-                                        <input name="email" id="yEmail" type="email" class="form-input mt-2" placeholder="Email">
-                                    </div> 
-                                    <div class="mb-5">
-                                        <label class="dark:text-white">Phone No.</label>
-                                        <input name="number" id="phNumber" class="form-input mt-2" placeholder="412 124-5854">
-                                    </div>
-                                    <a href="javascript:void (0)" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md w-full">Schedule a free evaluation today!</a>
-                                </div><!--end row-->
-                            </form>
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                            <script>
+                              hbspt.forms.create({
+                                region: "na1",
+                                portalId: "47379304",
+                                formId: "33b46daf-8202-4851-9b5c-8a6af09a5f96"
+                              });
+                            </script>
                             <!-- end form -->
                         </div>
                     </div>
@@ -213,14 +289,37 @@
                             <i class="uil uil-jackhammer"></i>
                         </div>
 
-                        <div class="content mt-7">
+                        <div class="content mt-7 pb-4">
                             <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">Construction & Modernization</a>
-                            <p class="text-slate-400 mt-3">Kinetic Elevator brings world-wide elevator installation and modernization experience right to your building. Our team conveniently located in New Castle County Delaware has completed elevator projects across the America and across the world. Our elevator installation & modernization teams have successfully completed hundreds of projects. Let us complete your project next.</p>
+                            <p class="text-slate-400 mt-3">Kinetic Elevator brings world-wide elevator installation and modernization experience right to your building. </p>
                             
                            <!-- <div class="mt-5">
                                 <a href="" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
                             </div> -->
                         </div>
+                         <!-- Button trigger modal -->
+<button type="button" class="" data-toggle="modal" data-target="#Construction" style="color:#000000;">
+    Read More  </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="Construction" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Construction & Modernization</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                Our team conveniently located in New Castle County Delaware has completed elevator projects across the America and across the world. Our elevator installation & modernization teams have successfully completed hundreds of projects. Let us complete your project next.
+            </div>
+            <!-- <div class="modal-footer">
+             
+            </div> -->
+          </div>
+        </div>
+      </div>
                     </div>
 
                     <div class="features p-6 shadow-xl shadow-slate-100 dark:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
@@ -228,32 +327,79 @@
                             <i class="uil uil-building"></i>
                         </div>
 
-                        <div class="content mt-7">
+                        <div class="content mt-7 pb-5">
                             <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">Maintenance & Repair</a>
-                            <p class="text-slate-400 mt-3">Vertical transportation is a significant asset in your property. It is the responsibility of the property stakeholder to provide ADA Accessibility for any person who may enter the property. Safe and reliable elevators are a major part of these requirements. Kinetic Elevator understands the importance of safe and reliable elevators. Our elevator maintenance program will help to provide a welcoming environment for all individuals. We know there is no good time for elevator down time! Our team of dispatchers will prioritize your elevator brake down service call and route an technician to your location ASAP so we can get your elevator operating ASAP.<br><br>
- 
-
-                                An investment into a maintenance program with Kinetic Elevator will prolong the lifecycle of your device(s) and reduce costly repairs. Proper maintenance can significantly reduce or eliminate repair cost and downtime. When the unfortunate repair is required, Kinetic's service fleet, with fully stocked vehicles will repair your device(s) quickly and cost effectively. We are factory trained to work on most makes and models including but not limiting to Otis, TKE, Schindler, Kone, Delaware, Dover, MEI, GALaxy, MCE, and many more.</p>
+                            <p class="text-slate-400 mt-3">Vertical transportation is a significant asset in your property.  </p>
                             
                          <!--   <div class="mt-5">
                                 <a href="" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
                             </div> -->
                         </div>
+                         <!-- Button trigger modal -->
+<button type="button" class="" data-toggle="modal" data-target="#maintenance" style="color:#000000;">
+    Read More  </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="maintenance" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Maintenance & Repair</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                It is the responsibility of the property stakeholder to provide ADA Accessibility for any person who may enter the property.<br><br>
+                Safe and reliable elevators are a major part of these requirements. Kinetic Elevator understands the importance of safe and reliable elevators. Our elevator maintenance program will help to provide a welcoming environment for all individuals. We know there is no good time for elevator down time! Our team of dispatchers will prioritize your elevator brake down service call and route an technician to your location ASAP so we can get your elevator operating ASAP.<br><br>
+ 
+
+                An investment into a maintenance program with Kinetic Elevator will prolong the lifecycle of your device(s) and reduce costly repairs. Proper maintenance can significantly reduce or eliminate repair cost and downtime. When the unfortunate repair is required, Kinetic's service fleet, with fully stocked vehicles will repair your device(s) quickly and cost effectively. We are factory trained to work on most makes and models including but not limiting to Otis, TKE, Schindler, Kone, Delaware, Dover, MEI, GALaxy, MCE, and many more.
+            </div>
+            <!-- <div class="modal-footer">
+              
+            </div> -->
+          </div>
+        </div>
+      </div>
                     </div>
+                    
 
                     <div class="features p-6 hover:shadow-xl hover:shadow-slate-100 dark:hover:shadow-slate-800 transition duration-500 rounded-3xl mt-8">
                         <div class="w-20 h-20 bg-orange-600/5 text-orange-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-sm">
                             <i class="uil uil-cloud-database-tree"></i>
                         </div>
 
-                        <div class="content mt-7">
+                        <div class="content mt-7 pb-4">
                             <a href="" class="text-lg hover:text-orange-600 dark:text-white dark:hover:text-orange-600 transition-all duration-500 ease-in-out font-medium">Smart & Safe Devices</a>
-                            <p class="text-slate-400 mt-3">The phrasal sequence of the is now so that many campaign and benefit</p>
+                            <p class="text-slate-400 mt-3">Elevator safety and elevator compliance are critical to the undisrupted use of your facility. </p>
+                           
                             
-                            <div class="mt-5">
-                                <a href="" class="btn btn-link hover:text-orange-600 dark:hover:text-orange-600 after:bg-orange-600 dark:text-white transition duration-500">Read More <i class="uil uil-arrow-right"></i></a>
-                            </div>
                         </div>
+                        <!-- Button trigger modal -->
+<button type="button" class="" data-toggle="modal" data-target="#exampleModalCenter" style="color:#000000;">
+Read More  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Smart & Safe Devices</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            Kinetic Elevator understands this and prioritizes this. We have focused teams which are ready to complete your elevator inspection and elevator test. We can react quickly and complete these tests within 72 hours in most cases. If your elevator or escalator has a violation from a previous inspection, we will perform the corrective repairs to resolve the elevator violation and perform and reinspection of your devis(s) to ensure you receive an elevator certificate right away. Several of our technicians hold elevator inspector certifications themselves which helps to ensure our work is completed the correct way the first time. If you have any questions about elevator inspections or elevator violations, please email <a href="mailto:liz@kineticlifts.com">liz@kinetcilifts.com</a> directly. Liz is a licensed inspector and can help resolve any concerns you may have ASAP.
+        </div>
+        <!-- <div class="modal-footer">
+          
+          
+        </div> -->
+      </div>
+    </div>
+  </div>
                     </div>
 
                     
@@ -263,15 +409,25 @@
            
         </section><!--end section-->
         <!-- End -->
-
+        
+              
+    
+            
+         
+    
+        </div>
+            <!-- EOF container-fluid --> 
+          
+    
+          <a name="agenda-list"></a> </section>
         <!-- Start -->
         <section class="relative md:py-24 py-16 bg-zinc-50 dark:bg-gray-800" id="portfolio">
             <div class="container">
                 <div class="grid grid-cols-1 pb-8 text-center">
-                    <h6 class="text-orange-600 text-base font-medium uppercase mb-2">Portfolio</h6>
-                    <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">Our Works & Projects</h3>
+                   
+                    <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">Recent Projects</h3>
 
-                    <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">Launch your campaign and benefit from our expertise on designing and managing conversion centered Tailwind CSS html page.</p>
+                    <!-- <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">Launch your campaign and benefit from our expertise on designing and managing conversion centered Tailwind CSS html page.</p> -->
                 </div><!--end grid-->
 
                 <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-6 mt-8">
@@ -284,10 +440,10 @@
                                 <a href="assets/images/portfolio/1.jpg" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white btn-icon rounded-full lightbox"><i class="uil uil-camera"></i></a>
                             </div>
 
-                            <div class="absolute z-10 hidden group-hover:block bottom-4 ltr:left-4 rtl:right-4">
+                            <!-- <div class="absolute z-10 hidden group-hover:block bottom-4 ltr:left-4 rtl:right-4">
                                 <a href="" class="h6 text-md font-medium text-white hover:text-orange-600 transition duration-500">Mockup Collection</a>
                                 <p class="text-slate-100 tag mb-0">Abstract</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -300,10 +456,10 @@
                                 <a href="assets/images/portfolio/2.jpg" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white btn-icon rounded-full lightbox"><i class="uil uil-camera"></i></a>
                             </div>
 
-                            <div class="absolute z-10 hidden group-hover:block bottom-4 ltr:left-4 rtl:right-4">
+                            <!-- <div class="absolute z-10 hidden group-hover:block bottom-4 ltr:left-4 rtl:right-4">
                                 <a href="" class="h6 text-md font-medium text-white hover:text-orange-600 transition duration-500">Mockup Collection</a>
                                 <p class="text-slate-100 tag mb-0">Abstract</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -316,10 +472,10 @@
                                 <a href="assets/images/portfolio/3.jpg" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white btn-icon rounded-full lightbox"><i class="uil uil-camera"></i></a>
                             </div>
 
-                            <div class="absolute z-10 hidden group-hover:block bottom-4 ltr:left-4 rtl:right-4">
+                            <!-- <div class="absolute z-10 hidden group-hover:block bottom-4 ltr:left-4 rtl:right-4">
                                 <a href="" class="h6 text-md font-medium text-white hover:text-orange-600 transition duration-500">Mockup Collection</a>
                                 <p class="text-slate-100 tag mb-0">Abstract</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -332,10 +488,10 @@
                                 <a href="assets/images/portfolio/4.jpg" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white btn-icon rounded-full lightbox"><i class="uil uil-camera"></i></a>
                             </div>
 
-                            <div class="absolute z-10 hidden group-hover:block bottom-4 ltr:left-4 rtl:right-4">
+                            <!-- <div class="absolute z-10 hidden group-hover:block bottom-4 ltr:left-4 rtl:right-4">
                                 <a href="" class="h6 text-md font-medium text-white hover:text-orange-600 transition duration-500">Mockup Collection</a>
                                 <p class="text-slate-100 tag mb-0">Abstract</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -350,7 +506,7 @@
             <div class="absolute inset-0 bg-black opacity-80"></div>
             <div class="container relative">
                 <div class="grid grid-cols-1 pb-8 text-center">
-                    <h2 class="mb-6 md:text-3xl text-2xl text-white font-medium">Ready to start your next web project now?</h2>
+                    <h2 class="mb-6 md:text-3xl text-2xl text-white font-medium">Your best Choice for Elevator Maintenance, Repair, <br>Replacement servicing The Mid-Atlantic region!</h2>
 
                     
                 </div><!--end grid-->
@@ -358,23 +514,23 @@
             <div class="container mb-8">
                 <div class="grid grid-cols-2 md:grid-cols-4">
                     <div class="counter-box position-relative text-center">
-                        <h3 class="font-medium text-3xl mb-2 light:text-white text-white"><span class="counter-value text-white" data-target="40">3</span>+</h3>
-                        <span class="counter-head text-slate-400 dark:text-slate-300">Projects</span>
+                        <h2 class="font-medium text-3xl mb-2 light:text-white text-white"><span class="counter-value text-white" data-target="4">1</span></h2>
+                        <span class="counter-head text-slate-400 dark:text-slate-300">States <br>(DE, NJ, MD, PA, and DC)</span>
                     </div><!--end counter box-->
 
                     <div class="counter-box position-relative text-center">
-                        <h3 class="font-medium text-3xl mb-2 light:text-white text-white"><span class="counter-value text-white" data-target="200">1</span>+</h3>
-                        <span class="counter-head text-slate-400 dark:text-slate-300">Clients</span>
+                        <h2 class="font-medium text-3xl mb-2 light:text-white text-white"><span class="counter-value text-white" data-target="95">1</span>%+</h2>
+                        <span class="counter-head text-slate-400 dark:text-slate-300">Response Time <br>Under 2 Hours</span>
                     </div><!--end counter box-->
 
                     <div class="counter-box position-relative text-center">
-                        <h3 class="font-medium text-3xl mb-2 light:text-white text-white"><span class="counter-value text-white" data-target="457">200</span>K</h3>
-                        <span class="counter-head text-slate-400 dark:text-slate-300">Members</span>
+                        <h2 class="font-medium text-3xl mb-2 light:text-white text-white"><span class="counter-value text-white" data-target="16">1</span></h2>
+                        <span class="counter-head text-slate-400 dark:text-slate-300">Fully Stocked <br>Vehicles</span>
                     </div><!--end counter box-->
 
                     <div class="counter-box position-relative text-center">
-                        <h3 class="font-medium text-3xl mb-2 light:text-white text-white"><span class="counter-value text-white" data-target="150">100</span>+</h3>
-                        <span class="counter-head text-slate-400 dark:text-slate-300">Employee</span>
+                        <h2 class="font-medium text-3xl mb-2 light:text-white text-white"><span class="counter-value text-white" data-target="250">1</span>+</h2>
+                        <span class="counter-head text-slate-400 dark:text-slate-300">Combined Years <br>of Experience</span>
                     </div><!--end counter box-->
                 </div><!--end grid-->
             </div><!--end container-->
@@ -382,11 +538,11 @@
                 <div class="grid grid-cols-1 pb-8 text-center">
                     
 
-                    <p class="text-white  max-w-xl mx-auto">Launch your campaign and benefit from our expertise on designing and managing conversion centered Tailwind CSS html page.</p>
+                   <!-- <p class="text-white  max-w-xl mx-auto">Kinetic is a full-service vertical transportation company serving Maryland, Delaware, New Jersey, Washington DC, and Pennsylvania. Our Headquarters is centrally positioned in Newcastle County Delaware.</p> -->
                 
-                    <div class="relative mt-10">
+                    <!-- <div class="relative mt-10">
                         <a href="" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md">Get Started</a>
-                    </div>
+                    </div> -->
                 </div><!--end grid-->
             </div><!--end container-->
         </section><!--end section-->
@@ -399,39 +555,23 @@
         <section class="relative md:py-24 py-16 bg-zinc-50 dark:bg-gray-800" id="contact">
             <div class="container">
                 <div class="grid grid-cols-1 pb-8 text-center">
-                    <h6 class="text-orange-600 text-base font-medium uppercase mb-2">Contact us</h6>
+                 <!--   <h6 class="text-orange-600 text-base font-medium uppercase mb-2">Contact us</h6> -->
                     <h3 class="mb-4 md:text-2xl text-xl font-medium dark:text-white">Get In Touch !</h3>
 
-                    <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">Kinetic is a full service vertical transportation company serving Maryland, Delaware and Pennsylvania. Our company is centrally positioned around our core values of integrity, loyalty, trust, and responsibility.</p>
+                    <p class="text-slate-400 dark:text-slate-300 max-w-xl mx-auto">Kinetic is a full-service vertical transportation company serving Maryland, Delaware, New Jersey, Washington DC, and Pennsylvania. Our Headquarters is centrally positioned in Newcastle County Delaware.</p>
                 </div><!--end grid-->
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 md:grid-cols-2 mt-8 items-center gap-6">
                     <div class="lg:col-span-8">
                         <div class="p-6 rounded-md shadow bg-white dark:bg-black">
-                            <form method="post" name="myForm" id="myForm" onsubmit="return validateForm()">
-                                <p class="mb-0" id="error-msg"></p>
-                                <div id="simple-msg"></div>
-                                <div class="grid lg:grid-cols-12 lg:gap-6">
-                                    <div class="lg:col-span-6 mb-5">
-                                        <input name="name" id="name" type="text" class="form-input" placeholder="Name :">
-                                    </div>
-    
-                                    <div class="lg:col-span-6 mb-5">
-                                        <input name="email" id="email" type="email" class="form-input" placeholder="Email :">
-                                    </div><!--end col-->
-                                </div>
-
-                                <div class="grid grid-cols-1">
-                                    <div class="mb-5">
-                                        <input name="subject" id="subject" class="form-input" placeholder="Subject :">
-                                    </div>
-
-                                    <div class="mb-5">
-                                        <textarea name="comments" id="comments" class="form-input textarea h-28" placeholder="Message :"></textarea>
-                                    </div>
-                                </div>
-                                <button type="submit" id="submit" name="send" class="btn bg-orange-600 hover:bg-orange-700 border-orange-600 hover:border-orange-700 text-white rounded-md h-11 justify-center flex items-center">Send Message</button>
-                            </form>
+                            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                            <script>
+                              hbspt.forms.create({
+                                region: "na1",
+                                portalId: "47379304",
+                                formId: "33b46daf-8202-4851-9b5c-8a6af09a5f96"
+                              });
+                            </script>
                         </div>
                     </div>
 
@@ -511,7 +651,7 @@
         <a href="#" onclick="topFunction()" id="back-to-top" class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 right-5 h-9 w-9 text-center bg-orange-600 text-white leading-9"><i class="uil uil-arrow-up"></i></a>
         <!-- Back to top -->
 
-      
+       
 
         <!-- JAVASCRIPTS -->
         <script src="assets/libs/gumshoejs/gumshoe.polyfills.min.js"></script>
