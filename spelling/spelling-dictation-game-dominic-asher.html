@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spelling Dictation Game (Profiles + Progress)</title>
+  <style>
+    :root{
+      --bg1:#f8fafc; --bg2:#eef2ff;
+      --card:#ffffff; --border:#e2e8f0;
+      --text:#0f172a; --muted:#64748b;
+      --green:#10b981; --green2:#059669;
+      --amber:#f59e0b; --rose:#ef4444; --slate:#0f172a;
+      --soft:#f1f5f9;
+      --shadow: 0 10px 30px rgba(2,6,23,.08);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; padding:22px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 20% 10%, var(--bg2), transparent),
+                  linear-gradient(180deg, var(--bg1), #fff);
+      min-height:100vh;
+    }
+    .wrap{max-width:980px; margin:0 auto;}
+    header{
+      display:flex; flex-wrap:wrap; gap:14px; align-items:flex-end; justify-content:space-between;
+      margin-bottom:14px;
+    }
+    h1{margin:0; font-size:26px; letter-spacing:-.02em;}
+    .sub{margin-top:6px; color:var(--muted); font-size:14px; line-height:1.35}
+    .card{
+      background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px;
+    }
+    .grid{display:grid; gap:14px;}
+    .grid2{display:grid; gap:14px; grid-template-columns: 1fr;}
+    @media(min-width:900px){ .grid2{grid-template-columns: 1fr 1fr;} }
+    label{display:block; font-weight:700; font-size:13px; color:#1f2937;}
+    textarea, input[type="text"], select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid #cbd5e1;
+      outline:none;
+      background:#fff;
+      font-size:15px;
+    }
+    textarea{min-height:170px; resize:vertical; line-height:1.35}
+    input[type="checkbox"]{transform:translateY(1px)}
+    .row{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between;}
+    .row-left{display:flex; flex-wrap:wrap; gap:10px; align-items:center;}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      border:1px solid var(--border);
+      padding:9px 12px; border-radius:999px; background: #fff;
+      font-size:13px; color:#111827;
+    }
+    .pill b{font-size:13px}
+    .btn{
+      border:0; border-radius:14px;
+      padding:12px 16px;
+      font-weight:800;
+      cursor:pointer;
+      font-size:14px;
+      transition:.12s transform, .12s opacity, .12s background;
+      user-select:none;
+    }
+    .btn:active{transform:scale(.98)}
+    .btnPrimary{background:var(--green); color:white;}
+    .btnPrimary:hover{background:var(--green2)}
+    .btnGhost{
+      background:#fff; border:1px solid var(--border); color:#111827;
+    }
+    .btnDanger{background:var(--rose); color:#fff;}
+    .btnSmall{padding:9px 12px; border-radius:12px; font-size:13px;}
+    .muted{color:var(--muted); font-size:13px;}
+    .tiny{color:var(--muted); font-size:12px;}
+    .sectionTitle{font-weight:900; letter-spacing:-.01em; margin:0 0 8px 0;}
+    .divider{height:1px; background:var(--border); margin:12px 0;}
+    .hidden{display:none !important;}
+
+    /* Quiz UI */
+    .bigCount{font-size:28px; font-weight:900; letter-spacing:-.03em;}
+    .inputBig{
+      font-size:20px;
+      padding:14px 14px;
+      border-radius:18px;
+      letter-spacing:.02em;
+    }
+    .feedback{
+      border-radius:16px;
+      padding:12px 14px;
+      border:1px solid var(--border);
+      background:var(--soft);
+      font-weight:800;
+      margin-top:10px;
+    }
+    .ok{background:#ecfdf5; border-color:#a7f3d0; color:#065f46;}
+    .bad{background:#fff1f2; border-color:#fecdd3; color:#9f1239;}
+    .hint{background:#fffbeb; border-color:#fde68a; color:#92400e;}
+    .warn{background:#f8fafc; border-color:#e2e8f0; color:#0f172a;}
+
+    /* Stars */
+    .starsLine{display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
+    .starBadge{
+      display:inline-flex; align-items:center; gap:8px;
+      background:#fffbeb; border:1px solid #fde68a; color:#92400e;
+      padding:9px 12px; border-radius:999px; font-weight:900;
+    }
+    .spark{filter: drop-shadow(0 2px 8px rgba(245,158,11,.2));}
+
+    /* Tables */
+    table{width:100%; border-collapse:collapse; font-size:13px;}
+    th, td{padding:10px 10px; border-bottom:1px solid var(--border); text-align:left; vertical-align:top;}
+    th{color:#0f172a; font-weight:900; background:#f8fafc;}
+    tr:last-child td{border-bottom:0;}
+    .tag{
+      display:inline-block; padding:4px 8px; border-radius:999px;
+      border:1px solid var(--border); background:#fff; font-weight:800; font-size:12px;
+    }
+    .tagGood{border-color:#a7f3d0; background:#ecfdf5; color:#065f46;}
+    .tagBad{border-color:#fecdd3; background:#fff1f2; color:#9f1239;}
+    .clickWord{cursor:pointer;}
+    .clickWord:hover{text-decoration:underline;}
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>Spelling Dictation Game</h1>
+      <div class="sub">
+        Enter up to <b>10 words</b>. The computer will read the word and (optionally) use it in a sentence.
+        Progress, stars, and streaks are saved locally per child profile.
+      </div>
+    </div>
+
+    <div class="row-left">
+      <div class="pill">
+        <span>Profile:</span>
+        <select id="profileSelect" aria-label="Profile">
+          <option value="Dominic VanDyke">Dominic VanDyke</option>
+          <option value="Asher VanDyke">Asher VanDyke</option>
+        </select>
+      </div>
+      <div class="pill">
+        ⭐ Total Stars: <b id="totalStars">0</b>
+      </div>
+      <div class="pill">
+        🔥 Streaks: <b id="streakText">0</b>
+      </div>
+    </div>
+  </header>
+
+  <!-- SETUP -->
+  <section id="setup" class="grid">
+    <div class="card">
+      <div class="grid2">
+        <div>
+          <label for="wordsText">Spelling words (one per line)</label>
+          <div class="tiny" style="margin:6px 0 10px 0;">
+            Best format: <code>word | sentence</code>
+            <br/>Example: <code>because | I stayed inside because it was raining.</code>
+            <br/>If you enter only the word, the game will still work.
+          </div>
+
+          <textarea id="wordsText" spellcheck="false"
+            placeholder="because | I stayed inside because it was raining.
+friend | My friend came over after school.
+people | People like to help each other.
+beautiful | The sunset was beautiful.
+said | Mom said we could go to the park.
+there | The book is over there.
+their | Their dog is very friendly.
+where | Where did you put your shoes?
+again | Please read that again.
+school | I walked to school with my sister."></textarea>
+
+          <div class="row" style="margin-top:10px;">
+            <div class="muted">Loaded: <b id="loadedCount">0</b> / 10</div>
+            <button class="btn btnPrimary" id="startBtn">Start Quiz</button>
+          </div>
+          <div class="tiny" style="margin-top:8px;">
+            Tip: Most browsers require a button click before speech will play. Use “Test Voice” first if needed.
+          </div>
+        </div>
+
+        <div class="grid" style="align-content:start;">
+          <!-- QUIZ OPTIONS -->
+          <div class="card" style="box-shadow:none;">
+            <p class="sectionTitle">Quiz Options</p>
+            <div class="grid" style="gap:10px;">
+              <label class="pill" style="justify-content:space-between;">
+                <span><input type="checkbox" id="shuffleOnStart" checked> Shuffle words on start</span>
+              </label>
+              <label class="pill" style="justify-content:space-between;">
+                <span><input type="checkbox" id="autoSpeak" checked> Auto-speak new word</span>
+              </label>
+              <label class="pill" style="justify-content:space-between;">
+                <span><input type="checkbox" id="caseSensitive"> Case-sensitive checking</span>
+              </label>
+
+              <div>
+                <label for="dictationStyle">Dictation style</label>
+                <select id="dictationStyle">
+                  <option value="teacher" selected>Teacher (Word + Sentence + “Spell the word”)</option>
+                  <option value="simple">Simple (Word + Sentence)</option>
+                  <option value="wordOnly">Word only</option>
+                </select>
+                <div class="tiny" style="margin-top:6px;">
+                  Teacher style feels most like a real spelling test.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VOICE SETTINGS -->
+          <div class="card" style="box-shadow:none;">
+            <p class="sectionTitle">Voice Settings</p>
+
+            <div id="ttsWarning" class="feedback warn hidden">
+              Text-to-speech isn’t available in this browser. Try Chrome, Edge, or Safari.
+            </div>
+
+            <div class="grid" style="gap:10px;">
+              <div>
+                <label for="voiceSelect">Voice</label>
+                <select id="voiceSelect"></select>
+              </div>
+
+              <div class="grid2">
+                <div>
+                  <label for="rate">Rate</label>
+                  <input id="rate" type="range" min="0.6" max="1.2" step="0.05" value="0.90" style="width:100%;">
+                  <div class="tiny">Rate: <span id="rateVal">0.90</span></div>
+                </div>
+                <div>
+                  <label for="pitch">Pitch</label>
+                  <input id="pitch" type="range" min="0.6" max="1.4" step="0.05" value="1.00" style="width:100%;">
+                  <div class="tiny">Pitch: <span id="pitchVal">1.00</span></div>
+                </div>
+              </div>
+
+              <div>
+                <label for="volume">Volume</label>
+                <input id="volume" type="range" min="0.2" max="1.0" step="0.05" value="1.00" style="width:100%;">
+                <div class="tiny">Volume: <span id="volumeVal">1.00</span></div>
+              </div>
+
+              <button class="btn btnGhost" id="testVoiceBtn">Test Voice</button>
+              <div class="tiny" id="voiceNote"></div>
+            </div>
+          </div>
+
+          <!-- PROGRESS SNAPSHOT -->
+          <div class="card" style="box-shadow:none;">
+            <p class="sectionTitle">Weekly Progress (This Profile)</p>
+            <div class="row">
+              <div class="pill">This week: <b id="thisWeekSummary">0 quizzes</b></div>
+              <div class="pill">Best score (week): <b id="thisWeekBest">0/10</b></div>
+            </div>
+            <div class="divider"></div>
+            <div class="tiny">Progress saves automatically after each completed quiz.</div>
+            <div class="row" style="margin-top:10px;">
+              <button class="btn btnSmall btnGhost" id="viewProgressBtn">View Full Progress</button>
+              <button class="btn btnSmall btnGhost" id="resetProfileBtn" title="Clears stars & progress for the selected profile">Reset Profile</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="grid hidden">
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="muted">Word</div>
+          <div class="bigCount"><span id="wordIndex">1</span> <span class="muted">/</span> <span id="wordTotal">10</span></div>
+        </div>
+
+        <div class="row-left">
+          <button class="btn btnGhost btnSmall" id="repeatBtn">🔊 Repeat</button>
+          <button class="btn btnGhost btnSmall" id="repeatWordBtn">🔊 Word Only</button>
+          <button class="btn btnGhost btnSmall" id="repeatSentenceBtn">🔊 Sentence</button>
+          <button class="btn btnDanger btnSmall" id="exitBtn">Exit</button>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;">
+        <label for="answer">Type the spelling:</label>
+        <input id="answer" class="inputBig" type="text" autocomplete="off" spellcheck="false" placeholder="Type here…" />
+        <div class="row" style="margin-top:10px;">
+          <div class="row-left">
+            <button class="btn btnPrimary" id="submitBtn">Submit</button>
+            <button class="btn btnGhost" id="hintBtn">Hint</button>
+            <button class="btn btnGhost" id="skipBtn">Skip</button>
+          </div>
+          <div class="pill">Tries: <b id="tries">0</b></div>
+        </div>
+
+        <div id="feedback" class="feedback hidden"></div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <div class="starsLine">
+            <span class="starBadge"><span class="spark">⭐</span> This quiz: <b id="quizStars">0</b></span>
+            <span class="pill">Correct so far: <b id="correctSoFar">0</b></span>
+          </div>
+          <div class="muted">Tip: Press <b>Enter</b> to submit.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results" class="grid hidden">
+    <div class="card">
+      <div class="row">
+        <div>
+          <h2 style="margin:0;">Results</h2>
+          <div class="muted">Profile: <b id="resultsProfile"></b></div>
+        </div>
+        <div class="starsLine">
+          <span class="starBadge"><span class="spark">⭐</span> Stars earned: <b id="starsEarned">0</b></span>
+          <span class="pill">Score: <b id="finalScore">0/10</b></span>
+        </div>
+      </div>
+
+      <div id="missedBox" class="card" style="box-shadow:none; margin-top:14px;">
+        <div class="row">
+          <div>
+            <div class="sectionTitle" style="margin:0;">Words to practice</div>
+            <div class="tiny">Click a word to hear it again.</div>
+          </div>
+          <button class="btn btnPrimary btnSmall" id="practiceMissedBtn">Practice Missed</button>
+        </div>
+        <div class="divider"></div>
+        <div id="missedList" class="row-left" style="gap:8px; flex-wrap:wrap;"></div>
+      </div>
+
+      <div class="card" style="box-shadow:none; margin-top:14px;">
+        <div class="sectionTitle">Answer review</div>
+        <div style="overflow:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Word</th>
+                <th>You typed</th>
+                <th>Result</th>
+                <th>Tries</th>
+              </tr>
+            </thead>
+            <tbody id="reviewRows"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:14px;">
+        <button class="btn btnPrimary" id="newListBtn">New List</button>
+        <button class="btn btnGhost" id="rerunBtn">Run Again (Shuffled)</button>
+        <button class="btn btnGhost" id="viewProgressBtn2">View Full Progress</button>
+      </div>
+
+      <div class="tiny" style="margin-top:10px;">
+        Privacy: This game runs locally in your browser. Word lists and results are not sent anywhere.
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRESS MODAL -->
+  <section id="progress" class="grid hidden">
+    <div class="card">
+      <div class="row">
+        <div>
+          <h2 style="margin:0;">Progress & Rewards</h2>
+          <div class="muted">Profile: <b id="progressProfile"></b></div>
+        </div>
+        <button class="btn btnGhost btnSmall" id="closeProgressBtn">Close</button>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="grid2">
+        <div class="card" style="box-shadow:none;">
+          <div class="sectionTitle">Rewards</div>
+          <div class="row">
+            <div class="pill">⭐ Total stars: <b id="progressStars">0</b></div>
+            <div class="pill">🔥 Daily streak: <b id="dailyStreak">0</b></div>
+            <div class="pill">📅 Weekly streak: <b id="weeklyStreak">0</b></div>
+          </div>
+          <div class="tiny" style="margin-top:10px;">
+            Daily streak = consecutive days with a completed quiz.<br/>
+            Weekly streak = consecutive weeks with a completed quiz.
+          </div>
+        </div>
+
+        <div class="card" style="box-shadow:none;">
+          <div class="sectionTitle">This Week Snapshot</div>
+          <div class="row">
+            <div class="pill">Quizzes: <b id="wkQuizzes">0</b></div>
+            <div class="pill">Avg score: <b id="wkAvg">0/10</b></div>
+            <div class="pill">Best: <b id="wkBest">0/10</b></div>
+          </div>
+          <div class="tiny" style="margin-top:10px;">
+            Tip: 3–5 short quizzes per week builds strong spelling retention.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="box-shadow:none; margin-top:14px;">
+        <div class="sectionTitle">Weekly history</div>
+        <div class="tiny" style="margin-bottom:10px;">
+          Shows completed quizzes per week (auto-tracked).
+        </div>
+        <div style="overflow:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>Quizzes</th>
+                <th>Avg Score</th>
+                <th>Best Score</th>
+                <th>Stars Earned</th>
+              </tr>
+            </thead>
+            <tbody id="weeklyRows"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:14px;">
+        <button class="btn btnGhost" id="exportBtn">Export Progress (JSON)</button>
+        <button class="btn btnDanger" id="clearAllBtn" title="Clears ALL profiles and progress from this browser">Clear All Data</button>
+      </div>
+      <div class="tiny" style="margin-top:10px;">
+        Export lets you save a backup. Clear All removes everything from this browser only.
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const now = () => new Date();
+  const pad2 = (n) => String(n).padStart(2, "0");
+
+  function isoWeekKey(d = new Date()) {
+    const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+    const dayNum = date.getUTCDay() || 7;
+    date.setUTCDate(date.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
+    const weekNo = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+    return `${date.getUTCFullYear()}-W${pad2(weekNo)}`;
+  }
+
+  function dateKey(d = new Date()) {
+    return `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())}`;
+  }
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function normalizeWord(w) { return (w || "").trim(); }
+
+  function compare(a, b, caseSensitive) {
+    if (caseSensitive) return a === b;
+    return String(a).toLowerCase() === String(b).toLowerCase();
+  }
+
+  const STORAGE_KEY = "spellingGameProfiles_v1";
+
+  function defaultProfile(name) {
+    return {
+      name,
+      totalStars: 0,
+      lastPlayedDate: null,
+      dailyStreak: 0,
+      lastPlayedWeek: null,
+      weeklyStreak: 0,
+      weekly: {},
+      sessions: []
+    };
+  }
+
+  function loadAll() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return {};
+      return JSON.parse(raw);
+    } catch {
+      return {};
+    }
+  }
+
+  function saveAll(obj) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(obj));
+  }
+
+  function getProfiles() {
+    const all = loadAll();
+    if (!all["Dominic VanDyke"]) all["Dominic VanDyke"] = defaultProfile("Dominic VanDyke");
+    if (!all["Asher VanDyke"]) all["Asher VanDyke"] = defaultProfile("Asher VanDyke");
+    saveAll(all);
+    return all;
+  }
+
+  function getCurrentProfileName() {
+    return $("profileSelect").value;
+  }
+
+  function getProfileData(name) {
+    const all = getProfiles();
+    return all[name] || defaultProfile(name);
+  }
+
+  function updateProfile(name, updater) {
+    const all = getProfiles();
+    const current = all[name] || defaultProfile(name);
+    const updated = updater(current) || current;
+    all[name] = updated;
+    saveAll(all);
+    return updated;
+  }
+
+  let voices = [];
+  function ttsAvailable() {
+    return ("speechSynthesis" in window) && ("SpeechSynthesisUtterance" in window);
+  }
+
+  function loadVoices() {
+    if (!ttsAvailable()) return [];
+    voices = window.speechSynthesis.getVoices() || [];
+    return voices;
+  }
+
+  function populateVoiceSelect() {
+    const sel = $("voiceSelect");
+    sel.innerHTML = "";
+    const v = loadVoices();
+    if (!v.length) {
+      const opt = document.createElement("option");
+      opt.value = "";
+      opt.textContent = "Loading voices… (click Test Voice)";
+      sel.appendChild(opt);
+      return;
+    }
+
+    const sorted = [...v].sort((a, b) => {
+      const aEn = /^en/i.test(a.lang) ? 0 : 1;
+      const bEn = /^en/i.test(b.lang) ? 0 : 1;
+      return aEn - bEn || a.name.localeCompare(b.name);
+    });
+
+    for (const voice of sorted) {
+      const opt = document.createElement("option");
+      opt.value = voice.voiceURI;
+      opt.textContent = `${voice.name} (${voice.lang})`;
+      sel.appendChild(opt);
+    }
+
+    const pick =
+      sorted.find(x => /en(-|_)?US/i.test(x.lang)) ||
+      sorted.find(x => /^en/i.test(x.lang)) ||
+      sorted[0];
+
+    sel.value = pick ? pick.voiceURI : "";
+  }
+
+  function speak(text) {
+    if (!ttsAvailable() || !text) return false;
+    const rate = parseFloat($("rate").value);
+    const pitch = parseFloat($("pitch").value);
+    const volume = parseFloat($("volume").value);
+    const voiceURI = $("voiceSelect").value;
+
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = rate;
+    u.pitch = pitch;
+    u.volume = volume;
+
+    const v = (window.speechSynthesis.getVoices() || []).find(x => x.voiceURI === voiceURI);
+    if (v) u.voice = v;
+
+    window.speechSynthesis.cancel();
+    window.speechSynthesis.speak(u);
+    return true;
+  }
+
+  function updateVoiceLabels() {
+    $("rateVal").textContent = Number($("rate").value).toFixed(2);
+    $("pitchVal").textContent = Number($("pitch").value).toFixed(2);
+    $("volumeVal").textContent = Number($("volume").value).toFixed(2);
+  }
+
+  function parseWordLines(raw) {
+    const lines = (raw || "")
+      .split(/\n/)
+      .map(s => s.trim())
+      .filter(Boolean);
+
+    const out = [];
+    const seen = new Set();
+
+    for (const line of lines) {
+      let word = line;
+      let sentence = "";
+
+      if (line.includes("|")) {
+        const parts = line.split("|");
+        word = (parts[0] || "").trim();
+        sentence = (parts.slice(1).join("|") || "").trim();
+      } else if (line.includes(" - ")) {
+        const parts = line.split(" - ");
+        word = (parts[0] || "").trim();
+        sentence = (parts.slice(1).join(" - ") || "").trim();
+      }
+
+      word = normalizeWord(word);
+      if (!word) continue;
+
+      const key = word.toLowerCase();
+      if (seen.has(key)) continue;
+      seen.add(key);
+
+      if (!sentence) sentence = `Please spell ${word}.`;
+      out.push({ word, sentence });
+
+      if (out.length >= 10) break;
+    }
+    return out;
+  }
+
+  let stage = "setup";
+  let round = [];
+  let idx = 0;
+  let tries = 0;
+  let attempts = [];
+  let missedSet = new Set();
+  let correctCount = 0;
+  let quizStars = 0;
+
+  function setStage(next) {
+    stage = next;
+    $("setup").classList.toggle("hidden", next !== "setup");
+    $("quiz").classList.toggle("hidden", next !== "quiz");
+    $("results").classList.toggle("hidden", next !== "results");
+    $("progress").classList.toggle("hidden", next !== "progress");
+  }
+
+  function updateLoadedCount() {
+    const list = parseWordLines($("wordsText").value);
+    $("loadedCount").textContent = list.length;
+  }
+
+  function startQuiz(wordsToUse) {
+    const list = wordsToUse || parseWordLines($("wordsText").value);
+    if (!list.length) { alert("Please enter at least 1 word."); return; }
+
+    const shuffleOnStart = $("shuffleOnStart").checked;
+    const autoSpeak = $("autoSpeak").checked;
+
+    round = shuffleOnStart ? shuffle(list) : list;
+    idx = 0;
+    tries = 0;
+    attempts = [];
+    missedSet = new Set();
+    correctCount = 0;
+    quizStars = 0;
+
+    $("quizStars").textContent = "0";
+    $("correctSoFar").textContent = "0";
+
+    $("wordTotal").textContent = round.length;
+    setStage("quiz");
+
+    setTimeout(() => $("answer").focus(), 50);
+    if (autoSpeak) speakPrompt();
+    updateQuizHeader();
+  }
+
+  function currentItem() {
+    return round[idx] || null;
+  }
+
+  function dictationText(item) {
+    const style = $("dictationStyle").value;
+    if (style === "wordOnly") return item.word;
+    if (style === "simple") return `${item.word}. ${item.sentence}`;
+    return `The word is ${item.word}. ${item.sentence} Spell the word ${item.word}.`;
+  }
+
+  function speakPrompt() {
+    const item = currentItem();
+    if (!item) return;
+    const ok = speak(dictationText(item));
+    if (!ok) {
+      $("feedback").className = "feedback warn";
+      $("feedback").textContent = "Text-to-speech isn't available in this browser. You can still play by reading the words aloud.";
+      $("feedback").classList.remove("hidden");
+    }
+  }
+
+  function speakWordOnly() {
+    const item = currentItem();
+    if (!item) return;
+    speak(item.word);
+  }
+
+  function speakSentenceOnly() {
+    const item = currentItem();
+    if (!item) return;
+    speak(item.sentence);
+  }
+
+  function updateQuizHeader() {
+    $("wordIndex").textContent = String(idx + 1);
+    $("wordTotal").textContent = String(round.length);
+    $("tries").textContent = String(tries);
+  }
+
+  function showFeedback(type, msg) {
+    const box = $("feedback");
+    box.className = "feedback " + type;
+    box.textContent = msg;
+    box.classList.remove("hidden");
+  }
+
+  function clearFeedback() {
+    $("feedback").classList.add("hidden");
+    $("feedback").textContent = "";
+  }
+
+  function nextWord() {
+    tries = 0;
+    $("tries").textContent = "0";
+    $("answer").value = "";
+    clearFeedback();
+    updateQuizHeader();
+    setTimeout(() => $("answer").focus(), 50);
+    if ($("autoSpeak").checked) speakPrompt();
+  }
+
+  function submitAnswer() {
+    const item = currentItem();
+    if (!item) return;
+
+    const enteredRaw = normalizeWord($("answer").value);
+    if (!enteredRaw) return;
+
+    tries += 1;
+    $("tries").textContent = String(tries);
+
+    const isCorrect = compare(enteredRaw, item.word, $("caseSensitive").checked);
+
+    if (isCorrect) {
+      correctCount += 1;
+      $("correctSoFar").textContent = String(correctCount);
+
+      quizStars += 1;
+      if (tries === 1) quizStars += 1;
+      $("quizStars").textContent = String(quizStars);
+
+      attempts.push({ word: item.word, entered: enteredRaw, correct: true, tries });
+      showFeedback("ok", "✅ Correct!");
+
+      setTimeout(() => {
+        idx += 1;
+        if (idx >= round.length) {
+          endQuiz();
+        } else {
+          nextWord();
+        }
+      }, 650);
+
+    } else {
+      missedSet.add(item.word);
+      showFeedback("bad", "❌ Not quite. Try again.");
+    }
+  }
+
+  function hint() {
+    const item = currentItem();
+    if (!item) return;
+    const w = item.word;
+    const first = w[0] || "";
+    showFeedback("hint", `Hint: starts with “${first}” and has ${w.length} letters.`);
+  }
+
+  function skipWord() {
+    const item = currentItem();
+    if (!item) return;
+    missedSet.add(item.word);
+    attempts.push({ word: item.word, entered: normalizeWord($("answer").value) || "(skipped)", correct: false, tries: Math.max(tries, 1) });
+
+    idx += 1;
+    if (idx >= round.length) endQuiz();
+    else nextWord();
+  }
+
+  function computeScore() {
+    const total = round.length;
+    const correct = correctCount;
+    return { correct, total };
+  }
+
+  function weekStartDateFromKey(key) {
+    const [yPart, wPart] = key.split("-W");
+    const year = parseInt(yPart, 10);
+    const week = parseInt(wPart, 10);
+    const simple = new Date(Date.UTC(year, 0, 1 + (week - 1) * 7));
+    const dow = simple.getUTCDay();
+    const ISOweekStart = new Date(simple);
+    const diff = (dow <= 4 ? 1 - dow : 8 - dow);
+    ISOweekStart.setUTCDate(simple.getUTCDate() + diff);
+    return ISOweekStart;
+  }
+
+  function updateStreaks(profile) {
+    const today = dateKey(now());
+    const last = profile.lastPlayedDate;
+
+    if (!last) {
+      profile.dailyStreak = 1;
+    } else if (last === today) {
+      // keep
+    } else {
+      const lastDate = new Date(last + "T00:00:00");
+      const todayDate = new Date(today + "T00:00:00");
+      const diffDays = Math.round((todayDate - lastDate) / 86400000);
+      if (diffDays === 1) profile.dailyStreak = (profile.dailyStreak || 0) + 1;
+      else profile.dailyStreak = 1;
+    }
+    profile.lastPlayedDate = today;
+
+    const week = isoWeekKey(now());
+    const lastW = profile.lastPlayedWeek;
+    if (!lastW) {
+      profile.weeklyStreak = 1;
+    } else if (lastW === week) {
+      // keep
+    } else {
+      const weekStart = weekStartDateFromKey(week);
+      const lastStart = weekStartDateFromKey(lastW);
+      const diffWeeks = Math.round((weekStart - lastStart) / (86400000 * 7));
+      if (diffWeeks === 1) profile.weeklyStreak = (profile.weeklyStreak || 0) + 1;
+      else profile.weeklyStreak = 1;
+    }
+    profile.lastPlayedWeek = week;
+
+    return profile;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (m) => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"
+    }[m]));
+  }
+
+  function endQuiz() {
+    const { correct, total } = computeScore();
+
+    // Completed-quizzes-based rewards (as requested)
+    // Stars earned are applied only when the quiz is completed.
+    let earned = quizStars;
+    if (correct === total) earned += 2;
+    else if (correct / total >= 0.9) earned += 1;
+
+    const profileName = getCurrentProfileName();
+
+    updateProfile(profileName, (p) => {
+      p.totalStars = (p.totalStars || 0) + earned;
+      p = updateStreaks(p);
+
+      const wk = isoWeekKey(now());
+      if (!p.weekly[wk]) {
+        p.weekly[wk] = { quizzes: 0, totalScore: 0, bestScore: 0, starsEarned: 0, totalPossible: 0 };
+      }
+      const w = p.weekly[wk];
+      w.quizzes += 1;
+      w.totalScore += correct;
+      w.totalPossible += total;
+      w.bestScore = Math.max(w.bestScore, correct);
+      w.starsEarned += earned;
+
+      p.sessions = Array.isArray(p.sessions) ? p.sessions : [];
+      p.sessions.unshift({ ts: Date.now(), score: correct, total, stars: earned });
+      p.sessions = p.sessions.slice(0, 50);
+
+      return p;
+    });
+
+    $("resultsProfile").textContent = profileName;
+    $("starsEarned").textContent = String(earned);
+    $("finalScore").textContent = `${correct}/${total}`;
+
+    const missed = [...missedSet];
+    const missedList = $("missedList");
+    missedList.innerHTML = "";
+
+    if (missed.length === 0) {
+      $("missedBox").classList.remove("hidden");
+      missedList.innerHTML = `<span class="tag tagGood">Perfect score! 🎉</span>`;
+      $("practiceMissedBtn").disabled = true;
+      $("practiceMissedBtn").style.opacity = 0.5;
+    } else {
+      $("missedBox").classList.remove("hidden");
+      $("practiceMissedBtn").disabled = false;
+      $("practiceMissedBtn").style.opacity = 1;
+
+      missed.forEach(w => {
+        const btn = document.createElement("button");
+        btn.className = "btn btnGhost btnSmall";
+        btn.textContent = `🔊 ${w}`;
+        btn.addEventListener("click", () => speak(w));
+        missedList.appendChild(btn);
+      });
+    }
+
+    const tbody = $("reviewRows");
+    tbody.innerHTML = "";
+    for (const a of attempts) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${escapeHtml(a.word)}</td>
+        <td>${escapeHtml(a.entered)}</td>
+        <td>${a.correct ? `<span class="tag tagGood">Correct</span>` : `<span class="tag tagBad">Missed</span>`}</td>
+        <td>${a.tries}</td>
+      `;
+      tbody.appendChild(tr);
+    }
+
+    refreshHeaderBadges();
+    setStage("results");
+  }
+
+  function weeklySnapshot(profile) {
+    const wk = isoWeekKey(now());
+    const w = profile.weekly[wk];
+    if (!w) return { quizzes: 0, avg: 0, best: 0, totalPossible: 10 };
+    const avg = w.quizzes ? (w.totalScore / w.quizzes) : 0;
+    const totalPossible = w.quizzes ? (w.totalPossible / w.quizzes) : 10;
+    return { quizzes: w.quizzes, avg, best: w.bestScore, totalPossible };
+  }
+
+  function refreshHeaderBadges() {
+    const name = getCurrentProfileName();
+    const p = getProfileData(name);
+
+    $("totalStars").textContent = String(p.totalStars || 0);
+    $("streakText").textContent = `${p.dailyStreak || 0} day • ${p.weeklyStreak || 0} week`;
+
+    const snap = weeklySnapshot(p);
+    $("thisWeekSummary").textContent = `${snap.quizzes} quiz${snap.quizzes === 1 ? "" : "zes"}`;
+    $("thisWeekBest").textContent = `${snap.best}/10`;
+  }
+
+  function showProgress() {
+    const name = getCurrentProfileName();
+    const p = getProfileData(name);
+
+    $("progressProfile").textContent = name;
+    $("progressStars").textContent = String(p.totalStars || 0);
+    $("dailyStreak").textContent = String(p.dailyStreak || 0);
+    $("weeklyStreak").textContent = String(p.weeklyStreak || 0);
+
+    const snap = weeklySnapshot(p);
+    $("wkQuizzes").textContent = String(snap.quizzes);
+    $("wkAvg").textContent = `${(snap.avg).toFixed(1)}/10`;
+    $("wkBest").textContent = `${snap.best}/10`;
+
+    const rows = $("weeklyRows");
+    rows.innerHTML = "";
+
+    const entries = Object.entries(p.weekly || {}).sort((a,b) => b[0].localeCompare(a[0]));
+    if (!entries.length) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td colspan="5" class="muted">No progress yet. Complete a quiz to start tracking!</td>`;
+      rows.appendChild(tr);
+    } else {
+      for (const [wk, w] of entries) {
+        const avg = w.quizzes ? (w.totalScore / w.quizzes) : 0;
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${wk}</td>
+          <td>${w.quizzes}</td>
+          <td>${avg.toFixed(1)}/10</td>
+          <td>${w.bestScore}/10</td>
+          <td>⭐ ${w.starsEarned}</td>
+        `;
+        rows.appendChild(tr);
+      }
+    }
+
+    setStage("progress");
+  }
+
+  function exitToSetup() {
+    try { window.speechSynthesis.cancel(); } catch {}
+    setStage("setup");
+  }
+
+  function practiceMissed() {
+    const missed = [...missedSet];
+    if (!missed.length) { setStage("setup"); return; }
+
+    const base = parseWordLines($("wordsText").value);
+    const map = new Map(base.map(x => [x.word.toLowerCase(), x]));
+    const retry = missed.map(w => map.get(w.toLowerCase()) || { word: w, sentence: `Please spell ${w}.` });
+    startQuiz(retry);
+  }
+
+  function rerunShuffled() {
+    const base = parseWordLines($("wordsText").value);
+    startQuiz(shuffle(base));
+  }
+
+  function resetProfile() {
+    const name = getCurrentProfileName();
+    if (!confirm(`Reset all stars & progress for ${name}?`)) return;
+    updateProfile(name, () => defaultProfile(name));
+    refreshHeaderBadges();
+    alert("Profile reset.");
+  }
+
+  function exportProgress() {
+    const all = getProfiles();
+    const blob = new Blob([JSON.stringify(all, null, 2)], {type:"application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "spelling-game-progress.json";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  function clearAll() {
+    if (!confirm("Clear ALL profiles and progress from this browser?")) return;
+    localStorage.removeItem(STORAGE_KEY);
+    getProfiles();
+    refreshHeaderBadges();
+    alert("All data cleared.");
+    setStage("setup");
+  }
+
+  function bindEvents() {
+    $("wordsText").addEventListener("input", updateLoadedCount);
+    $("startBtn").addEventListener("click", () => startQuiz());
+
+    $("submitBtn").addEventListener("click", submitAnswer);
+    $("answer").addEventListener("keydown", (e) => {
+      if (e.key === "Enter") submitAnswer();
+    });
+
+    $("repeatBtn").addEventListener("click", speakPrompt);
+    $("repeatWordBtn").addEventListener("click", speakWordOnly);
+    $("repeatSentenceBtn").addEventListener("click", speakSentenceOnly);
+
+    $("hintBtn").addEventListener("click", hint);
+    $("skipBtn").addEventListener("click", skipWord);
+    $("exitBtn").addEventListener("click", exitToSetup);
+
+    $("practiceMissedBtn").addEventListener("click", practiceMissed);
+    $("newListBtn").addEventListener("click", () => setStage("setup"));
+    $("rerunBtn").addEventListener("click", rerunShuffled);
+
+    $("viewProgressBtn").addEventListener("click", showProgress);
+    $("viewProgressBtn2").addEventListener("click", showProgress);
+    $("closeProgressBtn").addEventListener("click", () => setStage("setup"));
+
+    $("resetProfileBtn").addEventListener("click", resetProfile);
+    $("exportBtn").addEventListener("click", exportProgress);
+    $("clearAllBtn").addEventListener("click", clearAll);
+
+    $("testVoiceBtn").addEventListener("click", () => {
+      populateVoiceSelect();
+      const ok = speak("Ready for spelling! I will say the word and use it in a sentence.");
+      $("voiceNote").textContent = ok ? "Voice test played." : "Speech not available in this browser.";
+    });
+
+    $("rate").addEventListener("input", updateVoiceLabels);
+    $("pitch").addEventListener("input", updateVoiceLabels);
+    $("volume").addEventListener("input", updateVoiceLabels);
+
+    $("profileSelect").addEventListener("change", () => {
+      refreshHeaderBadges();
+    });
+  }
+
+  function init() {
+    getProfiles();
+
+    updateLoadedCount();
+    updateVoiceLabels();
+    bindEvents();
+
+    if (!ttsAvailable()) {
+      $("ttsWarning").classList.remove("hidden");
+    } else {
+      populateVoiceSelect();
+      window.speechSynthesis.onvoiceschanged = () => populateVoiceSelect();
+    }
+
+    refreshHeaderBadges();
+    setStage("setup");
+  }
+
+  init();
+
+  window.__SpellingGame = { getProfiles, getProfileData, isoWeekKey };
+
+})();
+</script>
+</body>
+</html>
