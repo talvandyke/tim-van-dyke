@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Second Grade Spelling Dictation Game</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  }
+  textarea, input[type=text], select {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    margin-top: 6px;
+  }
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .primary { background: #10b981; color: white; }
+  .secondary { background: #e5e7eb; }
+  .danger { background: #ef4444; color: white; }
+
+  .hidden { display: none; }
+  .feedback { font-size: 20px; font-weight: bold; margin-top: 10px; }
+  .correct { color: #15803d; }
+  .incorrect { color: #b91c1c; }
+
+  ul li { cursor: pointer; }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Spelling Dictation Game</h1>
+  <p>Enter up to <b>10 words</b>. Use this format:</p>
+  <code>word | sentence</code>
+
+  <!-- SETUP -->
+  <div id="setup">
+<textarea id="words">
+because | I stayed inside because it was raining.
+friend | My friend came over to play.
+school | I walked to school today.
+again | Please read it again.
+people | People waved hello.
+</textarea>
+
+<label>Dictation Style</label>
+<select id="mode">
+  <option value="teacher" selected>Teacher Style</option>
+  <option value="simple">Word + Sentence</option>
+  <option value="word">Word Only</option>
+</select>
+
+<button class="primary" id="startBtn">Start Game</button>
+</div>
+
+<!-- GAME -->
+<div id="game" class="hidden">
+  <h2>Word <span id="count"></span></h2>
+
+  <input id="answer" type="text" placeholder="Type spelling here" autocomplete="off" spellcheck="false">
+
+  <div>
+    <button class="primary" id="submitBtn">Submit</button>
+    <button class="secondary" id="repeatBtn">🔊 Repeat</button>
+    <button class="danger" id="exitBtn">Exit</button>
+  </div>
+
+  <div id="feedback" class="feedback"></div>
+</div>
+
+<!-- RESULTS -->
+<div id="results" class="hidden">
+  <h2>Results</h2>
+  <p id="score"></p>
+  <h3>Words to Practice (click to hear)</h3>
+  <ul id="missed"></ul>
+  <button class="primary" id="restartBtn">New List</button>
+</div>
+
+</div>
+
+<script>
+/* =====================
+   GLOBAL GAME STATE
+===================== */
+let items = [];
+let index = 0;
+let missed = [];
+
+/* =====================
+   SPEECH
+===================== */
+function speak(text) {
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.rate = 0.9;
+  window.speechSynthesis.speak(u);
+}
+
+/* =====================
+   GAME LOGIC
+===================== */
+function parseWords(text) {
+  return text.split(/\n/)
+    .map(line => {
+      let [w, s] = line.split("|");
+      if (!w) return null;
+      return {
+        word: w.trim(),
+        sentence: s ? s.trim() : `Please spell ${w.trim()}.`
+      };
+    })
+    .filter(Boolean)
+    .slice(0,10);
+}
+
+function startGame() {
+  items = parseWords(document.getElementById("words").value);
+  if (!items.length) {
+    alert("Please enter at least one word.");
+    return;
+  }
+
+  index = 0;
+  missed = [];
+
+  document.getElementById("setup").classList.add("hidden");
+  document.getElementById("results").classList.add("hidden");
+  document.getElementById("game").classList.remove("hidden");
+
+  nextWord();
+}
+
+function nextWord() {
+  document.getElementById("feedback").textContent = "";
+  document.getElementById("answer").value = "";
+  document.getElementById("count").textContent =
+    `${index + 1} of ${items.length}`;
+
+  playPrompt();
+  document.getElementById("answer").focus();
+}
+
+function playPrompt() {
+  const mode = document.getElementById("mode").value;
+  const item = items[index];
+
+  if (mode === "word") {
+    speak(item.word);
+  } else if (mode === "simple") {
+    speak(item.word);
+    setTimeout(() => speak(item.sentence), 900);
+  } else {
+    speak(`The word is ${item.word}. ${item.sentence} Spell the word ${item.word}.`);
+  }
+}
+
+function submitAnswer() {
+  const input = document.getElementById("answer").value.trim().toLowerCase();
+  const correct = items[index].word.toLowerCase();
+  const fb = document.getElementById("feedback");
+
+  if (!input) return;
+
+  if (input === correct) {
+    fb.textContent = "✅ Correct!";
+    fb.className = "feedback correct";
+    index++;
+
+    if (index < items.length) {
+      setTimeout(nextWord, 700);
+    } else {
+      showResults();
+    }
+  } else {
+    fb.textContent = "❌ Try again";
+    fb.className = "feedback incorrect";
+    if (!missed.includes(items[index].word))
+      missed.push(items[index].word);
+  }
+}
+
+function showResults() {
+  document.getElementById("game").classList.add("hidden");
+  document.getElementById("results").classList.remove("hidden");
+
+  document.getElementById("score").textContent =
+    `You spelled ${items.length - missed.length} out of ${items.length} correctly.`;
+
+  const list = document.getElementById("missed");
+  list.innerHTML = "";
+
+  if (!missed.length) {
+    list.innerHTML = "<li>Perfect score! 🎉</li>";
+    return;
+  }
+
+  missed.forEach(w => {
+    const li = document.createElement("li");
+    li.textContent = "🔊 " + w;
+    li.onclick = () => speak(w);
+    list.appendChild(li);
+  });
+}
+
+function restart() {
+  document.getElementById("results").classList.add("hidden");
+  document.getElementById("setup").classList.remove("hidden");
+}
+
+/* =====================
+   EVENT BINDINGS
+===================== */
+document.getElementById("startBtn").addEventListener("click", startGame);
+document.getElementById("submitBtn").addEventListener("click", submitAnswer);
+document.getElementById("repeatBtn").addEventListener("click", playPrompt);
+document.getElementById("restartBtn").addEventListener("click", restart);
+document.getElementById("exitBtn").addEventListener("click", restart);
+
+/* ✅ Make functions globally visible (extra safety) */
+window.startGame = startGame;
+</script>
+
+</body>
+</html>
